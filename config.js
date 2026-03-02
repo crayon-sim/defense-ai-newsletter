@@ -12,7 +12,8 @@ window.NEWSLETTER_CONFIG = {
     "data/newsletter-42.js",
     "data/newsletter-41.js",
     // "data/newsletter-40.js",
-    // 이하 생략 — 파일 생성 후 주석 해제하여 추가
+    // "data/newsletter-2.js",
+    "data/newsletter-1.js",
   ],
 
   // 사이트 정보
