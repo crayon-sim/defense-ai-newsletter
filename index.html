@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>국방 AI(AI+IT) 뉴스레터 아카이브</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ============ 헤더 ============ -->
+<header>
+  <div class="header-top">
+    <div class="header-brand">
+      <span class="header-icon">🛡️</span>
+      <span class="header-title">국방 AI(AI+IT) 뉴스레터 아카이브</span>
+    </div>
+    <div class="header-subtitle">매주 국방 AI 및 정보기술 관련 기사 검색 데이터베이스 · Seungbae Sim (Crayon)</div>
+  </div>
+  <div class="search-bar-area">
+    <div class="search-input-wrap">
+      <span class="search-icon">🔍</span>
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="기사 제목, 요약, 키워드로 검색 (예: Anthropic, CCA, 드론, NIST…)"
+        autocomplete="off"
+      />
+    </div>
+    <button id="btnSearch" class="btn-search">검색</button>
+  </div>
+</header>
+
+<!-- ============ 필터 패널 ============ -->
+<div class="filter-panel">
+  <div class="filter-group">
+    <label class="filter-label" for="filterNewsletter">호수</label>
+    <select id="filterNewsletter" class="filter-select">
+      <option value="all">전체</option>
+    </select>
+  </div>
+  <div class="filter-divider"></div>
+  <div class="filter-group">
+    <label class="filter-label" for="filterSource">출처</label>
+    <select id="filterSource" class="filter-select">
+      <option value="all">전체</option>
+    </select>
+  </div>
+  <div class="filter-divider"></div>
+  <div class="filter-group">
+    <label class="filter-label" for="filterTopic">주제</label>
+    <select id="filterTopic" class="filter-select">
+      <option value="all">전체</option>
+    </select>
+  </div>
+  <div class="filter-divider"></div>
+  <button id="btnReset" class="btn-reset">초기화</button>
+</div>
+
+<!-- ============ 메인 레이아웃 ============ -->
+<div class="main-container">
+
+  <!-- 사이드바 -->
+  <aside class="sidebar">
+    <!-- 통계 -->
+    <div class="sidebar-section">
+      <div class="sidebar-title">아카이브 현황</div>
+      <div class="sidebar-stat">
+        <span>수록 호수</span>
+        <span class="stat-value" id="statNewsletters">—</span>
+      </div>
+      <div class="sidebar-stat">
+        <span>총 기사 수</span>
+        <span class="stat-value" id="statArticles">—</span>
+      </div>
+      <div class="sidebar-stat">
+        <span>수록 출처</span>
+        <span class="stat-value" id="statSources">—</span>
+      </div>
+    </div>
+
+    <!-- 호수 목록 -->
+    <div class="sidebar-section">
+      <div class="sidebar-title">뉴스레터 호수</div>
+      <ul class="newsletter-list-sidebar" id="sidebarNewsletterList">
+      </ul>
+    </div>
+
+    <!-- 키워드 클라우드 -->
+    <div class="sidebar-section">
+      <div class="sidebar-title">주요 키워드</div>
+      <div class="keyword-cloud" id="keywordCloud"></div>
+    </div>
+  </aside>
+
+  <!-- 결과 영역 -->
+  <main class="results-area">
+    <div class="results-header">
+      <div class="results-count" id="resultsCount">로딩 중…</div>
+      <select id="sortSelect" class="sort-select">
+        <option value="newest">최신 호수 순</option>
+        <option value="oldest">오래된 호수 순</option>
+      </select>
+    </div>
+    <div class="articles-grid" id="articlesGrid">
+      <div class="loading-overlay">데이터를 불러오는 중…</div>
+    </div>
+  </main>
+
+</div>
+
+<!-- ============ 기사 상세 모달 ============ -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitleEn">
+    <div class="modal-header">
+      <div class="modal-header-info">
+        <div class="modal-meta" id="modalMeta"></div>
+        <div class="modal-title-en" id="modalTitleEn"></div>
+        <div class="modal-title-kr" id="modalTitleKr"></div>
+      </div>
+      <button class="modal-close" id="modalClose" aria-label="닫기">✕</button>
+    </div>
+    <div class="modal-body">
+
+      <!-- 요약 -->
+      <div class="modal-section">
+        <div class="modal-section-title">기사 요약</div>
+        <div class="modal-summary" id="modalSummary"></div>
+      </div>
+
+      <!-- 키워드 -->
+      <div class="modal-section">
+        <div class="modal-section-title">키워드 (클릭 시 해당 키워드로 검색)</div>
+        <div class="modal-keywords" id="modalKeywords"></div>
+      </div>
+
+      <!-- URL / 출처 -->
+      <div class="modal-section">
+        <div class="modal-section-title">원문 링크</div>
+        <div class="modal-url-section" id="modalUrlSection"></div>
+      </div>
+
+      <!-- 날짜 -->
+      <div class="modal-section">
+        <div class="modal-section-title">날짜</div>
+        <div style="font-size:13px; color:var(--text-secondary)" id="modalDate"></div>
+      </div>
+
+      <!-- 원문 보기 버튼 -->
+      <a id="modalOpenBtn" href="#" target="_blank" rel="noopener" class="btn-open-article">
+        원문 기사 열기 ↗
+      </a>
+
+    </div>
+  </div>
+</div>
+
+<!-- ============ 데이터 & 스크립트 로드 ============ -->
+<script src="config.js"></script>
+<script>
+  // config.js에 정의된 파일 목록을 순서대로 동적 로드
+  (function () {
+    if (!window.NEWSLETTER_CONFIG || !window.NEWSLETTER_CONFIG.files) return;
+    const files = window.NEWSLETTER_CONFIG.files;
+    let loaded = 0;
+
+    function tryInit() {
+      loaded++;
+      if (loaded === files.length) {
+        // 모든 파일 로드 완료 후 앱 초기화
+        const appScript = document.createElement("script");
+        appScript.src = "app.js";
+        document.body.appendChild(appScript);
+      }
+    }
+
+    if (files.length === 0) {
+      const appScript = document.createElement("script");
+      appScript.src = "app.js";
+      document.body.appendChild(appScript);
+      return;
+    }
+
+    files.forEach(function (file) {
+      const s = document.createElement("script");
+      s.src = file;
+      s.onload = tryInit;
+      s.onerror = tryInit; // 파일 없어도 계속 진행
+      document.body.appendChild(s);
+    });
+  })();
+</script>
+
+</body>
+</html>
