@@ -12,6 +12,7 @@ window.NEWSLETTER_CONFIG = {
     "data/newsletter-42.js",
     "data/newsletter-41.js",
     // "data/newsletter-40.js",
+    "data/newsletter-30.js",
     "data/newsletter-29.js",
     "data/newsletter-28.js",
     "data/newsletter-27.js",
