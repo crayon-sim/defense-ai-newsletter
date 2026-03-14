@@ -1,0 +1,167 @@
+(function () {
+  if (!window.NEWSLETTERS) window.NEWSLETTERS = [];
+  window.NEWSLETTERS.push({
+    id: 31,
+    title: "국방 AI(AI+IT) 뉴스레터 제31호",
+    period: "2025. 12. 7. ~ 13.",
+    date: "2025-12-13",
+    articles: [
+      {
+        id: "31-1",
+        newsletter_id: 31,
+        topic_en: "Pentagon - GenAI.mil Platform (MeriTalk)",
+        topic_kr: "미 국방부 GenAI.mil 플랫폼 출시",
+        title: "Pentagon Launches New GenAI.mil Platform",
+        title_kr: "미 국방부, 전 직원 대상 생성형 AI 플랫폼 'GenAI.mil' 공식 출시",
+        source: "MeriTalk",
+        url: "https://www.meritalk.com/articles/pentagon-launches-new-genai-mil-platform/",
+        keywords: ["GenAI.mil", "생성형 AI", "Google Gemini", "국방부", "300만 명", "CUI"],
+        summary: "미 국방부가 전 구성원 300만 명 이상을 대상으로 생성형 AI 플랫폼 GenAI.mil을 공식 출시했다. Google Cloud의 Gemini for Government가 초기 탑재 모델이며, CUI(비밀지정 외 통제정보) 수준의 보안 환경에서 운영된다. 향후 추가 상용·프런티어 AI 기능이 탑재될 예정으로 군 전반의 AI 채택률을 높이기 위한 전략적 플랫폼이다.",
+        date: "2025-12-09"
+      },
+      {
+        id: "31-2",
+        newsletter_id: 31,
+        topic_en: "Pentagon - More AI Tools (Defense One)",
+        topic_kr: "미 국방부 수 일~수 주 내 추가 AI 도구 예고",
+        title: "More AI tools coming in days or weeks, Pentagon R&D chief says",
+        title_kr: "미 국방부 R&D 수장, '수 일~수 주 내 추가 AI 도구 제공' 예고",
+        source: "Defense One",
+        url: "https://www.defenseone.com/technology/2025/12/more-ai-tools-coming-days-or-weeks-pentagon-rd-chief-says/410024/",
+        keywords: ["GenAI.mil", "추가 AI 도구", "국방부 R&D", "AI 확대", "신속 배치"],
+        summary: "국방부 R&D 수장이 GenAI.mil 출시 직후 수 일~수 주 내에 추가 AI 도구들이 제공될 것이라고 예고했다. 기존 플랫폼에 더 다양한 AI 역량을 빠르게 통합해 전 구성원이 활용할 수 있도록 속도를 높이겠다는 방침이다.",
+        date: "2025-12-10"
+      },
+      {
+        id: "31-3",
+        newsletter_id: 31,
+        topic_en: "Pentagon - GenAI Platform Rollout (Breaking Defense)",
+        topic_kr: "국방부 GenAI 플랫폼 전 인원 배포",
+        title: "Pentagon rolls out GenAI platform to all personnel, using Google's Gemini",
+        title_kr: "국방부, Google Gemini 기반 GenAI 플랫폼 전 직원 배포 완료",
+        source: "Breaking Defense",
+        url: "https://breakingdefense.com/2025/12/pentagon-rolls-out-genai-platform-to-all-personnel-using-googles-gemini/",
+        keywords: ["GenAI.mil", "Google Gemini", "전원 배포", "국방부 AI", "생성형 AI"],
+        summary: "Breaking Defense가 국방부의 GenAI.mil 전 인원 배포 과정을 상세 보도했다. Google Gemini를 기반으로 군인·민간인·계약직 인력 모두에게 생성형 AI를 제공하며, 이는 미군 역사상 최대 규모의 AI 도구 배포로 평가된다.",
+        date: "2025-12-09"
+      },
+      {
+        id: "31-4",
+        newsletter_id: 31,
+        topic_en: "Pentagon - DAWG (Former Replicator)",
+        topic_kr: "바이든 Replicator 드론 이니셔티브, DAWG로 존속",
+        title: "'It's alive': Biden-era Replicator drone initiative lives on as DAWG, looking at bigger UASs",
+        title_kr: "'살아있다': 바이든 시대 Replicator 드론 이니셔티브, DAWG로 이름 바꿔 지속 - 더 큰 UAS 검토",
+        source: "Breaking Defense",
+        url: "https://breakingdefense.com/2025/12/its-alive-biden-era-replicator-drone-initiative-lives-on-as-dawg-looking-at-bigger-uass/",
+        keywords: ["DAWG", "Replicator", "드론 이니셔티브", "대형 UAS", "자율무기 워킹그룹"],
+        summary: "바이든 행정부의 Replicator 드론 이니셔티브가 DAWG(자율무기 워킹그룹)로 재편되어 존속하고 있다. 기존 소형 드론 대량 조달에서 더 큰 규모의 UAS로 초점을 확대하는 방향을 검토 중이며, 트럼프 행정부에서도 드론 전력 확충의 필요성은 공유되고 있다.",
+        date: "2025-12-10"
+      },
+      {
+        id: "31-5",
+        newsletter_id: 31,
+        topic_en: "FY26 NDAA - Conference Bill",
+        topic_kr: "FY26 국방수권법 합의안 타결",
+        title: "Congress Reaches Deal on FY26 Defense Bill",
+        title_kr: "미 의회, FY2026 국방수권법(NDAA) 합의안 타결",
+        source: "MeriTalk",
+        url: "https://www.meritalk.com/articles/congress-reaches-deal-on-fy26-defense-bill/",
+        keywords: ["FY26 NDAA", "국방수권법", "합의안", "국방 예산", "의회"],
+        summary: "미 의회가 FY2026 국방수권법(NDAA) 합의안에 도달했다. AI·사이버·드론·우주 등 첨단 기술 투자 확대와 군 현대화 관련 조항들이 포함됐으며, 국방부 전반의 기술 획득 개혁을 지원하는 내용도 담겼다.",
+        date: "2025-12-09"
+      },
+      {
+        id: "31-6",
+        newsletter_id: 31,
+        topic_en: "FY26 NDAA - AI for Mental Health",
+        topic_kr: "FY26 NDAA 정신건강 분야 AI 활용 지시",
+        title: "NDAA includes directive for DOD to prioritize use of AI for mental health needs",
+        title_kr: "FY26 NDAA, 국방부에 정신건강 분야 AI 우선 활용 지시 조항 포함",
+        source: "Nextgov/FCW",
+        url: "https://www.nextgov.com/artificial-intelligence/2025/12/ndaa-includes-directive-dod-prioritize-use-ai-mental-health-needs/410084/",
+        keywords: ["NDAA", "정신건강 AI", "재향군인", "자살 예방", "AI 치료 지원"],
+        summary: "FY26 NDAA에 국방부가 정신건강 분야에서 AI를 우선적으로 활용하도록 지시하는 조항이 포함됐다. 재향군인 자살 예방, 외상 후 스트레스(PTSD) 조기 탐지, 정신건강 서비스 접근성 향상 등에 AI를 적극 도입하도록 방향을 제시한다.",
+        date: "2025-12-11"
+      },
+      {
+        id: "31-7",
+        newsletter_id: 31,
+        topic_en: "DISA - Acquisition Reform Progress",
+        topic_kr: "DISA 획득 개혁 진행 상황",
+        title: "DISA Officials: Agency on Track in Pentagon Acquisition Reform Effort",
+        title_kr: "DISA 관계자: 국방부 획득 개혁 기조에 맞춰 순조롭게 진행 중",
+        source: "MeriTalk",
+        url: "https://www.meritalk.com/articles/disa-officials-agency-on-track-in-pentagon-acquisition-reform-effort/",
+        keywords: ["DISA", "획득 개혁", "국방부 개혁", "조달 혁신", "DISA 현대화"],
+        summary: "DISA 관계자들이 국방부 전반의 획득 개혁 기조에 발맞춰 기관 차원의 조달 혁신이 순조롭게 진행되고 있다고 밝혔다. 속도와 효율을 중시하는 새로운 획득 문화로의 전환을 추진하며, 기술 현대화와 계약 간소화를 병행하고 있다.",
+        date: "2025-12-11"
+      },
+      {
+        id: "31-8",
+        newsletter_id: 31,
+        topic_en: "DoT - Agentic AI Expansion (Nextgov)",
+        topic_kr: "미 교통부 에이전틱 AI 활용 확대 계획",
+        title: "Transportation planning to expand its use of agentic AI capabilities",
+        title_kr: "미 교통부, 에이전틱 AI 역량 활용 확대 계획 추진",
+        source: "Nextgov/FCW",
+        url: "https://www.nextgov.com/modernization/2025/12/transportation-planning-expand-its-use-agentic-ai-capabilities/410082/",
+        keywords: ["교통부", "에이전틱 AI", "자율 실행", "민원 자동화", "AI 워크플로"],
+        summary: "미 교통부가 민원 처리·데이터 분석 등 다양한 업무에 에이전틱 AI를 도입하기 위한 준비를 진행 중이다. 단순 자동화를 넘어 자율 실행 능력을 갖춘 AI 에이전트를 활용하려는 것으로, 책임성·보안·직원 교육 측면의 정책적 고려가 병행된다.",
+        date: "2025-12-11"
+      },
+      {
+        id: "31-9",
+        newsletter_id: 31,
+        topic_en: "DoT - Salesforce AI Agents Modernization",
+        topic_kr: "미 교통부 Salesforce AI 에이전트 전부서 현대화",
+        title: "DOT Launches Department-Wide Modernization With Salesforce AI Agents",
+        title_kr: "미 교통부, Salesforce AI 에이전트로 전 부서 현대화 착수",
+        source: "MeriTalk",
+        url: "https://www.meritalk.com/articles/dot-launches-department-wide-modernization-with-salesforce-ai-agents/",
+        keywords: ["교통부", "Salesforce", "AI 에이전트", "전부서 현대화", "CRM", "업무 자동화"],
+        summary: "미 교통부가 Salesforce AI 에이전트를 활용한 전 부서 디지털 현대화에 착수했다. CRM 기반 AI 에이전트로 민원 처리·내부 업무 자동화를 구현하며, 연방 기관의 상용 AI 플랫폼 도입 확대 사례로 주목받는다.",
+        date: "2025-12-12"
+      },
+      {
+        id: "31-10",
+        newsletter_id: 31,
+        topic_en: "CISA - China-linked Malware (BRICKSTORM)",
+        topic_kr: "CISA, 중국 연계 악성코드 수개월 잠복 경고",
+        title: "China-Linked Malware Hid in Networks for Months, CISA Warns",
+        title_kr: "CISA 경고: 중국 연계 악성코드(BRICKSTORM), 수개월간 네트워크에 잠복",
+        source: "MeriTalk",
+        url: "https://www.meritalk.com/articles/china-linked-malware-hid-in-networks-for-months-cisa-warns/",
+        keywords: ["CISA", "BRICKSTORM", "중국 악성코드", "APT", "네트워크 침투", "사이버보안 경고"],
+        summary: "CISA가 중국 연계 위협 행위자가 사용하는 BRICKSTORM 악성코드가 수개월간 네트워크에 잠복해 있을 수 있다고 경고했다. 탐지를 피하면서 장기간 정보를 수집하는 은밀한 방식으로, 연방 기관과 민간 인프라 운영자들에게 즉각적인 점검과 대응을 촉구했다.",
+        date: "2025-12-10"
+      },
+      {
+        id: "31-11",
+        newsletter_id: 31,
+        topic_en: "CMU - Zero Trust Principles for Weapon Systems",
+        topic_kr: "무기체계에 9가지 제로 트러스트 원칙 적용",
+        title: "Tailoring 9 Zero Trust and Security Principles to Weapon Systems",
+        title_kr: "무기체계에 맞춘 9가지 제로 트러스트·보안 원칙 적용 방안 제시",
+        source: "CMU SEI",
+        url: "https://www.sei.cmu.edu/blog/tailoring-9-zero-trust-and-security-principles-to-weapon-systems/",
+        keywords: ["제로 트러스트", "무기체계", "CMU SEI", "OT 보안", "9대 원칙", "사이버 탄력성"],
+        summary: "CMU 소프트웨어공학연구소(SEI)가 IT 환경용으로 설계된 9가지 제로 트러스트 보안 원칙을 무기체계(OT/임베디드 시스템)에 맞게 조정하는 방법론을 제시했다. 무기체계의 실시간 요구사항·안전 제약·업데이트 한계 등 특수성을 반영해 사이버 탄력성을 강화하는 실용적 가이드라인이다.",
+        date: "2025-12-09"
+      },
+      {
+        id: "31-12",
+        newsletter_id: 31,
+        topic_en: "IDF - First Robotics War (Gaza)",
+        topic_kr: "이스라엘, 가자 전쟁을 '최초의 로봇 전쟁'으로 규정",
+        title: "Israeli official says Gaza conflict was 'first robotics war'",
+        title_kr: "이스라엘 관계자, 가자 분쟁을 '최초의 로봇 전쟁'으로 선언",
+        source: "Breaking Defense",
+        url: "https://breakingdefense.com/2025/12/israeli-official-says-gaza-conflict-was-first-robotics-war/",
+        keywords: ["IDF", "로봇 전쟁", "가자", "무인 시스템", "자율 무기", "최초 로봇전"],
+        summary: "이스라엘 국방 관계자가 가자 분쟁을 세계 최초의 로봇 전쟁으로 규정했다. IDF는 무인 지상차량·드론 스웜·AI 기반 표적 획득 시스템 등을 실전에서 대규모로 운용했으며, 이번 분쟁이 자율 무기와 로봇 전력이 결정적 역할을 한 새로운 전쟁 패러다임의 시작임을 공식화했다.",
+        date: "2025-12-12"
+      }
+    ]
+  });
+})();
