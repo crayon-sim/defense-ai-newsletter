@@ -1,0 +1,167 @@
+(function () {
+  if (!window.NEWSLETTERS) window.NEWSLETTERS = [];
+  window.NEWSLETTERS.push({
+    id: 39,
+    title: "국방 AI(AI+IT) 뉴스레터 제39호",
+    period: "2026. 2. 1. ~ 7.",
+    date: "2026-02-07",
+    articles: [
+      {
+        id: "39-1",
+        newsletter_id: 39,
+        topic_en: "DoW - Tech Budget Control",
+        topic_kr: "미 전쟁부의 기술 예산 통제권",
+        title: "Pentagon leaders should have more control over services' tech budgets, GAO suggests",
+        title_kr: "GAO, 국방부 기술 책임자에 각 군 기술 예산 인증 권한 부여 권고",
+        source: "Defense One",
+        url: "https://www.defenseone.com/technology/2026/02/pentagon-leaders-should-have-more-control-over-services-tech-budgets-gao-suggests/411242/",
+        keywords: ["GAO", "기술 예산 통제", "R&E 차관", "각 군 자율성", "NDAA", "PAE", "획득 개혁"],
+        summary: "GAO가 국방부 연구공학 차관실에 각 군 신기술 예산 인증 권한을 부여하도록 의회에 권고했으나, 육·해·공군은 '지연·자율성 제한·업무 증가'를 이유로 강력히 반대한다. 상원 NDAA는 PAE(포트폴리오 획득 담당관) 신설로 부분 반영했지만, 하원은 각 군의 기능별 보고 체계를 유지하도록 명시하며 양원 조정이 필요하다. GAO는 현행 기술 로드맵이 합동 기술 투자에 충분한 정보를 제공하지 못하고 있다고도 지적했다.",
+        date: "2026-02-05"
+      },
+      {
+        id: "39-2",
+        newsletter_id: 39,
+        topic_en: "DoW - Drone Dominance Program",
+        topic_kr: "미 전쟁부의 드론 도미넌스 프로그램 참가업체 선정",
+        title: "Pentagon picks 25 vendors to show off one-way attack drones in the Gauntlet competition",
+        title_kr: "미 국방부, 드론 도미넌스 프로그램 Gauntlet 평가 25개 업체 선정",
+        source: "Breaking Defense",
+        url: "https://breakingdefense.com/2026/02/pentagon-picks-25-vendors-to-show-off-one-way-attack-drones-in-the-gauntlet-competition/",
+        keywords: ["드론 도미넌스", "Gauntlet", "일회용 공격 드론", "Kratos SRE", "Teal Drones", "1억 5천만 달러", "포트 베닝"],
+        summary: "미 국방부가 Drone Dominance Program 1단계 Gauntlet 평가에 25개 업체를 선정했다. 2~3월 포트 베닝에서 군 운용자들이 직접 저가 일회용 공격 드론을 평가해 1억 5천만 달러 규모 시제품 구매 대상을 선발하며, 총 4단계·11억 달러 투자로 단가 절감·생산 확대를 목표로 한다. 참가 업체에는 Kratos SRE, Teal Drones, Ukrainian Defense Drones Tech Corp 등이 포함된다.",
+        date: "2026-02-06"
+      },
+      {
+        id: "39-3",
+        newsletter_id: 39,
+        topic_en: "DoW - AI Acceleration Strategy (Commentary)",
+        topic_kr: "미 전쟁부의 AI 가속화 전략 논평",
+        title: "DOD's AI acceleration strategy",
+        title_kr: "미 국방부 AI 가속화 전략 분석",
+        source: "Nextgov/FCW",
+        url: "https://www.nextgov.com/ideas/2026/02/dods-ai-acceleration-strategy/411135/",
+        keywords: ["AI 가속화 전략", "PSP", "30일 모델 배포", "CDAO", "객관성 벤치마크", "MOSA", "AI-first"],
+        summary: "DoD AI 가속화 전략의 7대 PSP(Swarm Forge·Agent Network·Ender's Foundry·Open Arsenal·Project Grant·GenAI.mil·Enterprise Agents)를 해설하며, AI 벤더가 최신 모델 공개 후 30일 내 DoD에 배포해야 한다는 요건과 90일 내 '모델 객관성 벤치마크' 조달 기준 수립 지시를 주목한다. 필자는 기존 사업과의 중복 모호성, 현장 재량에 따른 효과 분산, 생성형 AI 특성상 객관성 정량화의 근본적 어려움을 비판적으로 지적한다.",
+        date: "2026-02-04"
+      },
+      {
+        id: "39-4",
+        newsletter_id: 39,
+        topic_en: "DoW - STIB (Science, Technology, and Innovation Board)",
+        topic_kr: "미 전쟁부의 과학·기술·혁신 위원회 신설",
+        title: "Pentagon to Form New Innovation Board",
+        title_kr: "미 국방부, DIB·DSB 통합 과학·기술·혁신 위원회(STIB) 신설",
+        source: "MeriTalk",
+        url: "https://www.meritalk.com/articles/pentagon-to-form-new-innovation-board/",
+        keywords: ["STIB", "Defense Innovation Board", "Defense Science Board", "Emil Michael", "혁신 자문위원회", "전략적 옵션", "국가안보 혁신"],
+        summary: "미 국방부가 Defense Innovation Board(DIB)와 Defense Science Board(DSB)를 통합해 과학·기술·혁신 위원회(STIB)를 신설한다. R&E 차관 Emil Michael 산하에 '전략적 옵션 소위원회'와 '국가안보 혁신 소위원회'를 두며, 자문 기능 일원화로 혁신 조언의 속도와 일관성을 높이는 것이 목표다. Federal Register 공식 등록 절차가 진행 중이다.",
+        date: "2026-02-06"
+      },
+      {
+        id: "39-5",
+        newsletter_id: 39,
+        topic_en: "USAF - Counter-Drone SW Written by AI",
+        topic_kr: "미 공군의 AI 작성 카운터드론 소프트웨어 계약",
+        title: "Picogrid wins $9M Air Force contract for counter-drone software written by AI",
+        title_kr: "피코그리드, AI가 작성한 카운터드론 소프트웨어로 미 공군 930만 달러 계약 수주",
+        source: "Breaking Defense",
+        url: "https://breakingdefense.com/2026/02/picogrid-wins-9m-air-force-contract-for-counter-drone-software-written-by-ai/",
+        keywords: ["Picogrid", "Legion", "카운터드론", "AI 코드 생성", "SBIR Phase III", "시스템 통합", "NTC 1기병사단"],
+        summary: "피코그리드가 AI가 자동 생성하는 통합 모듈로 서로 다른 C-UAS 센서·재머를 하루 이내 연동하는 'Legion' 소프트웨어로 공군 SBIR Phase III 930만 달러 계약을 수주했다. 현재 통합 코드의 95~98%를 AI가 자동 생성하며(초기 60%에서 개선), NTC에서 1기병사단의 5개 업체 레이더를 FAAD-C2에 연동하는 데 성공했다. 대형 방산업체 중심 '프라임-하청' 모델에 대한 소형 기업의 도전 사례로 주목받는다.",
+        date: "2026-02-06"
+      },
+      {
+        id: "39-6",
+        newsletter_id: 39,
+        topic_en: "NSA - Zero Trust Guidelines (Phase 1 & 2)",
+        topic_kr: "NSA의 제로 트러스트 구현 가이드라인 1·2단계 발표",
+        title: "NSA Releases Phase One, Two Zero Trust Guidelines",
+        title_kr: "NSA, 제로 트러스트 구현 가이드라인 1단계·2단계 공개",
+        source: "MeriTalk",
+        url: "https://www.meritalk.com/articles/nsa-releases-phase-one-two-zero-trust-guidelines/",
+        keywords: ["NSA", "제로 트러스트", "ZIG", "1단계", "2단계", "91개 활동", "FY2027 목표"],
+        summary: "NSA가 제로 트러스트 구현 가이드라인(ZIG) 1단계(36개 활동, 보안 기반 구축)와 2단계(41개 활동, 핵심 ZT 솔루션 통합)를 공개했다. DoD의 FY2027 목표 수준 달성을 위한 91개 활동과 고급 수준의 152개 활동을 체계화하며, 모듈형 설계로 조직별 맞춤 적용이 가능하다. 지난달 발표된 입문·탐색 단계 문서를 먼저 검토하도록 권장한다.",
+        date: "2026-02-07"
+      },
+      {
+        id: "39-7",
+        newsletter_id: 39,
+        topic_en: "U.S. - FedRAMP 20x Modernization",
+        topic_kr: "FedRAMP 20x 현대화 마무리 단계",
+        title: "FedRAMP putting final pieces in place for major modernization effort",
+        title_kr: "FedRAMP, 대규모 현대화 작업 마무리 단계 진입",
+        source: "Federal News Network",
+        url: "https://federalnewsnetwork.com/cloud-computing/2026/02/fedramp-putting-final-pieces-in-place-for-major-modernization-effort/",
+        keywords: ["FedRAMP 20x", "클라우드 보안 인증", "백로그 해소", "30일 심사", "자동화 평가", "OMB", "RFC"],
+        summary: "FedRAMP가 10년 만의 구조 개편 'FedRAMP 20x' 마무리 단계에 진입했다. 100개 이상 서비스가 대기하던 백로그를 6개월 만에 해소하고 평균 심사 기간을 약 1년에서 30일 미만으로 단축했다. 문서 중심에서 자동화·API·지속 모니터링 기반의 보안 메트릭 제출 방식으로 전환하며, 2026년 1월 마지막 6건의 RFC를 발행(피드백 마감 3월 11일)하고 2026년은 현장 안착에 집중할 계획이다.",
+        date: "2026-02-04"
+      },
+      {
+        id: "39-8",
+        newsletter_id: 39,
+        topic_en: "U.S. - National Cyber Strategy (6 Pillars)",
+        topic_kr: "차기 미국 국가 사이버 전략 6대 핵심 축",
+        title: "Cairncross Lays Out 6 Pillars of Coming National Cyber Strategy",
+        title_kr: "케언크로스, 차기 국가 사이버 전략 6대 핵심 축 공개",
+        source: "MeriTalk",
+        url: "https://www.meritalk.com/articles/cairncross-lays-out-6-pillars-of-coming-national-cyber-strategy/",
+        keywords: ["국가 사이버 전략", "Cairncross", "ONCD", "억지 비용 부과", "사이버 규제 통합", "사이버 인력", "포스트 양자 암호"],
+        summary: "국가 사이버국장 케언크로스가 트럼프 행정부의 새 국가 사이버 전략 6대 축을 제시했다: ①적국 억지 및 비용 부과, ②규제 일원화·간소화, ③사이버 인력 양성, ④연방 조달·기술 현대화, ⑤민간 핵심 인프라 보호, ⑥AI·포스트 양자 암호 등 신흥 기술 투자·보호. 각 부처 실행 계획이 별도 제시될 예정이며 AI 보안은 'in-by-design' 원칙으로 설계된다.",
+        date: "2026-02-05"
+      },
+      {
+        id: "39-9",
+        newsletter_id: 39,
+        topic_en: "U.S. AI-ISAC (AI Information Sharing Center)",
+        topic_kr: "미국 AI 정보 공유 센터(AI-ISAC) 설립 논의",
+        title: "AI info-sharing center is in development, CISA official says",
+        title_kr: "CISA, AI 정보 공유·분석 센터(AI-ISAC) 개발 중 발표",
+        source: "Nextgov/FCW",
+        url: "https://www.nextgov.com/cybersecurity/2026/02/ai-info-sharing-center-development-cisa-official-says/411167/",
+        keywords: ["AI-ISAC", "CISA", "정보 공유", "AI 보안 위협", "Nick Andersen", "ITI 포럼", "사이버 위협"],
+        summary: "CISA 사이버보안 부문 집행부국장 Nick Andersen이 AI 위협 정보를 정부·산업계가 실시간 공유하는 AI-ISAC(AI Information Sharing and Analysis Center) 설립을 추진 중이라고 밝혔다. 기존 민간 정보 공유 네트워크와 중복을 피하는 조직 구조를 논의 중이며 출범 일정은 미확정이다. AI가 금융·헬스케어·통신 등 모든 핵심 인프라에 걸쳐 적용되므로 기술 횡단적 위협 대응 체계가 필요하다.",
+        date: "2026-02-05"
+      },
+      {
+        id: "39-10",
+        newsletter_id: 39,
+        topic_en: "U.S. Federal CIO - Digital Front Door",
+        topic_kr: "미 연방 CIO의 문화 중심 접근과 디지털 프론트 도어",
+        title: "Inside the federal CIO's culture-first approach",
+        title_kr: "연방 CIO 바바카시아의 '문화 우선' IT 현대화 전략",
+        source: "Nextgov/FCW",
+        url: "https://www.nextgov.com/people/2026/02/inside-federal-cios-culture-first-approach/411189/",
+        keywords: ["연방 CIO", "Gregory Barbaccia", "디지털 프론트 도어", "U.S. Tech Force", "FITARA", "문화 우선", "Login.gov"],
+        summary: "연방 CIO 겸 연방 최고 AI 책임자 Gregory Barbaccia가 기술 아키텍처보다 '정부가 기술을 생각하는 문화 전환'을 1순위 과제로 삼는다고 밝혔다. FITARA 강제 집행 강화, 상용 클라우드 기본값 채택, 30개 기업과 협력하는 U.S. Tech Force 운영과 함께 모든 연방 서비스를 단일 화면에서 제공하는 '디지털 프론트 도어'를 추진 중이다. 2025년 IT 관리 직군에서만 1만 4,600명 이상이 이탈한 인력 공백을 AI로 보완하겠다는 계획도 밝혔다.",
+        date: "2026-02-06"
+      },
+      {
+        id: "39-11",
+        newsletter_id: 39,
+        topic_en: "DoJ - AI Use Cases (31% Growth)",
+        topic_kr: "미 DoJ의 AI 활용 사례 31% 증가",
+        title: "DOJ Says AI Use Cases Grew Nearly 31% in 2025",
+        title_kr: "미 법무부, 2025년 AI 활용 사례 약 31% 증가 보고",
+        source: "MeriTalk",
+        url: "https://www.meritalk.com/articles/doj-says-ai-use-cases-grew-nearly-31-in-2025/",
+        keywords: ["DoJ", "AI 활용 사례", "FBI", "법 집행 AI", "고영향 시스템", "생체인식", "위험 관리"],
+        summary: "미 법무부가 2025년 AI 활용 사례를 315건(2024년 대비 31% 증가)으로 보고했으며, 이 중 188건이 실제 운영 중이다. FBI는 19건에서 50건으로 늘렸고, 전체의 62%가 법 집행 목적이다. FBI의 9개 고영향 AI 시스템(신원 확인·생체인식 매칭·차량 추적 등)은 2026년 4월 OMB 위험 관리 기준 충족 마감을 앞두고 영향 평가를 완료하지 못한 상태다.",
+        date: "2026-02-06"
+      },
+      {
+        id: "39-12",
+        newsletter_id: 39,
+        topic_en: "AI Governance - Defensibility",
+        topic_kr: "AI 거버넌스: 의사결정 계층으로서의 AI 입증 가능성",
+        title: "AI Answers Are Becoming Business Decisions: Most Organizations Aren't Governing Them That Way",
+        title_kr: "AI 응답이 비즈니스 의사결정이 되고 있지만 대부분 조직의 거버넌스는 아직 준비 안 됐다",
+        source: "ISACA",
+        url: "https://www.isaca.org/resources/news-and-trends/newsletters/atisaca/2026/volume-3/ai-answers-are-becoming-business-decisions-most-organizations-arent-governing-them-that-way",
+        keywords: ["AI 거버넌스", "입증 가능성", "Decision Influence Layer", "EU AI Act", "접근 통제", "감사 추적", "공유 책임"],
+        summary: "AI가 재무·법률·운영 등 핵심 의사결정에 직접 영향을 주는 'Decision Influence Layer'가 됐지만, 대부분 조직은 역할 기반 접근 통제·감사 추적·책임 구조 없이 운용 중이다. EU AI Act·NIST AI RMF 등은 문서상 정책이 아닌 운영 행태의 증거를 요구하며, 벤더의 보안·통제 책임에 의존하는 것은 공유 책임 모델 오해다. '누가 요청·어떤 데이터·어떤 정책·어떤 버전'을 모두 추적·입증할 수 없으면 고위험 업무에는 아직 준비가 안 된 것이라는 기준을 제시한다.",
+        date: "2026-02-03"
+      }
+    ]
+  });
+})();
