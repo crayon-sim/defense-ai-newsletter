@@ -57,6 +57,34 @@
   <button id="btnReset" class="btn-reset">초기화</button>
 </div>
 
+<!-- ============ 최신호 대시보드 ============ -->
+<div class="dashboard-panel" id="latestDashboard" style="display:none">
+  <div class="dashboard-header" id="dashToggleBtn">
+    <div class="dashboard-header-left">
+      <span class="dashboard-live-dot"></span>
+      <span class="dashboard-latest-badge">LATEST</span>
+      <div class="dashboard-title-group">
+        <span class="dashboard-title" id="dashTitle">—</span>
+        <span class="dashboard-subtitle" id="dashSubtitle">—</span>
+      </div>
+    </div>
+    <div class="dashboard-header-right">
+      <span class="dashboard-issue-num" id="dashIssueNum">—</span>
+      <button class="dashboard-toggle" id="dashToggle" aria-label="대시보드 접기/펼치기">▲</button>
+    </div>
+  </div>
+  <div class="dashboard-body" id="dashBody">
+    <div class="dashboard-topics-section">
+      <div class="dashboard-section-label">📑 이번 호 주요 기사</div>
+      <div class="dashboard-topics" id="dashTopics"></div>
+    </div>
+    <div class="dashboard-insights-section">
+      <div class="dashboard-section-label">💡 핵심 인사이트</div>
+      <div class="dashboard-insights" id="dashInsights"></div>
+    </div>
+  </div>
+</div>
+
 <!-- ============ 메인 레이아웃 ============ -->
 <div class="main-container">
 

@@ -26,6 +26,7 @@ function init() {
     flattenArticles();
     buildFilterOptions();
     buildSidebar();
+    buildDashboard();
     applyFiltersAndSearch();
     buildKeywordCloud();
   } else {
@@ -101,6 +102,66 @@ function buildFilterOptions() {
     opt.value = t;
     opt.textContent = t;
     topicSelect.appendChild(opt);
+  });
+}
+
+// ============ 최신호 대시보드 ============
+function buildDashboard() {
+  const latest = state.newsletters[0];
+  if (!latest) return;
+
+  const panel = document.getElementById("latestDashboard");
+  panel.style.display = "";
+
+  document.getElementById("dashTitle").textContent = latest.title;
+  document.getElementById("dashSubtitle").textContent =
+    latest.period + (latest.key_theme ? "  |  " + latest.key_theme : "");
+  document.getElementById("dashIssueNum").textContent = latest.id;
+
+  // 주제 목록 (topic_en 기준 중복 제거, 순서 유지)
+  const TOPIC_COLORS = [
+    "#0891b2","#2563eb","#dc2626","#ea580c","#d97706",
+    "#0d9488","#4f46e5","#7c3aed","#475569","#059669",
+    "#16a34a","#0284c7","#be123c","#9333ea","#b45309"
+  ];
+  const seenTopics = [];
+  latest.articles.forEach(a => {
+    const base = a.topic_en.replace(/\s*\(\d+\/\d+\)$/, "");
+    if (!seenTopics.find(t => t.base === base)) {
+      seenTopics.push({ base, topic_kr: a.topic_kr.replace(/\s*\(\d+\/\d+\)$/, "") });
+    }
+  });
+
+  const topicsEl = document.getElementById("dashTopics");
+  topicsEl.innerHTML = seenTopics.map((t, i) => {
+    const color = TOPIC_COLORS[i % TOPIC_COLORS.length];
+    return `<div class="dash-topic-item">
+      <span class="dash-topic-badge" style="background:${color}">${t.base}</span>
+      <span class="dash-topic-kr">${t.topic_kr}</span>
+    </div>`;
+  }).join("");
+
+  // 핵심 인사이트
+  const insightsEl = document.getElementById("dashInsights");
+  if (latest.insights && latest.insights.length) {
+    insightsEl.innerHTML = latest.insights.map(ins => `
+      <div class="dash-insight-card">
+        <div class="dash-insight-title" style="color:${ins.color}">${ins.title}</div>
+        <div class="dash-insight-body">${ins.body}</div>
+      </div>`).join("");
+  } else {
+    insightsEl.closest(".dashboard-insights-section").style.display = "none";
+  }
+
+  // 접기/펼치기 토글
+  let collapsed = false;
+  const body = document.getElementById("dashBody");
+  const btn = document.getElementById("dashToggle");
+  document.getElementById("dashToggleBtn").addEventListener("click", () => {
+    collapsed = !collapsed;
+    body.style.display = collapsed ? "none" : "";
+    btn.textContent = collapsed ? "▼" : "▲";
+    btn.title = collapsed ? "펼치기" : "접기";
   });
 }
 

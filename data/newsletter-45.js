@@ -5,6 +5,29 @@
     title: "국방 AI(AI+IT) 뉴스레터 제45호",
     period: "2026. 3. 15. ~ 21.",
     date: "2026-03-21",
+    key_theme: "AI 가드레일 분쟁 · Anduril 전 군 장악 · 연방 AI 제도화",
+    insights: [
+      {
+        color: "#22d3ee",
+        title: "🎯 Anthropic 분쟁의 구조적 함의",
+        body: "DoD의 Anthropic 블랙리스트 사태는 AI 윤리 정책과 군사 운용 자율성 간 충돌의 첫 법적 선례. 멀티-LLM 전략(OpenAI·Gemini·Grok)으로 특정 벤더 의존 구조를 해소하는 방향으로 전환 중"
+      },
+      {
+        color: "#fbbf24",
+        title: "⚡ Anduril의 전 군 장악",
+        body: "$20B 육군 계약·CAMP 해군 XL-AUV·C-UAS $87M을 동시 수주. Lattice 플랫폼 중심의 소프트웨어 정의 방산이 전통 대기업 조달 구조를 대체하는 패러다임 전환 신호탄"
+      },
+      {
+        color: "#34d399",
+        title: "🤖 연방 AI 거버넌스 제도화",
+        body: "백악관 프레임워크 + Blackburn 법안 + GSA-NIST CAISI 파트너십이 동시 진행. 실험(USAi) → 표준화(CAISI) → 조달(OneGov)의 3단계 거버넌스 경로가 수렴 중"
+      },
+      {
+        color: "#a78bfa",
+        title: "🌊 해상 무인체계 가속화",
+        body: "미 해군 Gecko Robotics $71M 함정 정비, Dive-XL XL-AUV CAMP 착수, 영국 해군 K3 Scout 20척 도입이 동일 주에 발표. 수상·수중·정비 전 영역에 걸친 자율화 동시 진전"
+      }
+    ],
     articles: [
       {
         id: "45-1",
