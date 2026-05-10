@@ -10,24 +10,29 @@
     insights: [
       {
         color: "#f87171",
-        text: "CDAO Wingman, 전군 AI 자동화 확산: 미 국방부 CDAO가 'Wingman' 자동화 플랫폼의 전군 배포를 추진 중. 미 육군은 이미 150개 워크플로우 자동화로 68만 7천 시간 절감 및 3,700만 달러 비용 회피 달성. 단일 DoD ATO 획득으로 전 군종 확장 기반 마련.",
+        title: "🤖 CDAO Wingman 전군 AI 자동화 확산",
+        body: "미 국방부 CDAO가 'Wingman' 자동화 플랫폼의 전군 배포 추진 중. 미 육군은 150개 워크플로우 자동화로 68만 7천 시간 절감 및 $3,700만 비용 회피 달성. AI·ML·LLM·RPA·Low-code 통합, 비개발자 군 인력도 직접 워크플로우 설계 가능. DoD 단위 단일 ATO 획득으로 전 군종 확장 기반 마련."
       },
       {
         color: "#fbbf24",
-        text: "DoD '멀티벤더 AI' 선언: Emil Michael 국방연구공학차관, Anthropic 분쟁 후 '다시는 단일 AI 공급자에 종속되지 않겠다' 명시적 선언. AWS·Google·MS·NVIDIA·OpenAI·SpaceX·Reflection·Oracle 8개사와 IL-6/7 기밀망 계약 체결. 용도별 특화 모델 조합 전략으로 전환.",
+        title: "🏢 DoD '멀티벤더 AI' 선언 — 8개사 IL-6/7 기밀망 계약",
+        body: "Emil Michael 연구공학차관, SCSP AI+ Expo에서 '다시는 단일 AI 공급자에 종속되지 않겠다' 명시적 선언. Anthropic 분쟁 이후 AWS·Google·Microsoft·NVIDIA·OpenAI·SpaceX·Reflection·Oracle 8개사와 IL-6/IL-7 기밀망 배치 계약 체결. 용도별 특화 모델 조합 전략으로 전환, 벤더 락인 회피 아키텍처 구축 중."
       },
       {
         color: "#34d399",
-        text: "백악관 AI Guardrails 정책 초안 회람: 벤더가 정부의 AI 사용 방식을 과도하게 제한하지 못하도록 정부 권한을 명문화하는 정책 초안이 DoD·백악관 간 회람 중. Anthropic 분쟁의 직접 후속조치로, 행정명령 또는 별도 정책으로 구체화 예정. '합법적 사용은 선출된 정부가 결정' 원칙 천명.",
+        title: "⚖️ 백악관 AI Guardrails 정책 초안 — 정부의 AI 사용 통제권 명문화",
+        body: "벤더가 정부의 AI 사용 방식을 과도하게 제한하지 못하도록 정부 권한을 명문화한 정책 초안이 DoD·백악관 간 회람 중. Anthropic-국방부 분쟁(공급망 리스크 지정·퇴출 명령)의 직접 후속조치. '합법적 사용 결정은 선출된 정부의 권한'을 원칙으로 천명. 행정명령 또는 계약 표준 조항(EULA·AUP 우선)으로 구체화 예정."
       },
       {
         color: "#818cf8",
-        text: "Agentic AI 사이버 방어 실증 — AI TTX 2.0 + Mythos: 5월 7일 미 육군·빅테크 6사 합동 AI 사이버 훈련(AI TTX 2.0) 실시. Mythos급 AI가 취약점을 '주 단위'가 아닌 '분~초 단위'로 탐지·수정 가능 전망. 그러나 동일 기술이 사이버 범죄 조직에도 국가급 역량 부여 — 방어와 공격의 동시 가속화.",
+        title: "🛡️ Agentic AI 사이버 방어 실증 — AI TTX 2.0 + Mythos",
+        body: "5월 7일 미 육군·빅테크 6사 합동 AI TTX 2.0 실시. Mythos급 AI가 취약점을 '주 단위'에서 '분~초 단위'로 탐지·수정 가능 전망. 그러나 동일 기술이 사이버 범죄 조직에도 국가급 역량 부여 — 장기 침투·lateral movement·산업화된 랜섬웨어 등 새로운 공격 양상. 방어와 공격의 동시 가속화."
       },
       {
         color: "#60a5fa",
-        text: "전군 AI 현대화 가속: 공군, AI-First Force 전환을 위한 AI 인력계획 공식 승인(채용·유지·훈련 3대 축). 공중작전센터(AOC WS) AI 도입 추진, 우주군 발사 100배 대비 AI·인력 확충(Objective Force 2040), NRO는 AI 설명가능성을 핵심 과제로 지정하며 검증 인프라 운용 중.",
-      },
+        title: "✈️ 전군 AI 현대화 가속 — 공군·우주군·NRO",
+        body: "공군, AI-First Force 전환 위한 AI 인력계획 공식 승인(채용·유지·훈련 3대 축, 이원 경력 트랙). 공중작전센터(AOC WS) AI 도입 추진(Kessel Run 주관). 우주군, 발사 100배 대비 Objective Force 2040 추진(2036년 연 3,000회 목표). NRO, AI 설명가능성을 핵심 과제로 지정 — GPU 집적 환경에서 검증 인프라 운용."
+      }
     ],
     articles: [
       {
