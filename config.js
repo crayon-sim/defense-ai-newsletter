@@ -9,6 +9,7 @@
 window.NEWSLETTER_CONFIG = {
   // 로드할 뉴스레터 파일 목록 (최신 순으로 정렬)
   files: [
+    "data/newsletter-65.js",
     "data/newsletter-64.js",
     "data/newsletter-63.js",
     "data/newsletter-62.js",
