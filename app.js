@@ -54,8 +54,11 @@ function init() {
   });
   document.getElementById("modalClose").addEventListener("click", closeModal);
   document.addEventListener("keydown", e => {
-    if (e.key === "Escape") closeModal();
+    if (e.key !== "Escape") return;
+    if (isKoGuideOpen()) closeKoGuide();
+    else closeModal();
   });
+  initKoGuide();
 }
 
 // ============ 데이터 처리 ============
@@ -368,11 +371,14 @@ function renderArticles(articles) {
     });
   });
 
-  // 원문 보기 버튼 (버블링 방지)
+  // 원문·국문 보기 버튼 (버블링 방지)
   grid.querySelectorAll(".article-link-btn:not(.disabled)").forEach(btn => {
     btn.addEventListener("click", e => {
       e.stopPropagation();
     });
+  });
+  grid.querySelectorAll(".article-link-btn--ko").forEach(btn => {
+    btn.addEventListener("click", e => handleKoClick(e, btn.getAttribute("href")));
   });
 }
 
@@ -387,7 +393,10 @@ function renderArticleCard(article) {
   const kwTags = kws.map(kw => `<span class="kw-tag">${escapeHtml(kw)}</span>`).join("");
 
   const linkBtn = article.url
-    ? `<a href="${escapeHtml(article.url)}" target="_blank" rel="noopener" class="article-link-btn" title="원문 열기">원문 보기 ↗</a>`
+    ? `<div class="article-link-group">
+        <a href="${escapeHtml(article.url)}" target="_blank" rel="noopener" class="article-link-btn" title="원문 열기">원문 보기 ↗</a>
+        <a href="${escapeHtml(article.url)}" target="_blank" rel="noopener" class="article-link-btn article-link-btn--ko" title="원문을 열어 브라우저 번역으로 한국어로 보기">국문 보기</a>
+      </div>`
     : `<span class="article-link-btn disabled">URL 미등록</span>`;
 
   const dateStr = article.date ? formatDate(article.date) : article.newsletter_period;
@@ -437,6 +446,7 @@ function openModal(article) {
 
   // URL
   const urlSection = document.getElementById("modalUrlSection");
+  const modalKoBtn = document.getElementById("modalKoBtn");
   if (article.url) {
     urlSection.innerHTML = `
       <span class="modal-url-label">출처:</span>
@@ -444,9 +454,14 @@ function openModal(article) {
     `;
     document.getElementById("modalOpenBtn").href = article.url;
     document.getElementById("modalOpenBtn").style.display = "inline-flex";
+    if (modalKoBtn) {
+      modalKoBtn.href = article.url;
+      modalKoBtn.style.display = "inline-flex";
+    }
   } else {
     urlSection.innerHTML = `<span class="modal-url-label">출처:</span><span class="modal-url-empty">URL이 등록되지 않았습니다</span>`;
     document.getElementById("modalOpenBtn").style.display = "none";
+    if (modalKoBtn) modalKoBtn.style.display = "none";
   }
 
   // 날짜
@@ -470,6 +485,95 @@ function filterByKeyword(kw) {
     t.classList.toggle("active", t.textContent === kw);
   });
   applyFiltersAndSearch();
+}
+
+// ============ 국문 보기 (브라우저 번역 안내) ============
+// 기사 전문은 각 언론사 저작물이라 사이트에 번역본을 두지 않고,
+// 원문을 새 탭에서 열어 브라우저 내장 번역으로 보도록 안내한다.
+const KO_GUIDE_KEY = "koGuideDismissed";
+const KO_GUIDE_BROWSERS = [
+  { id: "chrome", name: "Chrome", desktop: "페이지에서 마우스 오른쪽 버튼 → <b>한국어로 번역</b> (주소창의 번역 아이콘도 가능)", mobile: "오른쪽 위 메뉴(⋮) → <b>번역</b>" },
+  { id: "edge", name: "Edge", desktop: "주소창의 번역 아이콘, 또는 마우스 오른쪽 버튼 → <b>한국어로 번역</b>", mobile: "메뉴(…) → <b>번역</b>" },
+  { id: "whale", name: "웨일", desktop: "주소창 오른쪽의 <b>번역(파파고) 아이콘</b>", mobile: "메뉴 → <b>번역</b>" },
+  { id: "safari", name: "Safari", desktop: "주소창의 번역 아이콘, 또는 메뉴 <b>보기 → 번역 → 한국어로 번역</b>", mobile: "주소창의 <b>가가(aA)</b> 버튼 → <b>한국어로 번역</b>" },
+  { id: "firefox", name: "Firefox", desktop: "메뉴(☰) → <b>페이지 번역</b>", mobile: "메뉴 → <b>번역</b>" },
+];
+let koGuideReturnFocus = null;
+
+function detectBrowser() {
+  const ua = navigator.userAgent;
+  if (/Whale\//.test(ua)) return "whale";
+  if (/Edg(A|iOS)?\//.test(ua)) return "edge";
+  if (/Firefox\/|FxiOS\//.test(ua)) return "firefox";
+  if (/Chrome\/|CriOS\//.test(ua)) return "chrome";
+  if (/Safari\//.test(ua)) return "safari";
+  return "other";
+}
+
+function isKoGuideDismissed() {
+  try { return localStorage.getItem(KO_GUIDE_KEY) === "1"; } catch { return false; }
+}
+
+function isKoGuideOpen() {
+  const overlay = document.getElementById("koGuideOverlay");
+  return !!overlay && !overlay.hidden;
+}
+
+function handleKoClick(e, url) {
+  // 안내를 끈 사용자는 링크 기본 동작(새 탭 열기)을 그대로 따른다
+  if (isKoGuideDismissed() || !document.getElementById("koGuideOverlay")) return;
+  e.preventDefault();
+  openKoGuide(url);
+}
+
+function initKoGuide() {
+  const overlay = document.getElementById("koGuideOverlay");
+  if (!overlay) return;
+
+  const isMobile = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+  const device = isMobile ? "mobile" : "desktop";
+  const current = KO_GUIDE_BROWSERS.find(b => b.id === detectBrowser());
+
+  document.getElementById("koGuideCurrent").innerHTML = current
+    ? `지금 사용 중인 <strong>${current.name}</strong>에서는<br>원문이 열리면 ${current[device]}`
+    : `원문이 열리면 브라우저 메뉴의 <b>번역</b> 기능을 이용하세요.`;
+  document.getElementById("koGuideOthers").innerHTML = KO_GUIDE_BROWSERS
+    .filter(b => b !== current)
+    .map(b => `<li><strong>${b.name}</strong>: ${b[device]}</li>`)
+    .join("");
+
+  document.getElementById("koGuideClose").addEventListener("click", closeKoGuide);
+  document.getElementById("koGuideCancel").addEventListener("click", closeKoGuide);
+  overlay.addEventListener("click", e => {
+    if (e.target === overlay) closeKoGuide();
+  });
+  document.getElementById("koGuideOpen").addEventListener("click", () => {
+    if (document.getElementById("koGuideRemember").checked) {
+      try { localStorage.setItem(KO_GUIDE_KEY, "1"); } catch { /* 저장 불가 환경은 매번 안내 */ }
+    }
+    // 링크의 새 탭 열기가 끝난 뒤 안내를 닫는다
+    setTimeout(closeKoGuide, 0);
+  });
+
+  const modalKoBtn = document.getElementById("modalKoBtn");
+  if (modalKoBtn) {
+    modalKoBtn.addEventListener("click", e => handleKoClick(e, modalKoBtn.getAttribute("href")));
+  }
+}
+
+function openKoGuide(url) {
+  koGuideReturnFocus = document.activeElement;
+  document.getElementById("koGuideOpen").href = url;
+  document.getElementById("koGuideOverlay").hidden = false;
+  document.body.style.overflow = "hidden";
+  document.getElementById("koGuideOpen").focus();
+}
+
+function closeKoGuide() {
+  document.getElementById("koGuideOverlay").hidden = true;
+  if (!state.activeModal) document.body.style.overflow = "";
+  if (koGuideReturnFocus && document.contains(koGuideReturnFocus)) koGuideReturnFocus.focus();
+  koGuideReturnFocus = null;
 }
 
 // ============ 유틸 ============
