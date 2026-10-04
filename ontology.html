@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>온톨로지 · 국방 AI(AI+IT) 뉴스레터 아카이브</title>
+  <meta name="description" content="국방 AI(AI+IT) 뉴스레터 아카이브의 기사에서 기관·기업·인물·사업·정책을 오브젝트로 뽑아 오브젝트·속성·링크와 액션·함수로 구조화한 온톨로지 지도" />
+  <link rel="stylesheet" href="ontology/ontology.css?v=20261005" />
+</head>
+<body>
+
+<!-- ============ 사이트 헤더 ============ -->
+<header class="site-header">
+  <div class="site-header-in">
+    <div>
+      <a class="site-brand" href="index.html">
+        <span class="site-icon" aria-hidden="true">🛡️</span>
+        <span class="site-title">국방 AI(AI+IT) 뉴스레터 아카이브</span>
+      </a>
+      <div class="site-sub">매주 국방 AI 및 정보기술 관련 기사 검색 데이터베이스 · Seungbae Sim (Crayon)</div>
+    </div>
+    <nav class="site-nav" aria-label="사이트 메뉴">
+      <a href="index.html">기사 아카이브</a>
+      <a href="ontology.html" aria-current="page">온톨로지</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <header class="top">
+    <div>
+      <p class="eyebrow" id="eyebrow">국방 AI(AI+IT) 뉴스레터 아카이브 · 온톨로지</p>
+      <h1>국방 AI 아카이브 온톨로지</h1>
+      <p class="lede" id="lede">뉴스레터에 실린 기사에서 기관·기업·인물·사업·정책 등을 오브젝트로 뽑아, 오브젝트·속성·링크로 이루어진 시맨틱 레이어와 액션·함수로 이루어진 키네틱 레이어로 구성했습니다.</p>
+    </div>
+    <dl class="stats" id="stats">
+      <div><dt>오브젝트 유형</dt><dd>—<small>&nbsp;</small></dd></div>
+      <div><dt>오브젝트</dt><dd>—<small>&nbsp;</small></dd></div>
+      <div><dt>링크 유형</dt><dd>—<small>&nbsp;</small></dd></div>
+      <div><dt>링크</dt><dd>—<small>&nbsp;</small></dd></div>
+    </dl>
+  </header>
+
+  <nav class="tabs" role="tablist" aria-label="온톨로지 보기">
+    <button class="tab" role="tab" id="tab-btn-graph" aria-controls="tab-graph" aria-selected="true">오브젝트 그래프<small>시맨틱</small></button>
+    <button class="tab" role="tab" id="tab-btn-schema" aria-controls="tab-schema" aria-selected="false" tabindex="-1">온톨로지 스키마<small>시맨틱</small></button>
+    <button class="tab" role="tab" id="tab-btn-kinetic" aria-controls="tab-kinetic" aria-selected="false" tabindex="-1">액션·함수<small>키네틱</small></button>
+    <button class="tab" role="tab" id="tab-btn-analysis" aria-controls="tab-analysis" aria-selected="false" tabindex="-1">분석·방법론<small>품질</small></button>
+  </nav>
+
+  <main>
+    <!-- 오브젝트 그래프 -->
+    <section class="tabpanel" id="tab-graph" role="tabpanel" aria-labelledby="tab-btn-graph">
+      <div class="explorer">
+        <aside class="rail" aria-label="오브젝트셋 필터">
+          <div class="rail-sec">
+            <label class="lbl" for="q">오브젝트 검색</label>
+            <div class="search">
+              <input id="q" type="search" placeholder="예: Anduril, 대드론, CDAO" autocomplete="off" aria-controls="q-results">
+              <ul id="q-results" class="q-results" hidden></ul>
+            </div>
+          </div>
+          <button type="button" class="rail-toggle btn" id="rail-toggle" aria-expanded="true" aria-controls="rail-more">필터·오브젝트셋 접기</button>
+          <div class="rail-more" id="rail-more">
+            <div class="rail-sec">
+              <p class="lbl">오브젝트셋</p>
+              <div class="sets" id="sets" role="radiogroup" aria-label="오브젝트셋"></div>
+            </div>
+            <div class="rail-sec">
+              <p class="lbl">오브젝트 유형</p>
+              <div class="type-filters" id="type-filters"></div>
+              <div class="mini-links"><button type="button" id="types-all">모두 선택</button><button type="button" id="types-none">모두 해제</button></div>
+            </div>
+            <div class="rail-sec">
+              <p class="lbl">기간</p>
+              <div class="seg" id="period-presets"></div>
+              <div class="range-row">
+                <label for="from">시작</label><select id="from"></select>
+                <label for="to">끝</label><select id="to"></select>
+              </div>
+            </div>
+            <div class="rail-sec">
+              <p class="lbl">링크 표시</p>
+              <label class="chk"><input type="checkbox" id="show-co" checked> 동시 언급 (파생 링크)</label>
+              <label class="chk"><input type="checkbox" id="show-schema" checked> 스키마 링크 (소속·운용·개발 등)</label>
+              <div class="slider"><label for="minw">최소 동시 언급 <output id="minw-out" for="minw">3</output>건</label><input type="range" id="minw" min="1" max="12" value="3"></div>
+              <div class="slider"><label for="k">노드당 연결 <output id="k-out" for="k">4</output>개</label><input type="range" id="k" min="1" max="12" value="4"></div>
+              <div class="slider"><label for="maxn">최대 노드 <output id="maxn-out" for="maxn">90</output>개</label><input type="range" id="maxn" min="20" max="300" step="10" value="90"></div>
+              <p class="rail-note">동시 언급 링크는 연관도(코사인)가 높은 순으로 노드당 상위 연결만 남깁니다.</p>
+            </div>
+          </div>
+        </aside>
+        <div class="stage">
+          <div class="stage-bar">
+            <span id="stage-summary">그래프 준비 중</span>
+            <div class="stage-actions"><button class="btn" type="button" id="btn-fit">화면 맞춤</button><button class="btn" type="button" id="btn-relayout">다시 배치</button></div>
+          </div>
+          <div class="graph-box">
+            <svg id="graph" role="group" aria-label="오브젝트 그래프. 노드를 선택하면 오브젝트 뷰가 열립니다."></svg>
+            <div class="graph-msg" id="boot-msg">아카이브 데이터를 읽고 온톨로지를 구성하는 중…</div>
+            <div class="graph-msg" id="graph-empty" hidden>조건에 맞는 오브젝트가 없습니다. 오브젝트 유형을 다시 선택하거나 기간을 넓혀 보세요.</div>
+          </div>
+          <div class="legend" id="legend"></div>
+        </div>
+        <aside class="ov" id="ov" aria-label="오브젝트 뷰" aria-live="polite"></aside>
+      </div>
+    </section>
+
+    <!-- 스키마 -->
+    <section class="tabpanel" id="tab-schema" role="tabpanel" aria-labelledby="tab-btn-schema" hidden>
+      <div class="schema-grid">
+        <div class="card">
+          <h2>시맨틱 레이어</h2>
+          <p class="card-sub">오브젝트 유형 12개와 링크 유형 14개입니다. 상자(오브젝트 유형), 선(링크 유형), 점선 영역(인터페이스)을 선택하면 오른쪽에 정의가 열립니다.</p>
+          <div class="scroll-x"><svg id="schema" viewBox="0 0 1010 660" role="group" aria-label="온톨로지 스키마 다이어그램"></svg></div>
+        </div>
+        <aside class="card" id="type-detail" aria-live="polite"></aside>
+      </div>
+      <div class="card" style="margin-top:16px">
+        <h2>개념 대응</h2>
+        <p class="card-sub">Foundry 온톨로지의 핵심 개념이 이 아카이브에서 무엇에 해당하는지 정리했습니다.</p>
+        <div class="scroll-x"><table class="concept" id="concept-table"></table></div>
+      </div>
+    </section>
+
+    <!-- 키네틱 -->
+    <section class="tabpanel" id="tab-kinetic" role="tabpanel" aria-labelledby="tab-btn-kinetic" hidden>
+      <div class="layer-intro">
+        <div>
+          <h2 class="sec-title">키네틱 레이어</h2>
+          <p>액션 유형은 오브젝트·속성·링크를 바꾸는 트랜잭션이고, 파라미터·규칙·제출 조건으로 정의됩니다. 함수는 온톨로지를 읽어 값을 계산하는 로직입니다. 아래 함수는 실제 아카이브 데이터로 바로 실행됩니다.</p>
+        </div>
+        <p class="sim-note">액션은 변경 미리보기만 보여 주며 데이터는 바뀌지 않습니다.</p>
+      </div>
+      <h3 class="kin-h">액션 유형<small>ACTION TYPES · 5</small></h3>
+      <div class="kin-grid" id="actions"></div>
+      <h3 class="kin-h">함수<small>FUNCTIONS · 5</small></h3>
+      <div class="kin-grid" id="funcs"></div>
+      <h3 class="kin-h">역할과 권한<small>ROLES · 4</small></h3>
+      <div class="card"><div class="scroll-x" id="roles"></div></div>
+    </section>
+
+    <!-- 분석 -->
+    <section class="tabpanel" id="tab-analysis" role="tabpanel" aria-labelledby="tab-btn-analysis" hidden>
+      <div class="an-grid">
+        <section class="card"><h2>유형별 오브젝트와 언급</h2><p class="card-sub">언급 링크는 기사 한 건이 오브젝트 하나를 언급할 때마다 1개씩 생깁니다.</p><div id="an-types"></div></section>
+        <section class="card"><h2>키워드 정규화</h2><p class="card-sub">기사마다 붙은 원시 키워드를 오브젝트 별칭 규칙으로 묶은 결과입니다.</p><div id="an-kw"></div></section>
+      </div>
+      <section class="card" style="margin-bottom:16px">
+        <h2>언급 히트맵</h2>
+        <p class="card-sub">언급이 가장 많은 오브젝트 20개의 호별 언급 기사 수입니다. 이름을 누르면 오브젝트 뷰가, 칸을 누르면 그 호가 열립니다.</p>
+        <div class="scroll-x" id="an-heat"></div>
+      </section>
+      <div class="an-grid">
+        <section class="card"><h2>출처 분류</h2><p class="card-sub" id="an-src-sub">기사 출처를 분류별로 정규화했습니다.</p><div id="an-src"></div></section>
+        <section class="card"><h2>방법론과 한계</h2><div class="prose" id="an-method"></div></section>
+      </div>
+    </section>
+  </main>
+</div>
+<footer class="foot wrap"><p id="foot"></p></footer>
+<div class="tip" id="tip" role="tooltip" hidden></div>
+
+<!-- ============ 데이터 & 스크립트 로드 ============ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="config.js"></script>
+<script src="ontology/entities.js?v=20261005"></script>
+<script>
+  // config.js의 뉴스레터 파일을 모두 읽은 뒤 온톨로지 앱을 실행한다 (index.html과 같은 방식)
+  (function () {
+    var files = (window.NEWSLETTER_CONFIG && window.NEWSLETTER_CONFIG.files) || [];
+    var left = files.length;
+    function start() {
+      var s = document.createElement("script");
+      s.src = "ontology/ontology.js?v=20261005";
+      document.body.appendChild(s);
+    }
+    if (!left) { start(); return; }
+    files.forEach(function (file) {
+      var s = document.createElement("script");
+      s.src = file;
+      s.onload = s.onerror = function () { if (--left === 0) start(); };
+      document.body.appendChild(s);
+    });
+  })();
+</script>
+
+</body>
+</html>
