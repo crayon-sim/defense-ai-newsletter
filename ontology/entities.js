@@ -113,6 +113,7 @@ const ENTITIES = [
   { id: 'nsf', t: 'org', n: '국립과학재단(NSF)', e: 'National Science Foundation', a: ['=NSF', 'National Science Foundation', '국립과학재단'], p: { cat: '연방 민간기관', country: 'us' } },
   { id: 'nara', t: 'org', n: '국가기록원(NARA)', e: 'NARA', a: ['=NARA', '국가기록원', '국가기록청'], p: { cat: '연방 민간기관', country: 'us' } },
   { id: 'gao', t: 'org', n: '회계감사원(GAO)', e: 'GAO', a: ['=GAO', '회계감사원'], p: { cat: '입법·감사', country: 'us' } },
+  { id: 'crs', t: 'org', n: '의회조사국(CRS)', e: 'Congressional Research Service', a: ['Congressional Research Service', '의회조사국'], p: { cat: '입법·감사', country: 'us', parent: 'congress' } },
   { id: 'congress', t: 'org', n: '미 의회', e: 'U.S. Congress', a: ['Congress', 'Senate', '=HASC', '=SASC', 'House Armed Services', 'Senate Armed Services', nf('의회'), nf('상원'), nf('하원')], p: { cat: '입법·감사', country: 'us' } },
   { id: 'nato', t: 'org', n: 'NATO', e: 'NATO', a: ['=NATO', '나토'], p: { cat: '국제기구·동맹' } },
   { id: 'eu', t: 'org', n: '유럽연합(EU)', e: 'European Union', a: ['=EU', '유럽연합', 'European Union'], p: { cat: '국제기구·동맹' } },
@@ -173,6 +174,9 @@ const ENTITIES = [
   { id: 'boeing', t: 'company', n: 'Boeing', e: 'Boeing', a: ['Boeing', '보잉'], p: { cat: '전통 방산', country: 'us' } },
   { id: 'rtx', t: 'company', n: 'RTX(Raytheon)', e: 'RTX', a: ['=RTX', 'Raytheon', '레이시온', 'Collins Aerospace', '콜린스 에어로스페이스'], p: { cat: '전통 방산', country: 'us' } },
   { id: 'gd', t: 'company', n: 'General Dynamics', e: 'General Dynamics', a: ['General Dynamics', '제너럴 다이내믹스', '=GDIT'], p: { cat: '전통 방산', country: 'us' } },
+  { id: 'bae', t: 'company', n: 'BAE Systems', e: 'BAE Systems', a: ['BAE Systems', '=BAE', 'BAE 시스템즈'], p: { cat: '전통 방산', country: 'uk' } },
+  { id: 'appliedintuition', t: 'company', n: 'Applied Intuition', e: 'Applied Intuition', a: ['Applied Intuition', '어플라이드 인튜이션'], p: { cat: '방산 테크', country: 'us' } },
+  { id: 'helsing', t: 'company', n: 'Helsing', e: 'Helsing', a: ['Helsing', '헬싱'], p: { cat: '방산 테크', country: 'de' } },
   { id: 'striveworks', t: 'company', n: 'Striveworks', e: 'Striveworks', a: ['Striveworks', '스트라이브웍스'], p: { cat: '방산 테크', country: 'us' } },
   { id: 'hii', t: 'company', n: 'HII(헌팅턴 잉걸스)', e: 'Huntington Ingalls Industries', a: ['=HII', 'Huntington Ingalls', '헌팅턴 잉걸스', 'Newport News', '뉴포트 뉴스'], p: { cat: '전통 방산', country: 'us' } },
   { id: 'l3harris', t: 'company', n: 'L3Harris', e: 'L3Harris', a: ['L3Harris', 'L3해리스'], p: { cat: '전통 방산', country: 'us' } },
@@ -225,6 +229,8 @@ const ENTITIES = [
   { id: 'mq9', t: 'program', n: 'MQ-9 Reaper', e: 'MQ-9 Reaper', a: [R('(?<![A-Za-z0-9])MQ-9'), '=Reaper', '리퍼'], p: { cat: '무인기 플랫폼', op: ['usaf'], ctr: ['ga'] } },
   { id: 'f35', t: 'program', n: 'F-35', e: 'F-35', a: [R('(?<![A-Za-z0-9])F-35')], p: { cat: '유인 전투기', op: ['usaf'], ctr: ['lockheed'] } },
   { id: 'f47', t: 'program', n: 'F-47', e: 'F-47', a: [R('(?<![A-Za-z0-9])F-47')], p: { cat: '6세대 전투기', op: ['usaf'], ctr: ['boeing'] } },
+  { id: 'mq28', t: 'program', n: 'MQ-28 Ghost Bat', e: 'MQ-28 Ghost Bat', a: [R('(?<![A-Za-z0-9])MQ-28'), 'Ghost Bat', '고스트배트', '고스트 배트'], p: { cat: '무인 전투기', ctr: ['boeing'] } },
+  { id: 'apkws', t: 'program', n: 'APKWS', e: 'Advanced Precision Kill Weapon System', a: ['=APKWS'], p: { cat: '대드론 유도킷', ctr: ['bae'] } },
   { id: 'f22', t: 'program', n: 'F-22', e: 'F-22 Raptor', a: [R('(?<![A-Za-z0-9])F-22(?![0-9])')], p: { cat: '유인 전투기', op: ['usaf'], ctr: ['lockheed'] } },
   { id: 'virginia', t: 'program', n: '버지니아급 잠수함', e: 'Virginia-class submarine', a: ['Virginia-class', 'Virginia class', '버지니아급'], p: { cat: '공격형 잠수함', op: ['navy'], ctr: ['gd', 'hii'] } },
   { id: 'ngc2', t: 'program', n: 'NGC2(차세대 지휘통제)', e: 'Next Generation C2', a: ['=NGC2', 'Next Generation Command and Control', '차세대 지휘통제', '차세대지휘통제'], p: { cat: '지휘통제 체계', op: ['army'], ctr: ['anduril', 'lockheed'] } },
@@ -232,6 +238,8 @@ const ENTITIES = [
   { id: 'jwcc', t: 'program', n: 'JWCC(합동전투클라우드)', e: 'Joint Warfighting Cloud Capability', a: ['=JWCC', 'Joint Warfighting Cloud', 'Joint Warfighter Cloud'], p: { cat: '클라우드 계약', op: ['disa'], ctr: ['amazon', 'microsoft', 'google', 'oracle'] } },
   { id: 'goldendome', t: 'program', n: 'Golden Dome', e: 'Golden Dome', a: ['Golden Dome', '골든 돔', '골든돔'], p: { cat: '미사일 방어', op: ['dod', 'ussf'] } },
   { id: 'replicator', t: 'program', n: 'Replicator', e: 'Replicator', a: ['Replicator', '리플리케이터'], p: { cat: '자율무기 대량배치', op: ['diu'] } },
+  { id: 'gatekeeper', t: 'program', n: '프로젝트 게이트키퍼', e: 'Project Gatekeeper', a: ['Project Gatekeeper', '게이트키퍼'], p: { cat: 'SW 보안 심사 플랫폼', op: ['army'] } },
+  { id: 'swapusv', t: 'program', n: 'SWAP-USV', e: 'SWAP-USV', a: ['SWAP-USV'], p: { cat: '무인수상정 경연', op: ['diu'] } },
   { id: 'agincourt', t: 'program', n: '아쟁쿠르 프로젝트', e: 'Project Agincourt', a: ['Agincourt', '아쟁쿠르'], p: { cat: '무인체계 획득 조직', op: ['dod'] } },
   { id: 'swarmforge', t: 'program', n: 'Swarm Forge', e: 'Swarm Forge', a: ['Swarm Forge', '스웜 포지'], p: { cat: '군집 드론 신속 전력화', op: ['cdao', 'usasoc'] } },
   { id: 'dawg', t: 'program', n: 'DAWG(국방자율전투그룹)', e: 'Defense Autonomous Warfare Group', a: ['=DAWG', 'Defense Autonomous Warfare Group', '국방자율전투그룹', '국방 자율전투그룹'], p: { cat: '자율무기 대량배치', op: ['dod'] } },
@@ -377,13 +385,13 @@ const SRC_NORM = {
 const SRC_CAT = {
   '국방 전문지': ['Defense One', 'Breaking Defense', 'Defense News', 'Air & Space Forces Magazine', 'DefenseScoop', 'The Defense Post', 'Military Times', 'C4ISRNET', 'Military AI', 'Army Times', 'Air Force Times', 'Army Technology', 'Defence Blog', 'The Aviationist', 'Flight Global', 'RealClearDefense', 'Small Wars Journal', 'SpaceNews'],
   '연방 IT·행정 전문지': ['MeriTalk', 'Nextgov/FCW', 'Federal News Network', 'Government Executive', 'Washington Technology', 'FedScoop', 'GovTech', 'CIO.com', 'ISACA'],
-  '정부·공식 발표': ['DVIDS', 'U.S. Department of War', 'U.S. Air Force', 'U.S. Army', 'GOV.UK', 'UK Parliament', 'NIST', 'DIU', 'GSA 뉴스레터'],
+  '정부·공식 발표': ['Congress.gov', 'DVIDS', 'U.S. Department of War', 'U.S. Air Force', 'U.S. Army', 'GOV.UK', 'UK Parliament', 'NIST', 'DIU', 'GSA 뉴스레터'],
   '싱크탱크·연구기관': ['CSIS', 'Council on Foreign Relations', 'NDU Press', 'IISS', 'Hudson Institute', 'SCSP', 'CMU SEI', 'CNAS', 'CEPA', 'HCSS', 'Finnish AI Region', 'Foreign Affairs'],
   '기업·보도자료': ['Anthropic', 'Palantir Blog', 'Lockheed Martin', 'GlobeNewswire', 'PR Newswire', 'Business Wire'],
   '블로그·뉴스레터': ['Steve Blank Blog', 'DIIE Substack', 'UnHerd'],
 };
 
-const DICT = { VERSION: '2026-10-17', ENTITIES, SRC_NORM, SRC_CAT };
+const DICT = { VERSION: '2026-10-24', ENTITIES, SRC_NORM, SRC_CAT };
 if (typeof module !== 'undefined' && module.exports) module.exports = DICT;
 else root.ONTOLOGY_DICT = DICT;
 })(typeof window !== 'undefined' ? window : globalThis);
