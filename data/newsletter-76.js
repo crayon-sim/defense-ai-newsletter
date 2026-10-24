@@ -1,0 +1,325 @@
+(function () {
+  window.NEWSLETTERS = window.NEWSLETTERS || [];
+  window.NEWSLETTERS.push({
+    id: 76,
+    title: "국방 AI(AI+IT) 뉴스레터 제76호",
+    period: "2026.10.18~24",
+    date: "2026-10-24",
+    key_theme: "국방부가 '프로젝트 아쟁쿠르' 기반의 현장 중심 '전쟁 수행 획득' 모델과 연 2만5천 기 대드론 유도킷 다년 계약으로 자율·대드론 전력화를 제도화하는 가운데, 전직 안보 고위 관료 17인이 Anthropic 공급망 위험 지정의 재심리를 촉구하고 CRS가 두 갈래 판결을 정리하며 논쟁이 이어졌고, DHS의 DeepSeek 제거 명령·GSA의 LLM 계약 안전장치·NSA의 OT 제로트러스트 지침 등 연방 차원의 AI 공급망·보안 통제가 일제히 강화",
+    insights: [
+      {
+        color: "#C62828",
+        title: "🤖 '전쟁 수행 획득'으로 바뀌는 자율무기 조달 — 아쟁쿠르·대드론 다년 계약",
+        body: "국방부는 기술 기업을 부대와 직접 연결해 훈련·전투 현장 성능에 따라 자율·로봇 체계 투자 규모를 정하는 '전쟁 수행 획득(warfighting acquisition)' 모델을 공개하고, 헤그세스 장관 주도의 '프로젝트 아쟁쿠르'로 획득 결정과 예산을 최전선 가까이 옮기며 2027년 10월까지 AUTOWARCOM 창설을 추진한다. BAE 시스템즈와는 최대 7년간 연 2만5천 기(FMS 수요 시 3만5천 기) APKWS 레이저 유도킷 프레임워크를 맺어 저비용 드론 요격 재고를 확보하되, 실제 조달에는 의회 승인과 예산이 필요하다. DIU는 대공 하드킬 무인수상정 확보를 위한 SWAP-USV 2단계(최대 4,000만 달러) 경연을 시작했다."
+      },
+      {
+        color: "#FF8F00",
+        title: "⚖️ Anthropic 공급망 위험 지정 논쟁 확산 — 전직 안보 관료 재심리 촉구, CRS 정리",
+        body: "애브릴 헤인스 전 DNI, 제이크 설리번 전 국가안보보좌관 등 전직 안보 고위 관료 17인은 국방부가 FASCSA상 사전 위험 평가를 건너뛰고 결정을 먼저 발표했다며 항소법원 판결의 전원합의체 재심리를 촉구하고, Claude Mythos 같은 사이버 역량 모델의 군 도입 차단이 오히려 안보를 해친다고 경고했다. 의회조사국(CRS)은 10 U.S.C. §3252 지정(협력업체 사용 금지)은 8월 연방법원에서 무효, 41 U.S.C. §4713 지정(국방부 내부 시스템 배제)은 9월 D.C. 항소법원에서 합법으로 갈린 상황을 정리했다. 그 사이 국방부는 xAI·Google 등 8개 기업과 기밀망 AI 계약을 추진했다."
+      },
+      {
+        color: "#1565C0",
+        title: "🛰️ 육군·해군 전장 AI 실전화 — NGC2 통합 진통, 게이트키퍼, 함정 센서 융합",
+        body: "25사단은 '라이트닝 서지 5' 훈련에서 앤두릴 Lattice 기반 NGC2를 구형 통신·TSM 무전기와 통합하며 데이터 전송·확장성 문제를 겪어, 신형 장비를 다 받지 못한 대다수 부대의 현실을 드러냈다. 육군은 공급업체가 자체 AI 모델로 코드 취약점 스캔과 ATO 문서화를 수행하는 '프로젝트 게이트키퍼'를 출범했고, 사이버대대는 소형 드론에 RF 효과 플랫폼을 실어 전술 사이버·전자전 효과를 실험 중이다. 해군은 Applied Intuition과 2,500만 달러 계약으로 알레이버크급 5척에 AI 센서 융합(IPS)을 배치하며, DLA·CDAO는 군수 데이터 일원화와 예측 AI로 부품 조달 지연을 줄이고 있다."
+      },
+      {
+        color: "#6A1B9A",
+        title: "🛡️ 연방 AI 공급망·보안 통제 강화 — DeepSeek 제거, GSA LLM 계약, NSA OT 지침",
+        body: "DHS는 연방 민간기관에 DeepSeek 및 계열사 AI 제품을 60일 안에 제거하고 조달을 금지하라고 명령했고, 자체 AI 지침을 고쳐 CAIO의 예외 승인권과 국산 AI 우선 조달을 명시했다. GSA의 새 LLM 계약 규격은 미국 내 개발·운영, 외국 정부 개입 공시, 에이전트 단계 감사 추적, 정부 데이터 학습 금지, 72시간 내 사고 보고를 의무화했다. NSA는 레거시 운영기술(OT) 환경용 제로트러스트 지침을 내놓았고, 하원은 NIST에 AI 사이버 방어·증류 공격 방지 표준을 맡기는 초당적 법안을 발의했다."
+      },
+      {
+        color: "#2E7D32",
+        title: "🌍 러시아의 탈(脫)하이브리드전과 유럽 CCA 판도 — 독일 MQ-28 도입 철회",
+        body: "Defense One 기고는 러시아가 은폐를 포기하고 더 대담한 물리적 공작으로 넘어갔는데도 워싱턴은 명확한 대응 기준을 세우지 못하고 있다며 레드라인 수립을 촉구했다. 독일 국방부는 보잉 MQ-28 고스트배트 직구매 계획을 철회해 2029년 유럽 최초 CCA 전력화 목표에 차질이 생겼고, 에어버스-크라토스·헬싱·제너럴 아토믹스 등의 경쟁 입찰로 선회할 전망이다. 구글은 조달·FOIA 등 다단계 행정을 자동화하는 정부용 에이전트 플랫폼 'Gemini for Government Services'를 내놓았고 HHS가 초기 사용자로 참여했다."
+      }
+    ],
+    articles: [
+      {
+        id: "76-1",
+        newsletter_id: 76,
+        topic_en: "Pentagon - Autonomous Warfare Acquisition",
+        topic_kr: "미 국방부 - 자율전 획득 모델",
+        title: "Pentagon Details New Acquisition Model for Autonomous Warfare",
+        title_kr: "미 국방부, 자율무기 신규 획득 모델과 '프로젝트 아쟁쿠르' 세부 공개",
+        source: "MeriTalk",
+        url: "https://www.meritalk.com/articles/pentagon-details-new-acquisition-model-for-autonomous-warfare/",
+        keywords: ["Project Agincourt", "전쟁 수행 획득", "AUTOWARCOM", "전투사령관 권한", "자율무기 획득"],
+        summary: "미 국방부가 자율무기 도입 가속을 위해 기술 기업을 군 부대와 직접 연결하고, 군사 연습과 전투 현장 성능에 따라 자율·로봇 체계의 투자 규모를 정하는 '전쟁 수행 획득(warfighting acquisition)' 체계로 전환. 피트 헤그세스 장관이 주도하는 '프로젝트 아쟁쿠르(Project Agincourt)'는 획득 결정과 예산을 최전선 단위로 가깝게 옮기며, 2027년 10월 1일까지 4성급 자율전투사령부(AUTOWARCOM) 창설을 목표로 한다. 태평양·유럽 등 작전 지역 특성에 맞게 전투 지휘관이 필요한 자율무기 체계를 유연하게 고를 수 있도록 권한을 주고, 불필요한 관료주의와 행정 복잡성을 걷어낸다는 방침이다.",
+        date: "2026-10-22"
+      },
+      {
+        id: "76-2",
+        newsletter_id: 76,
+        topic_en: "Pentagon & Anthropic - Supply Chain Risk",
+        topic_kr: "미 국방부와 Anthropic - 공급망 위험 지정",
+        title: "Former National Security Officials Warn Anthropic Ruling Threatens Federal AI Procurement",
+        title_kr: "전직 안보 고위 관료 17인, 국방부의 Anthropic '공급망 위험' 지정 판결 재심리 촉구",
+        source: "MeriTalk",
+        url: "https://www.meritalk.com/articles/former-national-security-officials-warn-anthropic-ruling-threatens-federal-ai-procurement/",
+        keywords: ["Anthropic", "공급망 위험 지정", "FASCSA", "전원합의체 재심리", "Claude Mythos"],
+        summary: "애브릴 헤인스 전 국가정보장(DNI), 제이크 설리번 전 국가안보보좌관 등 전직 국가안보 고위 관료 17인이 국방부의 Anthropic 공급망 위험 지정을 지지한 연방 항소법원 판결을 전원합의체에서 재심리해 달라고 촉구. 이들은 국방부가 연방조달공급망안보법(FASCSA)에 따른 사전 위험 평가·검토 절차를 건너뛰고 결정을 먼저 발표한 뒤 사후 정당화했다고 비판하며, 기업의 안전 원칙이나 발언을 이유로 행정부가 자의적 제재를 가하는 선례가 될 수 있다고 경고했다. Anthropic이 대규모 감시와 완전 자율무기 사용을 거부하며 협상이 결렬된 데서 비롯된 이번 조치로 Claude Mythos 등 사이버 안보 역량을 갖춘 첨단 모델의 군 도입이 막혀, 대중국 기술 경쟁력과 국방 안보가 오히려 약해질 수 있다고 강조했다.",
+        date: "2026-10-23"
+      },
+      {
+        id: "76-3",
+        newsletter_id: 76,
+        topic_en: "Pentagon & Anthropic - Supply Chain Risk",
+        topic_kr: "미 국방부와 Anthropic - 공급망 위험 지정",
+        title: "Federal Government and Anthropic: Considerations for AI Innovation and Competition",
+        title_kr: "미 의회조사국(CRS), 국방부-Anthropic 갈등 경과와 공급망 위험 지정 쟁점 정리",
+        source: "Congress.gov",
+        url: "https://www.congress.gov/crs-product/IF13217",
+        keywords: ["CRS", "Anthropic", "10 U.S.C. 3252", "41 U.S.C. 4713", "기밀망 AI"],
+        summary: "미 의회조사국(CRS)이 국방부와 Anthropic 간 갈등 경과와 공급망 위험 지정 쟁점을 정리한 보고서. 2026년 2월 Anthropic이 국방부 계약 협상에서 완전 자율무기 사용 제한과 미국인 대상 대량 국내 감시 제한이라는 두 가지 예외 조항을 요구하며 갈등이 시작됐고, 2월 27일 트럼프 대통령은 연방기관의 Anthropic 기술 사용 중단을 지시했으며 헤그세스 국방장관은 Anthropic을 국가안보 공급망 위험으로 지정했다. 소송은 두 갈래로 갈려, 국방 협력업체의 Claude 사용을 금지한 10 U.S.C. §3252 지정은 8월 연방법원에서 수정헌법 제1·5조와 행정절차법(APA) 위반으로 영구 집행정지됐지만, 국방부 내부 시스템에서 제품을 배제하는 41 U.S.C. §4713 지정은 9월 D.C. 연방항소법원이 합법으로 판단했다. 그 사이 국방부는 xAI·Google 등 8개 기업과 기밀망 AI 계약을 추진했고, 상무부는 6월 고성능 취약점 탐지 모델(Mythos 5·Fable 5)에 수출통제를 걸었다가 해제했다. 민간 AI 기업과의 협약에서 자율무기·감시 등 작전 제한 조건에 대한 법적 가이드라인과 특정 벤더 배제 시 전환 비용·공급망 다변화 대책이 필요하다는 시사점이다.",
+        date: "2026-10-14"
+      },
+      {
+        id: "76-4",
+        newsletter_id: 76,
+        topic_en: "DoD / DLA - Supply Chain Data Readiness",
+        topic_kr: "미 국방부·국방병참지원국 - 공급망 데이터 준비태세",
+        title: "DOD Officials Detail Push to Make Data Ready for Mission AI",
+        title_kr: "미 국방부, AI 기반 군수망 혁신을 위한 전군 데이터 통합 추진",
+        source: "MeriTalk",
+        url: "https://www.meritalk.com/articles/dod-officials-detail-push-to-make-data-ready-for-mission-ai/",
+        keywords: ["DLA", "CDAO", "데이터 준비태세", "예측 분석", "GenAI.mil"],
+        summary: "미 국방부 국방병참지원국(DLA)과 최고디지털·AI책임자실(CDAO)이 군수 공급망 판단과 작전 의사결정 속도를 높이기 위해 전군 데이터 정비와 AI 적용을 본격화. 연간 130억 건 이상의 거래를 처리하는 DLA는 분산된 시스템을 단일 공신력 있는 출처로 통합하고, 최대 2~5년이 걸리는 무기 부품 조달 지연을 막기 위해 예측 분석 AI를 도입하고 있다. CDAO는 800개 데이터 소스와 300만 사용자를 아우르는 엔터프라이즈 환경을 구축하면서 상부 지침에 따라 전군 조직의 데이터 공유·개방을 기본 원칙으로 정했으며, 현장 인력의 부담을 줄이기 위해 기존 데이터 저장소에 AI 모델을 직접 연결해 인사이트를 뽑는 GenAI.mil 등의 플랫폼을 적극 활용하고 있다.",
+        date: "2026-10-21"
+      },
+      {
+        id: "76-5",
+        newsletter_id: 76,
+        topic_en: "Pentagon - Counter-Drone Kits",
+        topic_kr: "미 국방부 - 대드론 유도킷",
+        title: "Pentagon Announces Multiyear Framework for 25,000 Counter-Drone Kits Annually",
+        title_kr: "미 국방부, BAE 시스템즈와 연 2만5천 기 대드론 유도킷(APKWS) 다년 프레임워크 체결",
+        source: "MeriTalk",
+        url: "https://www.meritalk.com/articles/pentagon-announces-multiyear-framework-for-25000-counter-drone-kits-annually/",
+        keywords: ["APKWS", "BAE Systems", "대드론", "다년 조달", "FMS"],
+        summary: "미 국방부가 BAE 시스템즈와 최대 7년간 연간 2만5,000기의 APKWS 레이저 유도키트를 생산하는 프레임워크 계약을 체결했으며, 대외군사판매(FMS) 수요에 따라 연간 3만5,000기까지 생산을 늘릴 수 있다. 장기 수요 신호를 줘 생산 라인을 안정적으로 유지하고 비용 대비 효율적인 드론 등 공중 위협 요격 재고를 확보하려는 것이다. 다만 프레임워크 자체에는 실행 예산이 없어 실제 다년 조달을 진행하려면 의회 승인과 예산 배정이 필요하다.",
+        date: "2026-10-20"
+      },
+      {
+        id: "76-6",
+        newsletter_id: 76,
+        topic_en: "U.S. Army - EW Testing",
+        topic_kr: "미 육군 - 전술 사이버·전자전 시험",
+        title: "Army unit experimenting with small drones for 'tailored cyber effects'",
+        title_kr: "미 육군 사이버부대, 소형 드론 기반 전술 사이버·전자전 역량 실험",
+        source: "Breaking Defense",
+        url: "https://breakingdefense.com/2026/10/army-unit-experimenting-with-small-drones-for-tailored-cyber-effects/",
+        keywords: ["사이버 전자전", "소형 드론", "RDEP", "11 사이버대대", "비운동성 효과"],
+        summary: "미 육군이 전술 제대에 비운동성 타격과 재밍 효과를 제공하기 위해 소형 드론에 무선주파수 효과 전달 플랫폼(RDEP)과 상용·정부 개발 페이로드를 장착하는 시험을 진행. 제11 사이버전대대와 창설 예정인 제12 사이버대대의 표준 장비와 편제를 확정하기 위해 국경 작전 등 실전 배치 피드백을 모으고 시제품을 평가하고 있다. 지휘관이 전장 상황에 맞춰 사이버·무선주파수(RF)·전자전(EW) 능력을 유연하게 조합하고 지상 부대와 긴밀히 협력할 수 있도록 다양한 폼팩터의 장비를 검토 중이다.",
+        date: "2026-10-22"
+      },
+      {
+        id: "76-7",
+        newsletter_id: 76,
+        topic_en: "U.S. Army - Project Gatekeeper",
+        topic_kr: "미 육군 - 프로젝트 게이트키퍼",
+        title: "Army to Launch AI-Powered Project Gatekeeper This Week",
+        title_kr: "미 육군, AI 기반 상용 소프트웨어 보안 심사 플랫폼 '프로젝트 게이트키퍼' 출범",
+        source: "MeriTalk",
+        url: "https://www.meritalk.com/articles/army-to-launch-ai-powered-project-gatekeeper-this-week/",
+        keywords: ["Project Gatekeeper", "ATO", "DevSecOps", "상용 소프트웨어", "Login.gov"],
+        summary: "미 육군이 상용 소프트웨어의 국방부 네트워크 도입 기간과 기술 업무량을 크게 줄이기 위해 AI 기반 플랫폼 '프로젝트 게이트키퍼(Project Gatekeeper)'를 출범. 공급업체가 Login.gov로 인증하고 자체 상용 AI 모델 API 키를 연동하면, 육군이 제공하는 자동화된 DevSecOps 파이프라인으로 코드 취약점을 스캔하고 운영인가(ATO) 문서화를 수행한다. AI가 기술 평가를 자동화하더라도 최종 소프트웨어 승인과 위험 수용 권한은 전적으로 정부 승인권자에게 남으며, 참여를 원하는 벤더는 사전에 임무 수요를 가진 육군 내 스폰서를 확보해야 한다.",
+        date: "2026-10-19"
+      },
+      {
+        id: "76-8",
+        newsletter_id: 76,
+        topic_en: "U.S. Army / Anduril - NGC2 Integration",
+        topic_kr: "미 육군·앤두릴 - NGC2 통신 통합",
+        title: "Army feels 'growing pains' as it integrates Anduril NGC2 tech with older comms",
+        title_kr: "미 육군, 앤두릴 NGC2와 구형 통신체계 통합 과정에서 '성장통'",
+        source: "Breaking Defense",
+        url: "https://breakingdefense.com/2026/10/army-feels-growing-pains-as-it-integrates-anduril-ngc2-tech-with-older-comms/",
+        keywords: ["NGC2", "Anduril", "Lattice", "25사단", "레거시 통신"],
+        summary: "미 육군 25사단이 '라이트닝 서지 5(Lightning Surge 5)' 훈련에서 앤두릴의 Lattice 플랫폼을 구형 통신 장비, 서로 다른 파형의 TSM 무전기와 통합하는 과정에서 데이터 전송과 확장성에 상당한 기술적 어려움을 확인. 4사단이 주둔한 콜로라도의 개방 지형·스트라이커 장갑차 환경과 달리, 하와이의 밀림 지형과 경량 보병분대차량(ISV) 환경에서 요구되는 전술적·물리적 플랫폼 제약이 통합 난도를 높였다. 신형 장비를 전면 지급받지 못하고 구형 장비를 유지해야 하는 대다수 부대의 현실을 반영한 시험으로, 향후 제1군단(I Corps) 예하 부대 차세대 지휘통제(NGC2) 전력화에서 표준 구성과 통합 절차를 개선하는 선례가 될 전망이다.",
+        date: "2026-10-19"
+      },
+      {
+        id: "76-9",
+        newsletter_id: 76,
+        topic_en: "U.S. Navy - AI Sensor Fusion",
+        topic_kr: "미 해군 - AI 센서 융합",
+        title: "Navy awards Applied Intuition $25M to deploy AI sensor fusion at sea",
+        title_kr: "미 해군, Applied Intuition과 2,500만 달러 AI 센서 융합 계약 — 구축함 5척 우선 배치",
+        source: "Breaking Defense",
+        url: "https://breakingdefense.com/2026/10/navy-awards-applied-intuition-25m-to-deploy-ai-sensor-fusion-at-sea/",
+        keywords: ["Applied Intuition", "센서 융합", "알레이버크급", "무선 원격 업데이트", "미 해군"],
+        summary: "미 해군이 Applied Intuition과 2,500만 달러 규모 계약을 맺고 알레이버크급 구축함 5척을 시작으로 함정 내 AI 센서 융합 시스템(IPS) 실전 배치에 착수. 파편화된 카메라·적외선 센서 데이터를 실시간 통합해 단일 전술 화면으로 제공하고 충돌 위험 경로에 접근하면 자동으로 경고한다. 수집된 센서 데이터는 보안 조건에 맞춰 육상으로 보내 AI 모델 고도화에 쓰이며, 항해 중 무선 원격 업데이트를 지원해 신속한 성능 개량이 가능하다.",
+        date: "2026-10-22"
+      },
+      {
+        id: "76-10",
+        newsletter_id: 76,
+        topic_en: "DIU - SWAP-USV Sprint 2",
+        topic_kr: "미 국방혁신단(DIU) - SWAP-USV 2단계 경연",
+        title: "DIU unveils next phase in unmanned vessel competition",
+        title_kr: "미 국방혁신단(DIU), 무인수상정 경연 'SWAP-USV' 2단계 착수",
+        source: "Breaking Defense",
+        url: "https://breakingdefense.com/2026/10/diu-unveils-next-phase-in-unmanned-vessel-competition/",
+        keywords: ["DIU", "SWAP-USV", "무인수상정", "대공 하드킬", "신속 전력화"],
+        summary: "미 국방혁신단(DIU)이 120일 안에 미 해군이 실전 배치할 수 있는 성숙한 무인수상정(USV)을 확보하기 위해 최대 4,000만 달러 규모의 'SWAP-USV' 2단계(Sprint 2) 경연을 시작. 이번 단계에서는 해상에서 적 공중 위협을 탐지·추적·요격하는 성숙한 대공 하드킬 요격 체계와 혼잡 환경 대응 센서 스위트를 탑재하고, 최소 작전반경 200해리와 지속 속력 10노트 이상을 충족하는 무인수상정을 요구한다. 2단계 제출 마감은 11월 30일, 수중 시험은 2027년 초로 예정돼 있으며 3개 스프린트로 이뤄진 12개월 경쟁에 시제품과 후속 양산 계약 예산 총 2억 달러가 배정돼 있다.",
+        date: "2026-10-19"
+      },
+      {
+        id: "76-11",
+        newsletter_id: 76,
+        topic_en: "NSA - Zero Trust OT Guidance",
+        topic_kr: "미 국가안보국(NSA) - 운영기술 제로트러스트 지침",
+        title: "NSA Issues Zero Trust Guidance for Defense Operational Technology",
+        title_kr: "미 국가안보국(NSA), 국방·기반시설 운영기술(OT) 제로트러스트 보안 지침 발표",
+        source: "MeriTalk",
+        url: "https://www.meritalk.com/articles/nsa-issues-zero-trust-guidance-for-defense-operational-technology/",
+        keywords: ["NSA", "제로트러스트", "운영기술(OT)", "방위산업기반", "레거시 장비"],
+        summary: "미 국가안보국(NSA)이 전통적 기업 IT 보안을 적용하기 어려운 국방·기반시설의 구형 운영기술(OT) 환경을 위해, 권한 남용·측면 이동·지속적 침입 위협을 차단하는 제로트러스트(ZT) 원칙 지침을 공개. 국가안보시스템(NSS), 전쟁부(국방부), 방위산업기반(DIB) 네트워크 운영자와 에너지·수자원 등 주요 기반시설 관리자가 대상이다. 네트워크 침해 가능성을 전제하고 사용자·기기·워크플로·통신을 지속적으로 검증해 국방부 핵심 인프라의 방위종심(Defense-in-Depth) 보안 역량을 강화하도록 했다.",
+        date: "2026-10-16"
+      },
+      {
+        id: "76-12",
+        newsletter_id: 76,
+        topic_en: "DHS - AI Directive Waiver",
+        topic_kr: "미 국토안보부(DHS) - AI 지침 예외 승인",
+        title: "Policy Change Lets DHS CAIO Waive AI Limits",
+        title_kr: "미 국토안보부, AI 지침 개정으로 최고AI책임자(CAIO) 예외 승인권 신설",
+        source: "MeriTalk",
+        url: "https://www.meritalk.com/articles/policy-change-lets-dhs-caio-waive-ai-limits/",
+        keywords: ["DHS", "CAIO", "AI 지침 개정", "고위험 AI", "국산 AI 우선"],
+        summary: "미 국토안보부(DHS)가 AI 정책(Directive 139-08)을 개정해 최고AI책임자(CAIO)가 금지된 AI 사용을 포함한 규정 요건을 예외적으로 승인하거나 철회할 수 있는 권한을 확보. 인권·안전·필수 인프라 등에 중대한 영향을 주는 '고위험 AI'를 중심으로 인적 감독 기준을 명확히 하고 자산 공유와 행정 부담 경감을 강조했다. 맞춤형 AI 모델과 코드를 부서 내·정부 내에서 공유하고 가능하면 오픈소스화하며, 미국 내에서 개발·생산된 AI 기술을 최대한 우선 조달하도록 지침을 바꿨다.",
+        date: "2026-10-22"
+      },
+      {
+        id: "76-13",
+        newsletter_id: 76,
+        topic_en: "DHS - DeepSeek Ban",
+        topic_kr: "미 국토안보부(DHS) - 딥시크 사용 금지",
+        title: "DHS Orders Civilian Agencies to Remove DeepSeek AI Products",
+        title_kr: "미 국토안보부, 연방 민간기관에 DeepSeek AI 제품 제거·조달 금지 명령",
+        source: "MeriTalk",
+        url: "https://www.meritalk.com/articles/dhs-orders-civilian-agencies-to-remove-deepseek-ai-products/",
+        keywords: ["DeepSeek", "DHS", "CISA", "공급망 보안", "60일 제거"],
+        summary: "미 국토안보부(DHS)가 연방 민간 행정기관에 중국 DeepSeek과 계열사의 AI 제품·서비스를 즉시 제거하고 향후 조달을 전면 금지하라고 명령(국방부·정보공동체·국가안보 시스템은 적용 제외). 사용자 데이터와 프롬프트·응답이 중국 본토 서버로 전송되는 점, 포렌식 분석에서 식별된 보안·프라이버시 취약점, 부정확·편향·유해 콘텐츠 생성 가능성이 근거로 제시됐다. 연방기관은 60일 안에 해당 기술을 제거해야 하며, 이행 과정에서 네트워크 트래픽 모니터링·로깅 강화·데이터 유출 방지(DLP) 통제 등 위험 완화 조치를 시행하고 CISA가 이행을 감독한다.",
+        date: "2026-10-19"
+      },
+      {
+        id: "76-14",
+        newsletter_id: 76,
+        topic_en: "CISA & OMB - ECH Encryption Standard",
+        topic_kr: "미 CISA·OMB - ECH 암호화 표준 미적용",
+        title: "Hundreds of federal websites lack key defense against spies, senator says",
+        title_kr: "와이든 상원의원 경고 — 연방 웹사이트 수백 곳에 감시 방지 암호화(ECH) 미적용",
+        source: "Defense One",
+        url: "https://www.defenseone.com/threats/2026/10/senator-warns-hundreds-federal-web-addresses-may-lack-key-spying-protection/416671/",
+        keywords: ["ECH", "Ron Wyden", "CISA", "OMB", "연방 웹사이트 보안"],
+        summary: "론 와이든 상원의원이 CISA와 OMB에 연방정부 웹사이트의 보안 취약점 시정을 촉구. 연방기관 웹사이트 수백 곳이 브라우저 접속 시 방문하는 도메인 이름을 숨겨 주는 ECH(Encrypted Client Hello) 표준을 적용하지 않아, 해외 적대국이 민감한 사이트 방문 이력을 추적할 수 있다는 것이다. FBI 제보 포털(tips.fbi.gov)과 채용 포털, 정보공동체 채용 사이트, DHS 감찰관 핫라인, 법무부 민권 신고 포털, 보훈부(VA) 위기 지원 라인과 NIH 보건 정보 사이트 등이 위험 대상으로 꼽혔으며, 클라우드·네트워크 제공업체와 일부 기관의 미적용(Cloudflare 사용 중 미활성화, AWS 미지원 등)이 원인이다. CISA와 OMB에 연방 클라우드·네트워크 계약 조건에 ECH 지원을 의무화하고, 대상 기관은 설정 변경으로 11월 20일까지 보안 공백을 해소하라고 요구했다.",
+        date: "2026-10-19"
+      },
+      {
+        id: "76-15",
+        newsletter_id: 76,
+        topic_en: "GSA - AI Contract Safeguards",
+        topic_kr: "미 GSA - 대형언어모델(LLM) 계약 보안·통제",
+        title: "GSA's New AI Contract Safeguards Take Effect",
+        title_kr: "미 GSA, 대형언어모델(LLM) 정부 계약 신규 보안·통제 규정 발효",
+        source: "MeriTalk",
+        url: "https://www.meritalk.com/articles/gsas-new-ai-contract-safeguards-take-effect/",
+        keywords: ["GSA", "GSAR class deviation", "LLM 계약", "감사 추적", "FedRAMP"],
+        summary: "미 연방조달청(GSA)이 정부 데이터를 처리하는 대형언어모델(LLM) 계약에 대한 새 획득 규격(GSAR class deviation)을 공식 발효. 미국 내에서 개발·운영되는 AI 시스템 사용을 원칙으로 하위 계약자 실사를 의무화하고, 외국 정부의 개입이나 모델 수정 요구 여부를 공시하도록 했다. 정부가 AI 운영에 개입·감독할 수 있는 합리적 수단을 마련하고 다단계 추론이나 에이전트 단계 등 중간 처리 과정의 요약과 감사 추적 기록(API)을 제공해야 하며, 정부 데이터의 모델 학습 무단 활용을 금지하고 FedRAMP 인증 환경 안의 논리적 분리를 요구하며 위반이나 보안 침해 발생 시 72시간 안에 보고해야 한다.",
+        date: "2026-10-21"
+      },
+      {
+        id: "76-16",
+        newsletter_id: 76,
+        topic_en: "USPTO - Agentic AI",
+        topic_kr: "미 특허청(USPTO) - 에이전틱 AI 도입",
+        title: "USPTO looks to AI agents to ease examiner workloads",
+        title_kr: "미 특허청(USPTO), 에이전틱 AI 'Compass'로 심사관 업무 부담 경감 추진",
+        source: "Nextgov/FCW",
+        url: "https://www.nextgov.com/artificial-intelligence/2026/10/uspto-looks-ai-agents-ease-examiner-workloads/416719/",
+        keywords: ["USPTO", "에이전틱 AI", "Compass", "심사 적체", "과의존 경계"],
+        summary: "미 특허청(USPTO)이 70만 건의 심사 적체를 해소하기 위해 에이전틱 AI 도구 '콤패스(Compass)'를 도입해 서류 형식 검토 등 단순 반복 업무를 자동화하고, 5년 걸리던 심사 기간을 1년으로 줄일 계획. 반복 업무에 묶여 있던 박사급 심사관들이 본래의 전문 심사에 집중하고 신청인과의 대면·전화 소통 등 심층적인 인간 상호작용을 늘릴 수 있게 된다. AI 에이전트가 업무를 완전히 대체하기보다 보조하도록 설계하고, 실무진의 기초 역량 약화와 인지 능력 저하를 막기 위해 신중한 도입을 병행한다.",
+        date: "2026-10-20"
+      },
+      {
+        id: "76-17",
+        newsletter_id: 76,
+        topic_en: "GAO - AI & Cybersecurity Oversight",
+        topic_kr: "미 회계감사원(GAO) - AI·사이버보안 감시",
+        title: "GAO Targets AI, Cybersecurity Oversight in New Strategic Plan",
+        title_kr: "미 회계감사원(GAO), 2027~2032 전략계획에서 AI·사이버보안 감시 강화 예고",
+        source: "MeriTalk",
+        url: "https://www.meritalk.com/articles/gao-targets-ai-cybersecurity-oversight-in-new-strategic-plan/",
+        keywords: ["GAO", "전략계획", "AI 감독", "사이버보안", "IT 포트폴리오"],
+        summary: "미 회계감사원(GAO)이 2027~2032년 신규 전략계획에서 연방기관의 AI 도입, 사이버보안 태세, 핵심 인프라 보호, IT 포트폴리오 관리에 대한 전면적인 평가와 감독을 예고. 군사·안보 영역에서는 적대적 AI 활용, 자율 무기 체계, AI 기반 의사결정 체계에 내재된 잠재적 안보 위협을 엄격히 검증할 계획이다. 감독 실효성을 높이기 위해 자체 업무에도 AI·클라우드·데이터 분석을 전사적으로 도입하고, 사이버보안·데이터 과학 분야 기술 전문 인력의 채용과 교육을 강화한다.",
+        date: "2026-10-16"
+      },
+      {
+        id: "76-18",
+        newsletter_id: 76,
+        topic_en: "Federal Agencies - Mission-Ready AI",
+        topic_kr: "미 연방기관 - 임무 중심 AI",
+        title: "Federal Agencies Look Beyond AI Pilots to Build Mission-Ready Capabilities",
+        title_kr: "미 연방기관, AI 파일럿을 넘어 임무 중심 역량 구축으로 전환",
+        source: "MeriTalk",
+        url: "https://www.meritalk.com/articles/federal-agencies-look-beyond-ai-pilots-to-build-mission-ready-capabilities/",
+        keywords: ["임무 중심 AI", "데이터 거버넌스", "AI 샌드박스", "의회도서관", "AI 교육"],
+        summary: "미 연방기관들이 개인 생산성 도구나 챗봇 도입을 넘어, 실제 업무 현장의 병목을 해결하는 목적 중심 맞춤형 AI 애플리케이션 구축에 주력. 전문가들은 혼란스러운 원천 데이터로는 AI 성능을 담보할 수 없으므로 개발 초기부터 강력한 데이터 조직화와 보안·접근 통제 체계를 갖춰야 한다고 강조했다. 의회도서관(Library of Congress) 등은 정식 도입 전 AI 샌드박스로 실패를 허용하며 실효성을 검증하고, 일회성 교육이 아닌 상시 피드백 수렴으로 운용 인력 역량을 키우고 있다.",
+        date: "2026-10-23"
+      },
+      {
+        id: "76-19",
+        newsletter_id: 76,
+        topic_en: "U.S. Congress - AI Cyber Defense Act",
+        topic_kr: "미 의회 - AI 사이버 방어 법안",
+        title: "Bipartisan Bill Would Task NIST With AI Cyber Defense Standards",
+        title_kr: "미 하원 초당적 법안, NIST에 AI 모델 보호·사이버 방어 표준 마련 지시",
+        source: "MeriTalk",
+        url: "https://www.meritalk.com/articles/bipartisan-bill-would-task-nist-with-ai-cyber-defense-standards/",
+        keywords: ["NIST", "AI 사이버 방어", "증류 공격", "초당적 법안", "기반시설 방어"],
+        summary: "패트릭 해리건(공화)·조지 화이트사이즈(민주) 하원의원이 10월 22일 국립표준기술연구소(NIST)에 AI 모델 보호와 핵심 기반시설 방어 지침 마련을 지시하는 초당적 AI 사이버 방어 법안을 발의. NIST는 법안 통과 후 180일 안에 민간 AI 업계와 전력·의료 등 주요 기반시설 운영자가 참여하는 AI 사이버보안 원탁회의를 구성하고, 1년 안에 방어용 AI 사용과 증류 공격(Distillation Attacks) 방지 표준을 발표해야 한다. AI 개발·배포 기업 등 민간 이해관계자가 폭넓게 참여하되 중국·러시아·이란·북한·쿠바 등 우려 국가는 철저히 배제해 핵심 기술 유출을 막는다.",
+        date: "2026-10-23"
+      },
+      {
+        id: "76-20",
+        newsletter_id: 76,
+        topic_en: "Russia - Hybrid War Escalation",
+        topic_kr: "러시아 - 하이브리드 전쟁 고도화",
+        title: "Russia has moved past 'hybrid war.' Why hasn't Washington?",
+        title_kr: "러시아는 '하이브리드 전쟁'을 넘어섰다 — 워싱턴은 왜 그러지 못하는가",
+        source: "Defense One",
+        url: "https://www.defenseone.com/ideas/2026/10/russia-has-moved-past-hybrid-war-why-hasnt-washington/416629/",
+        keywords: ["러시아", "하이브리드전", "물리적 공작", "레드라인", "유럽 안보"],
+        summary: "러시아의 대서방 공작이 '하이브리드전' 단계를 넘어 은폐(Deniability)를 포기하고 더 대담한 물리적(Kinetic) 외부 공작으로 전환했다는 Defense One 기고. 유럽은 군사시설 피격과 영공 침범(폴란드 전투기의 러시아 드론 요격 등)에 맞서 적극적인 군사적 방어 조치로 돌아섰고, 미국 본토에서도 러시아 정보당국과 연계된 테러·암살 모의 조직이 법무부 기소로 드러나는 등 위협이 가시화되고 있다. 그러나 워싱턴은 러시아의 위협을 여전히 잠재적으로 보거나 백악관의 제재·회담 병행 혼선으로 명확한 대응 기준을 세우지 못하고 있다며, 억제력 회복을 위해 최고위층부터 러시아의 공작을 명확히 규정하고 단호한 레드라인과 대응 지침을 세워야 한다고 제언한다.",
+        date: "2026-10-18"
+      },
+      {
+        id: "76-21",
+        newsletter_id: 76,
+        topic_en: "German MoD - MQ-28 Drone Shift",
+        topic_kr: "독일 국방부 - MQ-28 드론 도입 선회",
+        title: "Germany changes course on plans to buy MQ-28 drone wingman: Boeing official",
+        title_kr: "독일, 보잉 MQ-28 무인 윙맨 직구매 계획 철회 — 경쟁 입찰로 선회 전망",
+        source: "Breaking Defense",
+        url: "https://breakingdefense.com/2026/10/germany-changes-course-on-plans-to-buy-mq-28-drone-wingman-boeing-official/",
+        keywords: ["MQ-28 Ghost Bat", "독일 국방부", "CCA", "Boeing", "유럽 무인 윙맨"],
+        summary: "독일 국방부가 보잉의 MQ-28 고스트배트(Ghost Bat) 유무인 편대용 무인기(CCA) 직구매 계획을 철회했다고 보잉 관계자가 밝힘. 독일은 보잉에 도입 포기를 공식 통보했으며, 구체적 사유는 공공계약법과 의회 사전 보고 규정 등을 이유로 공개되지 않았다. 2029년까지 작전 운용을 시작해 유럽 최초의 CCA 전력화 국가가 되려던 목표에 차질이 생겨 전력화가 2030년대 초로 늦춰질 가능성이 제기된다. 2027년 예정된 항공기 시험을 거쳐 경쟁 입찰로 선회할 것으로 보이며, 에어버스-크라토스(U740-Valkyrie), 헬싱(CA-1 Europa), 제너럴 아토믹스(Gambit 시리즈) 등이 참여할 전망이다.",
+        date: "2026-10-16"
+      },
+      {
+        id: "76-22",
+        newsletter_id: 76,
+        topic_en: "Google Public Sector - Agentic AI Platform",
+        topic_kr: "구글 퍼블릭 섹터 - 에이전트 AI 플랫폼",
+        title: "Google Launches Gemini for Government Services, With HHS Among Early Users",
+        title_kr: "구글, 정부용 에이전트 AI 플랫폼 'Gemini for Government Services' 출시 — HHS 초기 참여",
+        source: "MeriTalk",
+        url: "https://www.meritalk.com/articles/google-launches-gemini-for-government-services-with-hhs-among-early-users/",
+        keywords: ["Gemini for Government", "Google Public Sector", "에이전트 AI", "HHS", "감사 로깅"],
+        summary: "구글 퍼블릭 섹터가 연방·주·지방정부용 에이전트 AI 플랫폼 'Gemini for Government Services'를 출시했으며, 연방기관 중 보건복지부(HHS) 등이 초기 사용자(프리뷰)로 참여 중. 조달 제안서 검토, 정부 규정 분석, 민원 서류 처리, 정보공개법(FOIA) 비공개 처리 등 반복적이고 복잡한 다단계 행정 업무를 자동화하도록 설계됐다. IT·리스크 관리 부서가 AI 운영을 통제할 수 있는 중앙 집중형 제어 플레인과 감사 로깅을 제공하고, 고객 데이터를 동의 없이 기초 모델 학습에 쓰지 않는 보안 프레임워크를 적용했다.",
+        date: "2026-10-20"
+      }
+    ]
+  });
+})();
