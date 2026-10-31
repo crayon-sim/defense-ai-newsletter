@@ -25,7 +25,7 @@ const ENTITIES = [
   { id: 'ir', t: 'country', n: '이란', e: 'Iran', a: [R('(?:^|[^가-힣]|대)이란'), 'Iran', 'Iranian', '테헤란'], p: { bloc: '적대국' } },
   { id: 'kr', t: 'country', n: '한국', e: 'South Korea', a: ['대한민국', '한국', '한미', '=ROK', 'South Korea', 'Republic of Korea', '주한미군', '주한 미'], p: { bloc: '동맹·우방' } },
   { id: 'kp', t: 'country', n: '북한', e: 'North Korea', a: ['북한', 'North Korea', '=DPRK', '김정은'], p: { bloc: '적대국' } },
-  { id: 'tw', t: 'country', n: '대만', e: 'Taiwan', a: ['대만', 'Taiwan', '타이완', '타이베이', 'Taipei'], p: { bloc: '우방' } },
+  { id: 'tw', t: 'country', n: '대만', e: 'Taiwan', a: [R('(?<![가-힣])대만'), 'Taiwan', '타이완', '타이베이', 'Taipei'], p: { bloc: '우방' } },
   { id: 'jp', t: 'country', n: '일본', e: 'Japan', a: ['일본', 'Japan', 'Japanese'], p: { bloc: '동맹·우방' } },
   { id: 'uk', t: 'country', n: '영국', e: 'United Kingdom', a: ['영국', '=UK', 'United Kingdom', 'Britain', 'British', '=Dstl'], p: { bloc: '동맹·우방' } },
   { id: 'fr', t: 'country', n: '프랑스', e: 'France', a: ['프랑스', 'France', 'French'], p: { bloc: '동맹·우방' } },
@@ -57,15 +57,18 @@ const ENTITIES = [
   { id: 'socom', t: 'org', n: '특수작전사령부', e: 'SOCOM', a: ['=SOCOM', '=USSOCOM', R('(?<!육군\\s?)특수작전사령부'), '특전사'], p: { cat: '통합전투사령부', country: 'us', parent: 'dod' } },
   { id: 'cybercom', t: 'org', n: '사이버사령부', e: 'U.S. Cyber Command', a: ['=CYBERCOM', '=USCYBERCOM', R('(?<!(?:Army|Navy|Force|Marine|Marines|Corps|Fleet|Its|its)\\s)Cyber Command'), R('(?<!육군\\s?|공군\\s?|해군\\s?)사이버사령부')], p: { cat: '통합전투사령부', country: 'us', parent: 'dod' } },
   { id: 'stratcom', t: 'org', n: '전략사령부', e: 'STRATCOM', a: ['=STRATCOM', '=USSTRATCOM', '전략사령부'], p: { cat: '통합전투사령부', country: 'us', parent: 'dod' } },
+  { id: 'southcom', t: 'org', n: '남부사령부', e: 'SOUTHCOM', a: ['=SOUTHCOM', '=USSOUTHCOM', '남부사령부'], p: { cat: '통합전투사령부', country: 'us', parent: 'dod' } },
   { id: 'northcom', t: 'org', n: '북부사령부', e: 'NORTHCOM', a: ['=NORTHCOM', '=USNORTHCOM', '북부사령부', 'Northern Command'], p: { cat: '통합전투사령부', country: 'us', parent: 'dod' } },
   { id: 'autowarcom', t: 'org', n: '자율전투사령부(AUTOWARCOM)', e: 'Autonomous Warfare Command', a: ['=AUTOWARCOM', 'Autonomous Warfare Command', '자율전투사령부'], p: { cat: '통합전투사령부(창설 예정)', country: 'us', parent: 'dod' } },
   { id: 'arcyber', t: 'org', n: '육군 사이버사령부', e: 'ARCYBER', a: ['=ARCYBER', 'Army Cyber', '육군 사이버사령부'], p: { cat: '군종 예하', country: 'us', parent: 'army' } },
+  { id: 'atec', t: 'org', n: '육군 시험평가사령부(ATEC)', e: 'Army Test and Evaluation Command', a: ['=ATEC', 'Army Test and Evaluation Command', '시험평가사령부'], p: { cat: '군종 예하', country: 'us', parent: 'army' } },
   { id: 'swcs', t: 'org', n: '특수작전센터·학교(SWCS)', e: 'John F. Kennedy Special Warfare Center and School', a: ['=SWCS', 'Special Warfare Center', '특수작전센터', '특수전센터'], p: { cat: '군종 예하', country: 'us', parent: 'usasoc' } },
   { id: 'mcu', t: 'org', n: '미 해병대 대학교(MCU)', e: 'Marine Corps University', a: ['Marine Corps University', '=MCU', '해병대 대학교'], p: { cat: '군종 예하', country: 'us', parent: 'usmc' } },
   { id: 'fascom', t: 'org', n: '미래·자율체계사령부(FASCOM)', e: 'Army Futures and Autonomous Systems Command', a: ['=FASCOM', 'Futures and Autonomous Systems Command', '자율체계사령부'], p: { cat: '군종 예하', country: 'us', parent: 'army' } },
   { id: 'usasoc', t: 'org', n: '육군 특수작전사령부(USASOC)', e: 'U.S. Army Special Operations Command', a: ['=USASOC', 'Army Special Operations Command', '육군 특수작전사령부'], p: { cat: '군종 예하', country: 'us', parent: 'army' } },
   { id: 'diu', t: 'org', n: '국방혁신단(DIU)', e: 'Defense Innovation Unit', a: ['=DIU', 'Defense Innovation Unit', '국방혁신단', '국방혁신부'], p: { cat: '국방 기관', country: 'us', parent: 'dod' } },
   { id: 'darpa', t: 'org', n: 'DARPA', e: 'DARPA', a: ['=DARPA', '방위고등연구계획국', '고등연구계획국'], p: { cat: '국방 기관', country: 'us', parent: 'dod' } },
+  { id: 'mda', t: 'org', n: '미사일방어청(MDA)', e: 'Missile Defense Agency', a: ['Missile Defense Agency', '미사일방어청'], p: { cat: '국방 기관', country: 'us', parent: 'dod' } },
   { id: 'ndu', t: 'org', n: '미 국방대학교(NDU)', e: 'National Defense University', a: ['=NDU', 'National Defense University'], p: { cat: '국방 기관', country: 'us', parent: 'jcs' } },
   { id: 'disa', t: 'org', n: '국방정보시스템국(DISA)', e: 'DISA', a: ['=DISA', '국방정보시스템국'], p: { cat: '국방 기관', country: 'us', parent: 'dod' } },
   { id: 'dla', t: 'org', n: '국방병참지원국(DLA)', e: 'Defense Logistics Agency', a: ['=DLA', 'Defense Logistics Agency', '국방병참지원국', '국방군수국'], p: { cat: '국방 기관', country: 'us', parent: 'dod' } },
@@ -174,6 +177,7 @@ const ENTITIES = [
   { id: 'boeing', t: 'company', n: 'Boeing', e: 'Boeing', a: ['Boeing', '보잉'], p: { cat: '전통 방산', country: 'us' } },
   { id: 'rtx', t: 'company', n: 'RTX(Raytheon)', e: 'RTX', a: ['=RTX', 'Raytheon', '레이시온', 'Collins Aerospace', '콜린스 에어로스페이스'], p: { cat: '전통 방산', country: 'us' } },
   { id: 'gd', t: 'company', n: 'General Dynamics', e: 'General Dynamics', a: ['General Dynamics', '제너럴 다이내믹스', '=GDIT'], p: { cat: '전통 방산', country: 'us' } },
+  { id: 'sakana', t: 'company', n: 'Sakana AI', e: 'Sakana AI', a: ['Sakana AI', '사카나 AI', '사카나AI'], p: { cat: '프론티어 AI 랩', country: 'jp' } },
   { id: 'bae', t: 'company', n: 'BAE Systems', e: 'BAE Systems', a: ['BAE Systems', '=BAE', 'BAE 시스템즈'], p: { cat: '전통 방산', country: 'uk' } },
   { id: 'appliedintuition', t: 'company', n: 'Applied Intuition', e: 'Applied Intuition', a: ['Applied Intuition', '어플라이드 인튜이션'], p: { cat: '방산 테크', country: 'us' } },
   { id: 'helsing', t: 'company', n: 'Helsing', e: 'Helsing', a: ['Helsing', '헬싱'], p: { cat: '방산 테크', country: 'de' } },
@@ -229,6 +233,8 @@ const ENTITIES = [
   { id: 'mq9', t: 'program', n: 'MQ-9 Reaper', e: 'MQ-9 Reaper', a: [R('(?<![A-Za-z0-9])MQ-9'), '=Reaper', '리퍼'], p: { cat: '무인기 플랫폼', op: ['usaf'], ctr: ['ga'] } },
   { id: 'f35', t: 'program', n: 'F-35', e: 'F-35', a: [R('(?<![A-Za-z0-9])F-35')], p: { cat: '유인 전투기', op: ['usaf'], ctr: ['lockheed'] } },
   { id: 'f47', t: 'program', n: 'F-47', e: 'F-47', a: [R('(?<![A-Za-z0-9])F-47')], p: { cat: '6세대 전투기', op: ['usaf'], ctr: ['boeing'] } },
+  { id: 'futureint', t: 'program', n: '미래 요격기(Future Interceptor)', e: 'Future Interceptor', a: ['Future Interceptor', '미래 요격기'], p: { cat: '미사일 방어', op: ['army'], ctr: ['lockheed'] } },
+  { id: 'contra', t: 'program', n: 'Contra(헬싱 방공 체계)', e: 'Helsing Contra', a: [R('(?<![A-Za-z])Contra(?![A-Za-z])'), '콘트라'], p: { cat: '방공 체계', ctr: ['helsing'] } },
   { id: 'mq28', t: 'program', n: 'MQ-28 Ghost Bat', e: 'MQ-28 Ghost Bat', a: [R('(?<![A-Za-z0-9])MQ-28'), 'Ghost Bat', '고스트배트', '고스트 배트'], p: { cat: '무인 전투기', ctr: ['boeing'] } },
   { id: 'apkws', t: 'program', n: 'APKWS', e: 'Advanced Precision Kill Weapon System', a: ['=APKWS'], p: { cat: '대드론 유도킷', ctr: ['bae'] } },
   { id: 'f22', t: 'program', n: 'F-22', e: 'F-22 Raptor', a: [R('(?<![A-Za-z0-9])F-22(?![0-9])')], p: { cat: '유인 전투기', op: ['usaf'], ctr: ['lockheed'] } },
@@ -278,6 +284,7 @@ const ENTITIES = [
   { id: 'eo', t: 'policy', n: '대통령 행정명령', e: 'Executive Orders', a: ['행정명령', 'Executive Order', '=EO'], p: { kind: '행정명령', iss: 'wh' } },
   { id: 'aiactionplan', t: 'policy', n: 'AI Action Plan', e: "America's AI Action Plan", a: ['AI Action Plan', 'AI 행동계획', 'AI 액션 플랜', 'AI 액션플랜'], p: { kind: '국가 전략', iss: 'wh' } },
   { id: 'ombmemo', t: 'policy', n: 'OMB 메모 M-25-21/22', e: 'OMB M-25-21 / M-25-22', a: ['M-25-21', 'M-25-22'], p: { kind: '행정 지침', iss: 'omb' } },
+  { id: 'unbiasedai', t: 'policy', n: '편향 없는 AI(반워크 AI) 정책', e: 'Unbiased / anti-woke AI policy', a: ['woke AI', 'unbiased AI', R('(?<![가-힣])워크\\s?AI'), '편향 없는 AI'], p: { kind: '행정명령·지침', iss: 'wh' } },
   { id: 'exportctl', t: 'policy', n: 'AI 반도체 수출통제', e: 'Export controls', a: ['수출통제', '수출 통제', 'export control', 'export controls', '=ITAR'], p: { kind: '규제', iss: 'doc' } },
   { id: 'si', t: 'policy', n: '초지능(SI) 정책', e: 'Super Intelligence policy', a: ['초지능', '슈퍼 인텔리전스', 'Super Intelligence', 'superintelligence'], p: { kind: '행정명령·법안', iss: 'wh' } },
   { id: 'cyberstrat', t: 'policy', n: '사이버 전략(국가·국방)', e: 'Cyber Strategy', a: ['사이버 전략', 'Cyber Strategy', '국가 사이버 전략'], p: { kind: '전략' } },
@@ -335,6 +342,7 @@ const ENTITIES = [
   { id: 'p_arrington', t: 'person', n: '케이티 애링턴', e: 'Katie Arrington', a: ['Arrington', '애링턴'], p: { role: '전 국방부 CISO', aff: 'dod' } },
   { id: 'p_kosiba', t: 'person', n: '팀 코시바', e: 'Tim Kosiba', a: ['Kosiba', '코시바'], p: { role: 'NSA 부국장', aff: 'nsa' } },
   { id: 'p_kratsios', t: 'person', n: '마이클 크라치오스', e: 'Michael Kratsios', a: ['Kratsios', '크라치오스', '크라시오스'], p: { role: 'OSTP 실장', aff: 'ostp' } },
+  { id: 'p_shive', t: 'person', n: '데이비드 샤이브', e: 'David Shive', a: ['David Shive', '샤이브'], p: { role: 'GSA 최고정보책임자(CIO)', aff: 'gsa' } },
   { id: 'p_telle', t: 'person', n: '아담 텔레', e: 'Adam Telle', a: ['Adam Telle', '아담 텔레'], p: { role: '육군장관 대행', aff: 'army' } },
   { id: 'p_clayton', t: 'person', n: '제이 클레이턴', e: 'Jay Clayton', a: ['Jay Clayton', '클레이턴', '클레이튼'], p: { role: '국가정보장(DNI)·초지능 태스크포스 위원장', aff: 'odni' } },
   { id: 'p_kupor', t: 'person', n: '스콧 쿠퍼', e: 'Scott Kupor', a: ['Scott Kupor', '스콧 쿠퍼', '스콧 쿠포'], p: { role: '인사관리처(OPM) 처장', aff: 'opm' } },
@@ -383,7 +391,7 @@ const SRC_NORM = {
   'DoD (war.gov)': 'U.S. Department of War', 'CIO': 'CIO.com', '종합(Reuters, Business Insider, WSJ)': '종합(Reuters 등)',
 };
 const SRC_CAT = {
-  '국방 전문지': ['Defense One', 'Breaking Defense', 'Defense News', 'Air & Space Forces Magazine', 'DefenseScoop', 'The Defense Post', 'Military Times', 'C4ISRNET', 'Military AI', 'Army Times', 'Air Force Times', 'Army Technology', 'Defence Blog', 'The Aviationist', 'Flight Global', 'RealClearDefense', 'Small Wars Journal', 'SpaceNews'],
+  '국방 전문지': ['Next Gen Defense', 'Defense One', 'Breaking Defense', 'Defense News', 'Air & Space Forces Magazine', 'DefenseScoop', 'The Defense Post', 'Military Times', 'C4ISRNET', 'Military AI', 'Army Times', 'Air Force Times', 'Army Technology', 'Defence Blog', 'The Aviationist', 'Flight Global', 'RealClearDefense', 'Small Wars Journal', 'SpaceNews'],
   '연방 IT·행정 전문지': ['MeriTalk', 'Nextgov/FCW', 'Federal News Network', 'Government Executive', 'Washington Technology', 'FedScoop', 'GovTech', 'CIO.com', 'ISACA'],
   '정부·공식 발표': ['Congress.gov', 'DVIDS', 'U.S. Department of War', 'U.S. Air Force', 'U.S. Army', 'GOV.UK', 'UK Parliament', 'NIST', 'DIU', 'GSA 뉴스레터'],
   '싱크탱크·연구기관': ['CSIS', 'Council on Foreign Relations', 'NDU Press', 'IISS', 'Hudson Institute', 'SCSP', 'CMU SEI', 'CNAS', 'CEPA', 'HCSS', 'Finnish AI Region', 'Foreign Affairs'],
@@ -391,7 +399,7 @@ const SRC_CAT = {
   '블로그·뉴스레터': ['Steve Blank Blog', 'DIIE Substack', 'UnHerd'],
 };
 
-const DICT = { VERSION: '2026-10-24', ENTITIES, SRC_NORM, SRC_CAT };
+const DICT = { VERSION: '2026-10-31', ENTITIES, SRC_NORM, SRC_CAT };
 if (typeof module !== 'undefined' && module.exports) module.exports = DICT;
 else root.ONTOLOGY_DICT = DICT;
 })(typeof window !== 'undefined' ? window : globalThis);
