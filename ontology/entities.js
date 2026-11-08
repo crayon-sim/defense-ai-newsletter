@@ -40,6 +40,8 @@ const ENTITIES = [
   { id: 'tr', t: 'country', n: '튀르키예', e: 'Türkiye', a: ['튀르키예', '터키', 'Turkey', 'Türkiye', 'Turkish'], p: { bloc: 'NATO 회원국' } },
   { id: 'ae', t: 'country', n: 'UAE', e: 'United Arab Emirates', a: ['=UAE', '아랍에미리트', '에미리트'], p: { bloc: '우방' } },
   { id: 'th', t: 'country', n: '태국', e: 'Thailand', a: ['태국', 'Thailand'], p: { bloc: '우방' } },
+  { id: 'qa', t: 'country', n: '카타르', e: 'Qatar', a: ['Qatar', '카타르'], p: { bloc: '우방' } },
+  { id: 've', t: 'country', n: '베네수엘라', e: 'Venezuela', a: ['Venezuela', '베네수엘라', '마두로', 'Maduro'], p: { bloc: '적대국' } },
   { id: 'ro', t: 'country', n: '루마니아', e: 'Romania', a: ['루마니아', 'Romania'], p: { bloc: '동맹·우방' } },
   { id: 'indopac', t: 'country', n: '인도태평양(지역)', e: 'Indo-Pacific', a: [R('인도[-·\\s]?태평양(?!\\s?사령)'), 'Indo-Pacific', '인태 지역', '인태지역'], p: { bloc: '지역' } },
 
@@ -113,6 +115,7 @@ const ENTITIES = [
   { id: 'ssa', t: 'org', n: '사회보장국(SSA)', e: 'SSA', a: ['=SSA', '사회보장국', '사회보장청'], p: { cat: '연방 민간기관', country: 'us' } },
   { id: 'treasury', t: 'org', n: '재무부', e: 'Department of the Treasury', a: ['Treasury', '재무부'], p: { cat: '연방 민간기관', country: 'us' } },
   { id: 'nasa', t: 'org', n: 'NASA', e: 'NASA', a: ['=NASA'], p: { cat: '연방 민간기관', country: 'us' } },
+  { id: 'cms', t: 'org', n: '건강보험서비스청(CMS)', e: 'Centers for Medicare & Medicaid Services', a: ['=CMS', 'Centers for Medicare', '건강보험서비스청', '메디케어·메디케이드서비스센터'], p: { cat: '연방 민간기관', country: 'us', parent: 'hhs' } },
   { id: 'nsf', t: 'org', n: '국립과학재단(NSF)', e: 'National Science Foundation', a: ['=NSF', 'National Science Foundation', '국립과학재단'], p: { cat: '연방 민간기관', country: 'us' } },
   { id: 'nara', t: 'org', n: '국가기록원(NARA)', e: 'NARA', a: ['=NARA', '국가기록원', '국가기록청'], p: { cat: '연방 민간기관', country: 'us' } },
   { id: 'gao', t: 'org', n: '회계감사원(GAO)', e: 'GAO', a: ['=GAO', '회계감사원'], p: { cat: '입법·감사', country: 'us' } },
@@ -120,7 +123,7 @@ const ENTITIES = [
   { id: 'congress', t: 'org', n: '미 의회', e: 'U.S. Congress', a: ['Congress', 'Senate', '=HASC', '=SASC', 'House Armed Services', 'Senate Armed Services', nf('의회'), nf('상원'), nf('하원')], p: { cat: '입법·감사', country: 'us' } },
   { id: 'nato', t: 'org', n: 'NATO', e: 'NATO', a: ['=NATO', '나토'], p: { cat: '국제기구·동맹' } },
   { id: 'eu', t: 'org', n: '유럽연합(EU)', e: 'European Union', a: ['=EU', '유럽연합', 'European Union'], p: { cat: '국제기구·동맹' } },
-  { id: 'un', t: 'org', n: '유엔', e: 'United Nations', a: ['유엔', '안보리', 'United Nations', 'Security Council', '=UNSC'], p: { cat: '국제기구' } },
+  { id: 'un', t: 'org', n: '유엔', e: 'United Nations', a: ['유엔', R('안보리(?!스크)'), 'United Nations', 'Security Council', '=UNSC'], p: { cat: '국제기구' } },
   { id: 'fiveeyes', t: 'org', n: '파이브 아이즈', e: 'Five Eyes', a: ['Five Eyes', '파이브 아이즈', '파이브아이즈'], p: { cat: '국제기구·동맹' } },
   { id: 'pla', t: 'org', n: '중국 인민해방군(PLA)', e: 'PLA', a: ['=PLA', '=PLAAF', '인민해방군', '중국군'], p: { cat: '외국군', country: 'cn' } },
   { id: 'idf', t: 'org', n: '이스라엘군(IDF)', e: 'IDF', a: ['=IDF', '이스라엘군', '이스라엘 방위군'], p: { cat: '외국군', country: 'il' } },
@@ -233,6 +236,9 @@ const ENTITIES = [
   { id: 'mq9', t: 'program', n: 'MQ-9 Reaper', e: 'MQ-9 Reaper', a: [R('(?<![A-Za-z0-9])MQ-9'), '=Reaper', '리퍼'], p: { cat: '무인기 플랫폼', op: ['usaf'], ctr: ['ga'] } },
   { id: 'f35', t: 'program', n: 'F-35', e: 'F-35', a: [R('(?<![A-Za-z0-9])F-35')], p: { cat: '유인 전투기', op: ['usaf'], ctr: ['lockheed'] } },
   { id: 'f47', t: 'program', n: 'F-47', e: 'F-47', a: [R('(?<![A-Za-z0-9])F-47')], p: { cat: '6세대 전투기', op: ['usaf'], ctr: ['boeing'] } },
+  { id: 'nmesis', t: 'program', n: 'NMESIS', e: 'Navy-Marine Expeditionary Ship Interdiction System', a: ['=NMESIS'], p: { cat: '무인 대함 미사일', op: ['usmc'] } },
+  { id: 'goldenfleet', t: 'program', n: '골든 플릿(Golden Fleet)', e: 'Golden Fleet', a: ['Golden Fleet', '골든 플릿'], p: { cat: '함대 구상', op: ['navy'] } },
+  { id: 'wiser', t: 'program', n: 'WISeR(메디케어 AI 심사)', e: 'WISeR Model', a: ['=WISeR'], p: { cat: '행정 AI 심사', op: ['cms'] } },
   { id: 'futureint', t: 'program', n: '미래 요격기(Future Interceptor)', e: 'Future Interceptor', a: ['Future Interceptor', '미래 요격기'], p: { cat: '미사일 방어', op: ['army'], ctr: ['lockheed'] } },
   { id: 'contra', t: 'program', n: 'Contra(헬싱 방공 체계)', e: 'Helsing Contra', a: [R('(?<![A-Za-z])Contra(?![A-Za-z])'), '콘트라'], p: { cat: '방공 체계', ctr: ['helsing'] } },
   { id: 'mq28', t: 'program', n: 'MQ-28 Ghost Bat', e: 'MQ-28 Ghost Bat', a: [R('(?<![A-Za-z0-9])MQ-28'), 'Ghost Bat', '고스트배트', '고스트 배트'], p: { cat: '무인 전투기', ctr: ['boeing'] } },
@@ -244,6 +250,7 @@ const ENTITIES = [
   { id: 'jwcc', t: 'program', n: 'JWCC(합동전투클라우드)', e: 'Joint Warfighting Cloud Capability', a: ['=JWCC', 'Joint Warfighting Cloud', 'Joint Warfighter Cloud'], p: { cat: '클라우드 계약', op: ['disa'], ctr: ['amazon', 'microsoft', 'google', 'oracle'] } },
   { id: 'goldendome', t: 'program', n: 'Golden Dome', e: 'Golden Dome', a: ['Golden Dome', '골든 돔', '골든돔'], p: { cat: '미사일 방어', op: ['dod', 'ussf'] } },
   { id: 'replicator', t: 'program', n: 'Replicator', e: 'Replicator', a: ['Replicator', '리플리케이터'], p: { cat: '자율무기 대량배치', op: ['diu'] } },
+  { id: 'meridian', t: 'program', n: '프로젝트 메리디안', e: 'Project Meridian', a: ['Project Meridian', '메리디안 프로젝트', '프로젝트 메리디안'], p: { cat: '미래전 자문위원회', op: ['dod'] } },
   { id: 'gatekeeper', t: 'program', n: '프로젝트 게이트키퍼', e: 'Project Gatekeeper', a: ['Project Gatekeeper', '게이트키퍼'], p: { cat: 'SW 보안 심사 플랫폼', op: ['army'] } },
   { id: 'swapusv', t: 'program', n: 'SWAP-USV', e: 'SWAP-USV', a: ['SWAP-USV'], p: { cat: '무인수상정 경연', op: ['diu'] } },
   { id: 'agincourt', t: 'program', n: '아쟁쿠르 프로젝트', e: 'Project Agincourt', a: ['Agincourt', '아쟁쿠르'], p: { cat: '무인체계 획득 조직', op: ['dod'] } },
@@ -399,7 +406,7 @@ const SRC_CAT = {
   '블로그·뉴스레터': ['Steve Blank Blog', 'DIIE Substack', 'UnHerd'],
 };
 
-const DICT = { VERSION: '2026-10-31', ENTITIES, SRC_NORM, SRC_CAT };
+const DICT = { VERSION: '2026-11-07', ENTITIES, SRC_NORM, SRC_CAT };
 if (typeof module !== 'undefined' && module.exports) module.exports = DICT;
 else root.ONTOLOGY_DICT = DICT;
 })(typeof window !== 'undefined' ? window : globalThis);
