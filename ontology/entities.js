@@ -40,6 +40,7 @@ const ENTITIES = [
   { id: 'tr', t: 'country', n: '튀르키예', e: 'Türkiye', a: ['튀르키예', '터키', 'Turkey', 'Türkiye', 'Turkish'], p: { bloc: 'NATO 회원국' } },
   { id: 'ae', t: 'country', n: 'UAE', e: 'United Arab Emirates', a: ['=UAE', '아랍에미리트', '에미리트'], p: { bloc: '우방' } },
   { id: 'th', t: 'country', n: '태국', e: 'Thailand', a: ['태국', 'Thailand'], p: { bloc: '우방' } },
+  { id: 'no', t: 'country', n: '노르웨이', e: 'Norway', a: ['Norway', 'Norwegian', '노르웨이'], p: { bloc: '동맹·우방' } },
   { id: 'qa', t: 'country', n: '카타르', e: 'Qatar', a: ['Qatar', '카타르'], p: { bloc: '우방' } },
   { id: 've', t: 'country', n: '베네수엘라', e: 'Venezuela', a: ['Venezuela', '베네수엘라', '마두로', 'Maduro'], p: { bloc: '적대국' } },
   { id: 'ro', t: 'country', n: '루마니아', e: 'Romania', a: ['루마니아', 'Romania'], p: { bloc: '동맹·우방' } },
@@ -96,6 +97,7 @@ const ENTITIES = [
   { id: 'dhs', t: 'org', n: '국토안보부(DHS)', e: 'DHS', a: ['=DHS', '국토안보부', 'Homeland Security'], p: { cat: '연방 민간기관', country: 'us' } },
   { id: 'cisa', t: 'org', n: '사이버보안·인프라보안국(CISA)', e: 'CISA', a: ['=CISA', '사이버보안·인프라보안국', '사이버보안인프라보안국', '사이버안보·인프라보안청'], p: { cat: '연방 민간기관', country: 'us', parent: 'dhs' } },
   { id: 'cbp', t: 'org', n: '세관국경보호청(CBP)', e: 'CBP', a: ['=CBP', '=USBP', '세관국경보호청', '관세국경보호청', '국경순찰대', '국경 보안'], p: { cat: '연방 민간기관', country: 'us', parent: 'dhs' } },
+  { id: 'hsi', t: 'org', n: '국토안보수사국(HSI)', e: 'Homeland Security Investigations', a: ['=HSI', 'Homeland Security Investigations', '국토안보수사국'], p: { cat: '연방 민간기관', country: 'us', parent: 'dhs' } },
   { id: 'tsa', t: 'org', n: '교통보안청(TSA)', e: 'TSA', a: ['=TSA', '교통보안청'], p: { cat: '연방 민간기관', country: 'us', parent: 'dhs' } },
   { id: 'doj', t: 'org', n: '법무부', e: 'Department of Justice', a: ['=DOJ', '=DoJ', 'Department of Justice', 'Justice Department', '법무부'], p: { cat: '연방 민간기관', country: 'us' } },
   { id: 'fbi', t: 'org', n: '연방수사국(FBI)', e: 'FBI', a: ['=FBI', '연방수사국'], p: { cat: '연방 민간기관', country: 'us', parent: 'doj' } },
@@ -137,6 +139,7 @@ const ENTITIES = [
   { id: 'csis', t: 'org', n: 'CSIS', e: 'CSIS', a: ['=CSIS', '전략국제문제연구소'], p: { cat: '연구기관·싱크탱크', country: 'us' } },
   { id: 'cnas', t: 'org', n: 'CNAS', e: 'Center for a New American Security', a: ['=CNAS', '신미국안보센터'], p: { cat: '연구기관·싱크탱크', country: 'us' } },
   { id: 'heritage', t: 'org', n: '헤리티지재단', e: 'Heritage Foundation', a: ['Heritage Foundation', '헤리티지재단', '헤리티지 재단'], p: { cat: '연구기관·싱크탱크', country: 'us' } },
+  { id: 'brookings', t: 'org', n: '브루킹스 연구소', e: 'Brookings Institution', a: ['Brookings', '브루킹스'], p: { cat: '연구기관·싱크탱크', country: 'us' } },
   { id: 'cfr', t: 'org', n: '미국외교협회(CFR)', e: 'Council on Foreign Relations', a: ['Council on Foreign Relations', '외교협회'], p: { cat: '연구기관·싱크탱크', country: 'us' } },
   { id: 'hudson', t: 'org', n: '허드슨 연구소', e: 'Hudson Institute', a: ['Hudson Institute', '허드슨 연구소'], p: { cat: '연구기관·싱크탱크', country: 'us' } },
   { id: 'iiss', t: 'org', n: 'IISS(국제전략문제연구소)', e: 'International Institute for Strategic Studies', a: ['=IISS', 'International Institute for Strategic Studies', '국제전략문제연구소'], p: { cat: '연구기관·싱크탱크', country: 'uk' } },
@@ -180,6 +183,7 @@ const ENTITIES = [
   { id: 'boeing', t: 'company', n: 'Boeing', e: 'Boeing', a: ['Boeing', '보잉'], p: { cat: '전통 방산', country: 'us' } },
   { id: 'rtx', t: 'company', n: 'RTX(Raytheon)', e: 'RTX', a: ['=RTX', 'Raytheon', '레이시온', 'Collins Aerospace', '콜린스 에어로스페이스'], p: { cat: '전통 방산', country: 'us' } },
   { id: 'gd', t: 'company', n: 'General Dynamics', e: 'General Dynamics', a: ['General Dynamics', '제너럴 다이내믹스', '=GDIT'], p: { cat: '전통 방산', country: 'us' } },
+  { id: 'arondite', t: 'company', n: 'Arondite', e: 'Arondite', a: ['Arondite', '아론다이트'], p: { cat: '방산 테크', country: 'uk' } },
   { id: 'sakana', t: 'company', n: 'Sakana AI', e: 'Sakana AI', a: ['Sakana AI', '사카나 AI', '사카나AI'], p: { cat: '프론티어 AI 랩', country: 'jp' } },
   { id: 'bae', t: 'company', n: 'BAE Systems', e: 'BAE Systems', a: ['BAE Systems', '=BAE', 'BAE 시스템즈'], p: { cat: '전통 방산', country: 'uk' } },
   { id: 'appliedintuition', t: 'company', n: 'Applied Intuition', e: 'Applied Intuition', a: ['Applied Intuition', '어플라이드 인튜이션'], p: { cat: '방산 테크', country: 'us' } },
@@ -291,6 +295,7 @@ const ENTITIES = [
   { id: 'eo', t: 'policy', n: '대통령 행정명령', e: 'Executive Orders', a: ['행정명령', 'Executive Order', '=EO'], p: { kind: '행정명령', iss: 'wh' } },
   { id: 'aiactionplan', t: 'policy', n: 'AI Action Plan', e: "America's AI Action Plan", a: ['AI Action Plan', 'AI 행동계획', 'AI 액션 플랜', 'AI 액션플랜'], p: { kind: '국가 전략', iss: 'wh' } },
   { id: 'ombmemo', t: 'policy', n: 'OMB 메모 M-25-21/22', e: 'OMB M-25-21 / M-25-22', a: ['M-25-21', 'M-25-22'], p: { kind: '행정 지침', iss: 'omb' } },
+  { id: 'fitara', t: 'policy', n: 'FITARA(연방 IT 획득개혁법)', e: 'Federal IT Acquisition Reform Act', a: ['=FITARA'], p: { kind: '법률', iss: 'congress' } },
   { id: 'unbiasedai', t: 'policy', n: '편향 없는 AI(반워크 AI) 정책', e: 'Unbiased / anti-woke AI policy', a: ['woke AI', 'unbiased AI', R('(?<![가-힣])워크\\s?AI'), '편향 없는 AI'], p: { kind: '행정명령·지침', iss: 'wh' } },
   { id: 'exportctl', t: 'policy', n: 'AI 반도체 수출통제', e: 'Export controls', a: ['수출통제', '수출 통제', 'export control', 'export controls', '=ITAR'], p: { kind: '규제', iss: 'doc' } },
   { id: 'si', t: 'policy', n: '초지능(SI) 정책', e: 'Super Intelligence policy', a: ['초지능', '슈퍼 인텔리전스', 'Super Intelligence', 'superintelligence'], p: { kind: '행정명령·법안', iss: 'wh' } },
@@ -349,6 +354,8 @@ const ENTITIES = [
   { id: 'p_arrington', t: 'person', n: '케이티 애링턴', e: 'Katie Arrington', a: ['Arrington', '애링턴'], p: { role: '전 국방부 CISO', aff: 'dod' } },
   { id: 'p_kosiba', t: 'person', n: '팀 코시바', e: 'Tim Kosiba', a: ['Kosiba', '코시바'], p: { role: 'NSA 부국장', aff: 'nsa' } },
   { id: 'p_kratsios', t: 'person', n: '마이클 크라치오스', e: 'Michael Kratsios', a: ['Kratsios', '크라치오스', '크라시오스'], p: { role: 'OSTP 실장', aff: 'ostp' } },
+  { id: 'p_losapio', t: 'person', n: '마이클 로사피오', e: 'Michael LoSapio', a: ['LoSapio', '로사피오'], p: { role: 'CISA 국장 지명자(전 팔란티어 CISO)', aff: 'cisa' } },
+  { id: 'p_wilsbach', t: 'person', n: '케네스 윌스바흐', e: 'Kenneth Wilsbach', a: ['Wilsbach', '윌스바흐'], p: { role: '공군참모총장', aff: 'usaf' } },
   { id: 'p_shive', t: 'person', n: '데이비드 샤이브', e: 'David Shive', a: ['David Shive', '샤이브'], p: { role: 'GSA 최고정보책임자(CIO)', aff: 'gsa' } },
   { id: 'p_telle', t: 'person', n: '아담 텔레', e: 'Adam Telle', a: ['Adam Telle', '아담 텔레'], p: { role: '육군장관 대행', aff: 'army' } },
   { id: 'p_clayton', t: 'person', n: '제이 클레이턴', e: 'Jay Clayton', a: ['Jay Clayton', '클레이턴', '클레이튼'], p: { role: '국가정보장(DNI)·초지능 태스크포스 위원장', aff: 'odni' } },
@@ -401,12 +408,12 @@ const SRC_CAT = {
   '국방 전문지': ['Next Gen Defense', 'Defense One', 'Breaking Defense', 'Defense News', 'Air & Space Forces Magazine', 'DefenseScoop', 'The Defense Post', 'Military Times', 'C4ISRNET', 'Military AI', 'Army Times', 'Air Force Times', 'Army Technology', 'Defence Blog', 'The Aviationist', 'Flight Global', 'RealClearDefense', 'Small Wars Journal', 'SpaceNews'],
   '연방 IT·행정 전문지': ['MeriTalk', 'Nextgov/FCW', 'Federal News Network', 'Government Executive', 'Washington Technology', 'FedScoop', 'GovTech', 'CIO.com', 'ISACA'],
   '정부·공식 발표': ['Congress.gov', 'DVIDS', 'U.S. Department of War', 'U.S. Air Force', 'U.S. Army', 'GOV.UK', 'UK Parliament', 'NIST', 'DIU', 'GSA 뉴스레터'],
-  '싱크탱크·연구기관': ['CSIS', 'Council on Foreign Relations', 'NDU Press', 'IISS', 'Hudson Institute', 'SCSP', 'CMU SEI', 'CNAS', 'CEPA', 'HCSS', 'Finnish AI Region', 'Foreign Affairs'],
+  '싱크탱크·연구기관': ['Brookings', 'CSIS', 'Council on Foreign Relations', 'NDU Press', 'IISS', 'Hudson Institute', 'SCSP', 'CMU SEI', 'CNAS', 'CEPA', 'HCSS', 'Finnish AI Region', 'Foreign Affairs'],
   '기업·보도자료': ['Anthropic', 'Palantir Blog', 'Lockheed Martin', 'GlobeNewswire', 'PR Newswire', 'Business Wire'],
   '블로그·뉴스레터': ['Steve Blank Blog', 'DIIE Substack', 'UnHerd'],
 };
 
-const DICT = { VERSION: '2026-11-07', ENTITIES, SRC_NORM, SRC_CAT };
+const DICT = { VERSION: '2026-11-14', ENTITIES, SRC_NORM, SRC_CAT };
 if (typeof module !== 'undefined' && module.exports) module.exports = DICT;
 else root.ONTOLOGY_DICT = DICT;
 })(typeof window !== 'undefined' ? window : globalThis);
