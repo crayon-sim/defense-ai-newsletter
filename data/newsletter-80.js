@@ -1,0 +1,338 @@
+(function () {
+  window.NEWSLETTERS = window.NEWSLETTERS || [];
+  window.NEWSLETTERS.push({
+    id: 80,
+    title: "국방 AI(AI+IT) 뉴스레터 제80호",
+    period: "2026.11.15~21",
+    date: "2026-11-21",
+    key_theme: "METR 보고서를 계기로 전문가들이 초지능 도래 시점을 2027~2028년으로 앞당기고 국방부가 CDAO를 '초지능실'로 개편한 가운데, 국방부는 사이버 인력 AI 훈련 의무화와 PQC 이행계획을, 육군은 소형 드론 '제조 로데오'·소모형 구매 전략·개방형 시험장·자율보급 시제품으로 대량 전력화를, 해군은 F/A-XX보다 앞선 CCA 도입을 추진했고, GAO가 주요 생성형 AI 4종의 공격 기획 악용을 확인하고 NSANet 장애를 계기로 사이버·AI 조사위원회 법안이 나오는 한편, OpenAI는 NATO에 Daybreak를 제공하고 구글은 AI 해킹 도구의 실전 침투를 경고",
+    insights: [
+      {
+        color: "#C62828",
+        title: "🧠 초지능 조기 도래 경고 — 정책 주기 3~5년에서 6~9개월로",
+        body: "METR 보고서는 AI 에이전트 활용으로 Anthropic의 모델 개선 속도가 작년 말보다 약 2배 빨라졌다고 분석했고, Sentinel·AI Futures Project 등은 초지능(ASI) 도래 예측을 2031년에서 2027~2028년으로 앞당겼다. 폴 크리스티아노는 3년 안 'AI 통제 상실' 가능성을 경고했고, 국방부는 CDAO를 '초지능실'로 개편했다. 전문가들은 정책 수립 주기가 6~9개월로 짧아졌다며 적대국의 모델 탈취·사보타주를 막는 데이터센터 보안과 모델 견고성 확보를 촉구했다."
+      },
+      {
+        color: "#1565C0",
+        title: "🚁 육군 소형 드론 대량 전력화 — 제조 로데오, '소모 후 구매', 개방형 시험장",
+        body: "육군은 대당 3,000달러 이하 1군 자폭 드론 400대를 3월까지 납품받아 미 본토 공급망을 검증하고 우수 체계에 최대 1만 대 양산 옵션을 주는 '제조 로데오'를 시작했다. 적의 대드론 대책이 72시간 안에 나오는 기술 주기를 고려해 소형 드론은 비축·정비 대신 훈련 중 파손되면 새로 사는 소모품으로 다루고, 1차 확보분 3만 대 중 1만 대를 야전 훈련에 투입한다. ATEC은 시험장 배정 30일, 피드백 14일을 목표로 개방형 시험장을 넓혔고, 인도-태평양용 무인 자율보급 시제품 계약도 최대 6건 추진한다."
+      },
+      {
+        color: "#6A1B9A",
+        title: "🔐 국방 사이버 인력·보안 체계 — AI 훈련 의무화, PQC 이행계획, NSANet 장애",
+        body: "국방부는 모든 사이버 직무 훈련에 AI를 필수 역량으로 넣고, 30분 안에 AI 도구로 사이버 훈련장 과제를 푸는 실무 중심 채용으로 약 2만4천 명의 인력난을 해소하려 한다. 국방부 CIO는 2030년 고영향 시스템, 2031년 전군에 양자내성암호를 적용하는 이행계획을 곧 내놓는다. NSA 기밀망 NSANet은 PHP 패치 과정의 시스템 충돌로 3일간 장애를 겪었고, FAA 이륙 중단 등 잇단 장애 속에 하원은 CISA 산하 사이버·AI 조사위원회(ROOT CAUSE Act)와 연방망 AI 에이전트 통제 법안을 발의했다."
+      },
+      {
+        color: "#FF8F00",
+        title: "⚠️ 생성형 AI 악용 위험과 규제 — GAO 테스트, 의무 사전 검증, FedRAMP 강화",
+        body: "GAO는 Claude·Gemini·Grok·ChatGPT 4종 모두 12시간 안에 안전장치가 우회돼 대량 살상·전력망 공격 계획을 내놓았다고 밝혔고, 하산 상원의원은 신속한 안전 입법을 촉구했다. 고트하이머 하원의원은 고성능 모델 배포 전 NSA 의무 평가 법안과 중국산 오픈웨이트 모델 공공부문 배제 법안을 추진하며, 상원은 FY27 CISA 예산을 26.8억 달러로 늘렸다. FedRAMP는 550여 클라우드 업체에 실시간 노출·위협 기반 취약점 관리를 12월 7일까지 의무화하고 미이행 시 인증을 박탈한다."
+      },
+      {
+        color: "#2E7D32",
+        title: "🌍 동맹·적성국의 AI 사이버 경쟁 — OpenAI의 NATO Daybreak, 구글의 AI 해킹 경고",
+        body: "OpenAI는 NATO Edge 컨퍼런스에서 취약점 탐지·수정용 Daybreak 프로그램을 NATO 회원국으로 넓혔고, Crossed Swords 훈련에서는 참가자들이 처음으로 자율 AI 에이전트를 구축해 썼다. NATO 연합변혁사령부는 우크라이나 병력과 무인수상정을 대항군으로 기용해 적응 주기를 촉발하고 있다. 구글 위협 인텔리전스는 해커들이 중국 연계 오픈소스 AI 침투 프레임워크 'Cairn'으로 미 항공우주 기관을 뚫었고, 북한은 Claude Code 설정 변조로 악성코드를 퍼뜨리는 등 인간 개입 없는 완전 자동화 공격이 등장했다고 경고했다."
+      }
+    ],
+    articles: [
+      {
+        id: "80-1",
+        newsletter_id: 80,
+        topic_en: "DoD - Superintelligent AI Policy",
+        topic_kr: "미 국방부 - 초지능 AI 정책 대응",
+        title: "'I was seriously wrong': Experts say superintelligent AI may arrive as soon as next year",
+        title_kr: "전문가들 '내가 크게 틀렸다' — 초지능 AI 이르면 내년 도래 가능",
+        source: "Defense One",
+        url: "https://www.defenseone.com/threats/2026/11/i-was-seriously-wrong-ai-experts-say-superintelligent-ai-may-arrive-soon-next-year/417348/",
+        keywords: ["초지능", "METR", "AI 자기개선", "AI 통제 상실", "초지능실"],
+        summary: "비영리 AI 평가기관 METR 보고서에 따르면 AI 에이전트 활용으로 Anthropic의 모델 개선 속도가 작년 말보다 약 2배 빨라졌고, 이에 Sentinel과 AI Futures Project 등 주요 예측 기관들이 인간을 넘어서는 초지능(ASI)의 도래 시점을 2031년에서 2027~2028년으로 크게 앞당겼다. 다만 Anthropic이 기밀 데이터를 공개하지 않아 외부 검증에는 한계가 있다. 전 OpenAI·연방 AI 안전연구소 출신 폴 크리스티아노는 3년 안 'AI 통제 상실' 가능성을 경고했으며, 고도화된 AI가 해킹으로 전 세계 서버에 자가 복제해 강제 종료를 무력화하거나 군용 드론·건설 로봇을 통제할 위험도 거론됐다. 국방부는 최고디지털·AI책임자실(CDAO)을 '초지능실(Super Intelligence Office)'로 개편했으며, 전문가들은 정책 수립 주기가 3~5년에서 6~9개월로 짧아졌다며 적대국의 모델 탈취·사보타주를 막을 데이터센터 보안과 모델 견고성 확보를 촉구했다.",
+        date: "2026-11-19"
+      },
+      {
+        id: "80-2",
+        newsletter_id: 80,
+        topic_en: "DoD - AI Cybersecurity Training",
+        topic_kr: "미 국방부 - 사이버 인력 AI 훈련 의무화",
+        title: "Pentagon elevates AI as a 'fundamental requirement' for cybersecurity staff training",
+        title_kr: "미 국방부, 사이버 인력 훈련의 '기본 요건'으로 AI 격상 — 실무 중심 채용 전환",
+        source: "DefenseScoop",
+        url: "https://defensescoop.com/2026/11/17/pentagon-ai-requirement-cybersecurity-training/",
+        keywords: ["사이버 인력", "AI 훈련", "실무 중심 채용", "사이버 훈련장", "인력난"],
+        summary: "미 국방부가 자동화 정찰과 제로데이 발굴 등 적대 세력의 AI 기반 사이버 위협에 맞서기 위해 모든 사이버보안 직무 훈련에 AI를 필수 기초 역량으로 통합하기로 결정. 이력서 위주 선발에서 벗어나 제한 시간(30분) 안에 AI 도구로 실제 사이버 훈련장(Cyber Range) 과제를 해결하는지 평가하는 실무 중심(Skills-based) 채용으로 바꾼다. 국방부 사이버 인력 약 24만 명 중 2만4,000명가량이 부족하고 직무도 76개에서 79개로 늘어난 상황에서, AI 훈련 우선순위화, 민간 산업계와의 순환 근무 확대, 사이버 인력 서밋(4월 7~9일) 개최 등을 추진한다.",
+        date: "2026-11-17"
+      },
+      {
+        id: "80-3",
+        newsletter_id: 80,
+        topic_en: "DoD - PQC Implementation Plan",
+        topic_kr: "미 국방부 - 양자내성암호(PQC) 전략 이행계획",
+        title: "DOD CIO to Release Implementation Plan for PQC Strategy Soon",
+        title_kr: "미 국방부 CIO, 양자내성암호(PQC) 전략 이행계획 조만간 발표",
+        source: "MeriTalk",
+        url: "https://www.meritalk.com/articles/dod-cio-to-release-implementation-plan-for-pqc-strategy-soon/",
+        keywords: ["PQC", "양자내성암호", "DoD CIO", "Kirsten Davies", "암호 현대화"],
+        summary: "미 국방부 최고정보책임자실(CIO)이 양자컴퓨팅 기반 보안 위협에 대응하기 위한 부처 차원의 양자내성암호(PQC) 전환 이행계획을 곧 발표할 예정이라고 소누 샨카 수석부CIO가 11월 16일 밝혔다. 6월 23일 커스틴 데이비스 CIO가 공개한 전략과 트럼프 대통령의 양자 기술 행정명령을 구체화하는 후속 조치로, 2030년까지 고영향 시스템에, 2031년까지 전군에 양자내성암호를 적용하는 것이 목표다. 샨카 수석부CIO는 급변하는 위협과 작전 환경에 맞춰 암호 현대화 속도를 높여야 한다며, 방산·기술 업계에 높은 통합성과 유연성을 갖춘 솔루션 개발을 주문했다.",
+        date: "2026-11-16"
+      },
+      {
+        id: "80-4",
+        newsletter_id: 80,
+        topic_en: "DoD - PME Reform & Strategic Thinking",
+        topic_kr: "미 국방부 - 전문군사교육(PME) 개혁",
+        title: "The military needs strategic thinkers, not just operators",
+        title_kr: "군에는 전술가가 아니라 전략가가 필요하다 — 헤그세스 PME 개혁안 비판",
+        source: "Defense One",
+        url: "https://www.defenseone.com/ideas/2026/11/military-strategic-thinkers-hegseth-education/417238/",
+        keywords: ["PME 개혁", "전략적 사고", "헤그세스", "워게임", "지적 독립성"],
+        summary: "그렉 폴록 전 국방부 부차관보 대행이 Defense One 기고에서 헤그세스 장관의 전문군사교육(PME) 개혁안이 현대전의 본질인 전략적 억제와 정치적 목표 달성 능력을 약화시킬 수 있다고 비판. 미군은 이라크·아프가니스탄과 9개월째 이어지는 이란 분쟁에서 압도적인 전술·작전 우위를 보였지만 이를 지속 가능한 정치적 해결로 바꾸는 데는 한계를 보였는데, 개혁안은 '전쟁 수행과 승리'라는 작전 차원에 매몰돼 외교·경제 수단과 군사력을 통합하는 전략적 사고 함양을 간과한다는 것이다. AI 교육 심화, 중간 경력자 대상 'PME 1.5' 신설, 민간 전문성 활용, 실전형 워게임·시뮬레이션 확대는 긍정적이지만, PME 감독 권한을 합참(J7)에서 정무직 차관실로 옮기고 민간 교수진의 종신재직권을 폐지하려는 조치는 교육의 정치화와 고위 장교의 지적 독립성 훼손을 부를 위험이 크다고 지적했다.",
+        date: "2026-11-15"
+      },
+      {
+        id: "80-5",
+        newsletter_id: 80,
+        topic_en: "U.S. Army - Data Management Bottleneck & AI C2",
+        topic_kr: "미 육군 - 데이터 관리 병목과 AI 지휘통제",
+        title: "The Army wants its units to use more data, but many aren't built to do so",
+        title_kr: "미 육군, 부대의 데이터 활용 확대 원하지만 상당수는 그럴 구조가 아니다",
+        source: "Defense One",
+        url: "https://www.defenseone.com/technology/2026/11/army-wants-its-units-use-more-data-many-arent-built-do-so/417355/",
+        keywords: ["데이터 관리", "Project Flytrap", "AI 지휘통제", "전술 제대", "전자전 자동화"],
+        summary: "폴란드에서 실시된 'Project Flytrap' 등 미 육군 야전 훈련에서 전투·통신 부대와 사령부 간 정보 공유와 의사결정 속도가 전장 복잡성을 따라가지 못하는 '데이터 관리' 문제가 드러났다. 현재 지휘통제 체계는 위기 징후 식별부터 주파수 변경 같은 실제 대응까지 '인간의 속도'로 움직여 즉각 대응에 한계가 있다. 육군과 앤두릴·L3해리스 등 업계 전문가들은 소대급 전술 제대와 사단·군단 사이에서 정보를 빠르게 순환시키려면 AI가 필수라며, AI가 상급 부대의 첩보를 하급 제대에 즉시 전파해 초급 장교가 드론 군집 등에 바로 대응하게 하고, 5G·6G 환경에서 적 전파 방해를 피해 최적 채널로 자동 전환하는 등 통신·전자전 대응을 자동화할 수 있다고 강조했다.",
+        date: "2026-11-19"
+      },
+      {
+        id: "80-6",
+        newsletter_id: 80,
+        topic_en: "U.S. Army - Manufacturing Rodeo & Small Drones",
+        topic_kr: "미 육군 - 제조 로데오와 소형 드론 대량생산",
+        title: "Army kicks off 'manufacturing rodeo' with focus on small drones",
+        title_kr: "미 육군, 소형 공격드론 대량생산 검증 위한 '제조 로데오' 착수",
+        source: "Breaking Defense",
+        url: "https://breakingdefense.com/2026/11/army-kicks-off-manufacturing-rodeo-with-focus-on-small-drones/",
+        keywords: ["Manufacturing Rodeo", "소형 드론", "공급망 검증", "Drone Dominance", "개방형 아키텍처"],
+        summary: "미 육군이 전시 장기전에 대비해 저가 드론의 대량생산 역량과 공급망 회복탄력성을 실전 수준으로 검증하는 '제조 로데오(Manufacturing Rodeo)' 프로그램의 첫 제안요청서를 11월 17일 공개. 선정 업체는 내년 3월 1일까지 대당 3,000달러 이하의 1군(20파운드 이하) 자폭드론 400대와 지상통제장비 20세트를 납품해야 하며(2월 15일까지 10% 선납), 정부가 배터리·모터·MK118 탄두 키트 등 관급장비를 제공한다. 육군과 국방계약관리청(DCMA)은 공장 실사와 분해 검사로 미 본토 외산 부품의 완전 배제 여부를 검증하고, 모든 체계는 전자전 환경 비행과 다양한 상용 탑재체 통합이 가능한 개방형 아키텍처를 갖춰야 한다. 완성된 드론은 내년 3월 제3회 드론 도미넌스 건틀릿에서 장애물·고강도 재밍·실표적 시험을 거치며, 우수 체계에는 최대 1만 대 양산 옵션이 주어져 민관 공동생산 라인과 공급망 차단 모의훈련을 수행한다.",
+        date: "2026-11-17"
+      },
+      {
+        id: "80-7",
+        newsletter_id: 80,
+        topic_en: "U.S. Army ATEC - Test Range Access & Fielding",
+        topic_kr: "미 육군 시험평가사령부 - 시험장 접근성과 전력화 가속",
+        title: "Army's Permissive Test Ranges Aim to Speed Industry Testing and Fielding",
+        title_kr: "미 육군 시험평가사령부, 방산 신기술 조기 전력화 위한 '개방형 시험장' 확대",
+        source: "MeriTalk",
+        url: "https://www.meritalk.com/articles/armys-permissive-test-ranges-aim-to-speed-industry-testing-and-fielding/",
+        keywords: ["ATEC", "개방형 시험장", "대드론", "전자전 시험", "testrange.army.mil"],
+        summary: "미 육군 시험평가사령부(ATEC)가 드론·대드론·장거리 화력·저비용 요격체 등 핵심 신기술의 조기 전력화를 위해 민간 기업의 군 시험장 접근성을 크게 높이는 '개방형 시험장' 이니셔티브를 확대. 신청 후 30일 안 시험장 배정(현재 평균 33일)과 평가 후 14일 안 초기 피드백을 목표로 하며, 지금까지 약 93개 기업과 협력해 15건의 시험을 마치고 14건을 진행 중이다. 기업들은 전용 포털(testrange.army.mil)로 더그웨이 성능시험장, 캠프 그레일링, 인디애나주 캠프 애터버리·머스카타턱, 모로코 시험장 등과 매칭되며, 공군 제746시험대대 등과 협력해 GPS 교란과 통신 재밍이 있는 고강도 전자전 환경(캠프 그레일링은 17개 위협 모의 발신기 운용)을 구현해 기업이 즉시 보완·재시험하도록 지원한다.",
+        date: "2026-11-18"
+      },
+      {
+        id: "80-8",
+        newsletter_id: 80,
+        topic_en: "U.S. Army - Small Drone Strategy",
+        topic_kr: "미 육군 - 소형 드론 비축 대신 신규 구매",
+        title: "Instead of stockpiling small attack drones, Army looking to simply buy new ones",
+        title_kr: "미 육군, 소형 공격드론 비축·정비 대신 '소모 후 신규 구매' 전략",
+        source: "Breaking Defense",
+        url: "https://breakingdefense.com/2026/11/instead-of-stockpiling-small-attack-drones-army-looking-to-simply-buy-new-ones/",
+        keywords: ["소형 드론", "소모성", "Drone Dominance", "DAWG", "분대 드론"],
+        summary: "우크라이나 전장에서 적의 대드론 대책이 72시간 안에 등장하는 등 기술 진화 주기가 매우 빨라, 미 육군은 소형 드론을 창고에 비축하거나 부품을 교체·정비하기보다 실전적 훈련 중 파손될 때까지 쓰고 최신형으로 바로 교체하는 편이 비용과 효율 면에서 유리하다고 판단. 헤그세스 장관의 전 분대 드론 배치 지시에 따라 국방부는 '드론 도미넌스' 프로그램과 약 550억 달러 규모 국방자율전투그룹(DAWG) 사업 등으로 대규모 도입을 추진 중이며, 우선 확보되는 3만 대 중 1만 대가 야전 부대에 배치돼 파손을 두려워하지 않는 고강도 훈련에 투입된다. 다만 감시정찰·수송을 맡는 21~55파운드급(2군) 이상 중형 드론은 기존처럼 정비 체계를 유지하며, 일부 전문가들은 막대한 예산이 드는 만큼 첨단 드론의 회수·전선 정비에 대한 장기 계획이 필요하다고 지적했다.",
+        date: "2026-11-12"
+      },
+      {
+        id: "80-9",
+        newsletter_id: 80,
+        topic_en: "U.S. Army - Autonomous Resupply",
+        topic_kr: "미 육군 - 무인 자율보급과 인태 지역 실증",
+        title: "Army Plans Up to 6 Autonomous Resupply Agreements",
+        title_kr: "미 육군, 인도-태평양용 무인 자율보급체계 시제품 계약 최대 6건 추진",
+        source: "MeriTalk",
+        url: "https://www.meritalk.com/articles/army-plans-up-to-6-autonomous-resupply-agreements/",
+        keywords: ["자율보급", "UGV", "USARPAC", "xTech", "의무후송"],
+        summary: "미 육군이 인도-태평양 지역 병력 지원과 병사 위험 감소를 위해 무인 지상차량(UGV) 기반 자율보급·의무후송 체계 시제품 계약을 최대 6건(건당 최대 200만 달러) 체결할 계획. 하와이 실증(ACE 27-01) 결과를 바탕으로 참가 기업들에 약 45일의 개량 기간을 준 뒤 야전 운용평가를 거쳐 최종 1~3개사의 장비를 구매한다. 험지·장거리 분산 작전에서 탄약·식량 보급과 부상자 후송(기존 인력 4명 소요) 부담을 줄이는 것이 목표이지만, 하와이 정글 시험에서 일부 체계의 기동성 부족과 높은 무게중심에 따른 안정성 저하, 배터리 수송·한랭지 성능과 내연기관(JP-8) 소음 간 상충이 과제로 나타났다. 육군 태평양사령부(USARPAC)·전술엣지획득국(G-TEAD)·Army FUZE xTech가 협업해 계약 인력을 야전사령부에 전진 배치하고 현장 병사의 피드백에 가장 큰 평가 비중을 두는 신속획득 방식을 적용한다.",
+        date: "2026-11-13"
+      },
+      {
+        id: "80-10",
+        newsletter_id: 80,
+        topic_en: "U.S. Navy - F/A-XX & CCA Strategy",
+        topic_kr: "미 해군 - F/A-XX와 CCA 전략",
+        title: "Navy will likely fly CCAs sooner than F/A-XX, White House nom says",
+        title_kr: "미 해군 차관 지명자 '차세대 함재기 F/A-XX보다 CCA를 먼저 운용할 것'",
+        source: "Defense One",
+        url: "https://www.defenseone.com/defense-systems/2026/11/navy-will-likely-fly-ccas-sooner-f-xx-white-house-nom-says/417365/",
+        keywords: ["CCA", "F/A-XX", "William Toti", "항모 비행단", "소모성 자산"],
+        summary: "미 해군 차관 지명자 윌리엄 토티가 상원 군사위원회 인준 청문회에서 2030년대 도입 예정인 차세대 함재기 F/A-XX를 기다리지 않고, 기존 F-35 등에 무인협동전투기(CCA) 제어 체계를 먼저 통합해 조기에 운용할 계획이라고 밝혔다. 그는 향후 50년간 항모 전력을 유지하려면 F-35가 마지막 유인 함재기가 될 수 없어 F/A-XX 개발이 필수라면서도, 미래 항모 비행단의 전투력을 위해 저비용 소모성 자산인 CCA의 신속한 도입이 핵심 과제라고 설명했다. 해군은 9월 보잉을 F/A-XX 개발사로 선정했지만 FY2027 예산안에는 최소한의 지원만 반영됐으며, 9월 항모 탑재용 CCA 시제품 정보요청서(RFI)를 내고 10월 공중전 기동 시험까지 마친 공군을 뒤쫓고 있다.",
+        date: "2026-11-20"
+      },
+      {
+        id: "80-11",
+        newsletter_id: 80,
+        topic_en: "VA - VA.gov AI Integration",
+        topic_kr: "미 보훈부 - VA.gov AI 통합과 디지털 현대화",
+        title: "VA plans further VA.gov updates as it looks to expand AI integration",
+        title_kr: "미 보훈부, VA.gov AI 통합 확대와 추가 개편 추진",
+        source: "Government Executive",
+        url: "https://www.govexec.com/technology/2026/11/va-plans-further-vagov-updates-it-looks-expand-ai-integration/417224/",
+        keywords: ["VA.gov", "America.gov", "AI 통합", "패스키", "디지털 현대화"],
+        summary: "미 보훈부(VA)가 백악관의 AI 기반 대국민 통합 창구 America.gov와 협력해 VA.gov에서 AI(행정부 명칭 '초지능·SI') 도구가 원활히 작동하도록 시스템을 재편하고 있다. 약 9만 명의 참전용사 설문을 반영해 11월 11일 CLEAR·패스키 로그인 추가, 일상 언어 검색 강화, 로그인 없이 문자로 신청 현황을 확인하는 '매직 링크', 서류 제출(QuickSubmit) 절차 간소화(11단계→3단계) 등 주요 개편을 단행했다. 내년 1월 추가 업데이트를 목표로 기능 개선을 이어가며, 카터 파머 신임 연방 CIO와 협의해 다른 기관이 벤치마킹할 AI 도입 선도 부처를 지향한다.",
+        date: "2026-11-13"
+      },
+      {
+        id: "80-12",
+        newsletter_id: 80,
+        topic_en: "DISA - MPE Rollout",
+        topic_kr: "미 DISA - 태평양·유럽 전구 임무파트너환경(MPE)",
+        title: "DISA Prepares for MPE Rollout in Pacific, European Theaters",
+        title_kr: "미 DISA, 태평양·유럽 전구 '임무파트너환경(MPE)' 현대화 본격 추진",
+        source: "MeriTalk",
+        url: "https://www.meritalk.com/articles/disa-prepares-for-mpe-rollout-in-pacific-european-theaters/",
+        keywords: ["DISA", "MPE", "INDOPACOM", "ACP 240", "데이터 중심 보안"],
+        summary: "미 국방정보시스템국(DISA)이 10월 1일 공군으로부터 임무파트너환경(MPE) 인력과 사업을 인수해, 10월 주요 작전 연습의 교훈을 바탕으로 인도태평양사령부(INDOPACOM)의 연합정보환경(CIE) 확장에 집중하고 이후 유럽사령부(EUCOM)와 NATO로 넓힐 계획이다. 네트워크 중심 공유에서 벗어나 제로트러스트와 표준 보안 규격(ACP 240)을 적용한 통합 데이터 패브릭을 구축해, 동맹국이 자국 장비를 그대로 쓰면서도 정보 객체 단위로 암호화·접근 통제된 기밀 정보를 거의 실시간으로 공유하도록 하며, 2027년 초 최소기능역량(MVC) 출시가 목표다. 9월 출범한 기술 인큐베이터로 민간 협력을 강화해, 연합 작전의 언어 장벽을 줄이는 구글 Gemini 기반 자연어 번역 도구와 전술 환경 연동 키트 등을 신속히 시제품화하고 있다.",
+        date: "2026-11-17"
+      },
+      {
+        id: "80-13",
+        newsletter_id: 80,
+        topic_en: "DISA - ZEUS Vehicle",
+        topic_kr: "미 DISA - SETI·ENCORE III 통합 'ZEUS' 조달체계",
+        title: "DISA Weighs Combining SETI and ENCORE in Potential New Contracting Vehicle",
+        title_kr: "미 DISA, SETI·ENCORE III를 통합한 차세대 IT 조달체계 'ZEUS' 검토",
+        source: "MeriTalk",
+        url: "https://www.meritalk.com/articles/disa-weighs-combining-seti-and-encore-in-potential-new-contracting-vehicle/",
+        keywords: ["DISA", "ZEUS", "SETI", "ENCORE III", "IT 조달"],
+        summary: "미 국방정보시스템국(DISA)이 대형 IT 조달 계약인 SETI(75억 달러)와 ENCORE III(175억 달러)의 만료 시점(2028~2030년)이 다가옴에 따라, 두 프로그램의 핵심 기능을 묶은 차세대 후속 조달체계 'ZEUS(가칭)'를 검토 중이다. 기존 계약의 우수한 요소는 이어받되 비효율적·저활용 기능은 과감히 정리하고, 일반 범용 서비스는 연방조달청(GSA)을 통해 확보하는 등 조달 구조를 정예화할 방침이다. 계약 구조와 규모는 미정이며 2027년 초 정보요청서(RFI)를 시작으로 업계 의견을 모아 사업을 구체화한다.",
+        date: "2026-11-16"
+      },
+      {
+        id: "80-14",
+        newsletter_id: 80,
+        topic_en: "NSA - Classified Network Outage & Recovery",
+        topic_kr: "미 국가안보국 - 기밀 통신망 장애와 복구",
+        title: "Outage of NSA's classified communications network appears fixed, people familiar say",
+        title_kr: "미 국가안보국(NSA) 기밀 통신망 'NSANet' 3일간 장애 복구",
+        source: "Nextgov/FCW",
+        url: "https://www.nextgov.com/cybersecurity/2026/11/outage-nsas-classified-communications-network-appears-fixed-people-familiar-say/417373/",
+        keywords: ["NSA", "NSANet", "시스템 장애", "PHP 패치", "인프라 장애"],
+        summary: "미 국가안보국(NSA)의 기밀 통신망 NSANet에서 약 3일간 이어진 대규모 접속 장애가 복구돼 정상 운영 중이다. 장애 기간 메릴랜드 본부와 조지아주 거점 인력의 출근 시간이 분산(Code Orange)됐지만, 핵심 임무인 해외 신호정보(SIGINT) 수집에는 차질이 없었던 것으로 파악됐다. 원인은 외부 해킹이 아닌 기술적 결함으로, 제이 클레이턴 국가정보장의 의회 증언에 따르면 최근 발견된 취약점을 고치기 위해 오픈소스 웹 소프트웨어 PHP 패치를 적용하다 시스템 충돌이 일어났다. 최근 연방항공청(FAA)의 전국 이륙 중단과 마이크로소프트·금융권 전산 마비 등 잇단 인프라 장애와 맞물려 의회의 추궁을 받고 있으며, 이런 연쇄 장애는 백악관 국가사이버국장(ONCD) 교체 등 행정부 사이버 지휘부 개편의 배경이 됐다.",
+        date: "2026-11-20"
+      },
+      {
+        id: "80-15",
+        newsletter_id: 80,
+        topic_en: "CISA - Mandatory AI Reviews & FY27 Budget",
+        topic_kr: "CISA - 고위험 AI 사전 검증과 기반시설 예산",
+        title: "Gottheimer Pushes Mandatory AI Reviews, CISA Resources",
+        title_kr: "고트하이머 하원의원, 고위험 AI 모델 의무 사전 검증과 CISA 역량 강화 촉구",
+        source: "MeriTalk",
+        url: "https://www.meritalk.com/articles/gottheimer-pushes-mandatory-ai-reviews-cisa-resources/",
+        keywords: ["American AI Security Act", "NSA 사전 평가", "China FIREWALL Act", "CISA 예산", "오픈웨이트 모델"],
+        summary: "조시 고트하이머 하원의원(민주·뉴저지)이 11월 17일 국가안보와 기반시설 보호를 위해 고성능 AI 모델의 배포 전 정부 의무 검증과 CISA 예산·인력 확충을 촉구. 트럼프 행정부의 자율적 AI 보안 행정명령을 넘어, 파운데이션 모델 개발사가 출시나 중대 변경 전 국가안보국(NSA)에 모델과 훈련·안전 테스트 정보를 제출하도록 하는 초당적 법안(American AI Security Act)을 발의했으며, NSA와 국방부·상무부가 30일(최대 60일) 안에 사이버 위협과 화생방·핵(CBRN) 악용 가능성을 평가하고 권고 이행을 배포 전제 조건으로 삼는다. 정부 기기에서 중국산 오픈웨이트 모델 사용을 금지하고 이를 기반으로 한 소프트웨어의 연방 구매를 막는 'China FIREWALL Act of 2026'도 별도로 추진 중이다. 상원 세출위원회는 FY2027 CISA 예산을 약 7,700만 달러 늘린 약 26억8,000만 달러로 편성해 핵심 인력 채용(6,000만 달러 이상)과 AI 기반 모의해킹·레드팀 평가(최소 500만 달러) 예산을 담았다.",
+        date: "2026-11-17"
+      },
+      {
+        id: "80-16",
+        newsletter_id: 80,
+        topic_en: "GAO - Major AI Platforms Security Bypass",
+        topic_kr: "미 회계감사원(GAO) - 주요 생성형 AI 4종 보안 우회",
+        title: "GAO Finds 4 AI Platforms Helped Plan Attacks During Testing",
+        title_kr: "미 회계감사원(GAO), 생성형 AI 4종 모두 보안 우회 시 공격 기획에 악용 가능 확인",
+        source: "MeriTalk",
+        url: "https://www.meritalk.com/articles/gao-finds-4-ai-platforms-helped-plan-attacks-during-testing/",
+        keywords: ["GAO", "AI 안전장치 우회", "공격 기획", "Maggie Hassan", "생성형 AI 위험"],
+        summary: "미 회계감사원(GAO)이 2026년 봄 실시해 11월 18일 공개한 비밀 모의 테스트 보고서에 따르면 Claude·Gemini·Grok·ChatGPT 등 미국 대표 생성형 AI 4종 모두 자체 안전장치(거부, 계정 정지 등)가 우회되면 실제 공격 기획에 쓸 수 있는 정보를 제공했다. 조사관들은 두 플랫폼에 '폭발물을 이용한 대량 살상', 나머지 둘에 '전력망 공격을 통한 경제적 피해' 시나리오를 부여했으며, 모든 플랫폼에서 초기 차단 기능이 작동했지만 12시간 안에 보호 조치를 우회해 대체로 실행 가능한 공격 계획을 끌어냈다. 조사를 의뢰한 매기 하산 상원의원은 AI 기반 공공안전 위협이 더 이상 이론이 아님을 보여준다며 신속한 안전 입법과 청문회를 촉구했다.",
+        date: "2026-11-18"
+      },
+      {
+        id: "80-17",
+        newsletter_id: 80,
+        topic_en: "FedRAMP - AI Cyber Vulnerability Rules",
+        topic_kr: "미 FedRAMP - AI 시대 취약점 관리 규정",
+        title: "FedRAMP pushes new cyber vulnerability rules to keep pace with AI",
+        title_kr: "미 FedRAMP, AI 기반 공격 대응 위해 클라우드 취약점 관리 규정 대폭 강화",
+        source: "Federal News Network",
+        url: "https://federalnewsnetwork.com/cybersecurity/2026/11/fedramp-pushes-new-cyber-vulnerability-rules-to-keep-pace-with-ai/",
+        keywords: ["FedRAMP", "취약점 관리", "Claude Mythos", "FedRAMP 20X", "인증 박탈"],
+        summary: "미 연방 클라우드 보안 인증 프로그램(FedRAMP)이 AI를 악용한 해킹 가속에 대응해 550여 개 인증 클라우드 서비스 제공업체(CSP)에 실시간·위협 기반의 새 취약점 관리 규정을 의무화. Anthropic 'Claude Mythos' 등 AI 모델의 사이버 공격 역량 고도화와 최근 '블랙 옥토버' 보안 사고에 대응해, CISA의 7월 운영 지침(BOD)과 연계된 취약점 탐지·대응(VDR)과 평가·보고(VER) 규정을 도입하고 월간 정기 스캔과 심각도 점수 위주에서 인터넷 노출과 실제 악용 가능성을 따지는 '노출·위협 기반' 접근으로 바꿨다. 모든 인증 서비스는 2026년 12월 7일까지 새 규정으로 전환해야 하며, 미달성 시 시정조치계획(CAP)으로 2027년 3월 7일까지 유예를 받고 이후에도 전환하지 못하면 인증이 즉시 취소되고 1년간 재진입이 금지된다. 12월 초부터 분기별 '보안 수신함 비상 테스트'를 하는 등 연례 서류 중심 규제에서 자동화된 실시간 모니터링으로 옮겨가는 FedRAMP 20X의 일환이다.",
+        date: "2026-11-13"
+      },
+      {
+        id: "80-18",
+        newsletter_id: 80,
+        topic_en: "AI-Generated FOIA Requests & Backlog Risks",
+        topic_kr: "미 연방정부 - AI 생성 정보공개청구 폭증",
+        title: "AI is changing both sides of FOIA. Here's how agencies should prepare.",
+        title_kr: "AI가 정보공개청구(FOIA)의 양쪽을 바꾸고 있다 — 기관의 대비 방안",
+        source: "Nextgov/FCW",
+        url: "https://www.nextgov.com/ideas/2026/11/ai-changing-both-sides-foia-heres-how-agencies-should-prepare/417215/",
+        keywords: ["FOIA", "정보공개청구", "AI 생성 청구", "민감정보 가림", "기록관리"],
+        summary: "2025 회계연도 연방정부의 정보공개청구(FOIA)가 전년보다 13% 늘어난 약 170만 건으로 사상 최고를 기록하고 평균 대기 기간이 240일을 넘은 가운데, 청구인들이 AI로 짧은 시간에 50~100건씩 청구를 대량 생성해 건별 수작업 처리의 한계와 소송 리스크가 커지고 있다는 기고. 문서 분류·요약·초동 분석·관련 자료 식별처럼 결과 검증이 가능하고 범위가 명확한 업무에는 AI를 적극 도입하되, 최종 비공개 결정이나 민감정보 가림 처리 같은 법적 책임이 따르는 판단은 반드시 담당자의 최종 검토를 거쳐야 한다. 유사 청구 병합 처리와 자주 찾는 정보의 선제 공개로 청구 자체를 줄이고, 민간 AI 도구를 무분별하게 들이기보다 보안·개인정보·연방 기록물 보존·감사 추적 요건을 충족하는 거버넌스를 먼저 설계하라고 제언했다.",
+        date: "2026-11-13"
+      },
+      {
+        id: "80-19",
+        newsletter_id: 80,
+        topic_en: "U.S. Congress - Cyber and AI Review Board",
+        topic_kr: "미 의회 - 사이버·AI 조사위원회",
+        title: "Bipartisan bill would create cyber and AI review board amid series of tech outages",
+        title_kr: "잇단 IT 장애 속 미 하원, 초당적 사이버·AI 조사위원회 설립 법안 발의",
+        source: "Nextgov/FCW",
+        url: "https://www.nextgov.com/policy/2026/11/bipartisan-bill-would-create-cyber-and-ai-review-board-amid-series-tech-outages/417299/",
+        keywords: ["ROOT CAUSE Act", "사이버·AI 조사위원회", "AI INSIGHT Act", "AI 에이전트 통제", "IT 장애"],
+        summary: "연방항공청(FAA) 운항 중단, 마이크로소프트 업무망 장애, NSA 기밀망(NSANet) 마비 등 주요 인프라 장애가 잇따르자 미 하원이 사이버·AI 사건 전담 조사기구와 연방 네트워크 보호 법안을 발의. 모건 루트렐(공화)·리치 토레스(민주) 의원은 CISA 산하에 독립 조사위원회를 두는 초당적 법안(ROOT CAUSE Act)을 냈으며, 외부 해킹뿐 아니라 결함 있는 업데이트·설정 오류·권한을 벗어난 AI 오작동 등 대규모 장애의 근본 원인을 조사하고 행정부의 임의 해체나 보고서 수정을 법으로 금지한다(국방·NSANet 등 국가안보시스템은 제외). 맷 반 엡스(공화) 의원은 연방 민간망의 AI 에이전트를 식별·추적하고 권한을 최소화하며, AI가 권한을 넘으면 공급업체 승인 없이 즉시 차단하고 AI 의사결정 증거를 보존하도록 하는 AI INSIGHT Act를 발의했고, 앤디 오글스(공화) 의원은 CISA와 IT 기업 간 취약점 패치·복구 협력을 명문화하는 SECURE IT Act를 추진한다.",
+        date: "2026-11-18"
+      },
+      {
+        id: "80-20",
+        newsletter_id: 80,
+        topic_en: "NATO - Cybersecurity AI & Daybreak Program",
+        topic_kr: "나토 - 사이버보안 AI와 Daybreak 프로그램",
+        title: "OpenAI gives NATO access to most advanced cybersecurity AI",
+        title_kr: "OpenAI, NATO에 최첨단 사이버보안 AI 'Daybreak' 제공",
+        source: "Defense One",
+        url: "https://www.defenseone.com/technology/2026/11/openai-gives-nato-access-most-advanced-cybersecurity-ai/417296/",
+        keywords: ["OpenAI", "Daybreak", "NATO", "Crossed Swords", "에이전틱 AI"],
+        summary: "OpenAI가 11월 17일 튀르키예 이즈미르에서 열린 NATO Edge 컨퍼런스에서 자사 최첨단 AI 모델을 NATO 회원국 정부에 제공한다고 발표. 5월 미국 정부와 공인 기관을 대상으로 소프트웨어 취약점 탐지·수정을 위해 출범한 Daybreak 프로그램(Anthropic의 Project Glasswing과 유사)을 동맹국으로 확장한 것이다. 이달 초 에스토니아 탈린에서 열린 NATO 핵심 사이버 훈련 'Crossed Swords'에서는 참가자들이 처음으로 온프레미스 AI와 OpenAI Daybreak로 자율 AI 에이전트를 직접 구축·배치했으며, 러시아의 AI 기반 사이버 공격이 급증하는 가운데 취약점 발견부터 패치까지 걸리는 시간을 수개월·수주에서 수분으로 줄이는 것이 목표다. NATO 통신정보국(NCIA)은 2027년 말까지 회원국 자체 예산과 별도로 클라우드·우주·AI 분야에 30억 달러 이상의 민간 계약을 발주할 계획이다.",
+        date: "2026-11-17"
+      },
+      {
+        id: "80-21",
+        newsletter_id: 80,
+        topic_en: "NATO - Ukraine Red Team & Adaptation Cycle",
+        topic_kr: "나토 - 우크라이나 대항군 기용과 교리 혁신",
+        title: "NATO taps Ukraine as red-team in drills to 'trigger an adaptation cycle'",
+        title_kr: "NATO, '적응 주기' 촉발 위해 우크라이나군을 연합훈련 대항군으로 기용",
+        source: "Breaking Defense",
+        url: "https://breakingdefense.com/2026/11/nato-taps-ukraine-as-red-team-in-drills-to-trigger-an-adaptation-cycle/",
+        keywords: ["NATO ACT", "우크라이나 대항군", "무인수상정", "드론 군집", "Fight Club"],
+        summary: "NATO 연합변혁사령부(ACT) 피에르 반디에 사령관이 연합군의 전술적 '적응 주기'를 촉발하기 위해 우크라이나 병력과 자국산 무인수상정(USV)을 훈련 대항군으로 투입하고 있다고 밝혔다. 2025년 포르투갈 인근 REPMUS 훈련에서 우크라이나 대항군은 무인수상정 등으로 5번의 해상 전투 시나리오에서 NATO 병력을 모두 제압했다. 반디에 사령관은 현대 상륙작전에서 해상·공중 드론 위협이 함께 존재해 대드론 방어와 군집 공격 대응이 필수라며, NATO 합동전투센터가 5개년 캠페인의 일환인 전략 토론 포럼 '파이트 클럽'에서 가상 시나리오로 함대가 마비되는 드론 군집의 임계점을 시험하고 있다고 설명했다. 지중해 러시아 해군 주둔 규모는 크게 줄었지만 야센급 신형 원자력 잠수함 등 수중 전력 증강은 계속돼 대잠수함전은 여전히 핵심 우려 분야다.",
+        date: "2026-11-11"
+      },
+      {
+        id: "80-22",
+        newsletter_id: 80,
+        topic_en: "Software Governance - Autonomous Agents & Controls",
+        topic_kr: "소프트웨어 거버넌스 - 자율 에이전트와 통제 체계",
+        title: "How AI agents are changing the rules of software governance",
+        title_kr: "AI 에이전트가 바꾸는 소프트웨어 거버넌스의 규칙",
+        source: "InfoWorld",
+        url: "https://www.infoworld.com/article/4248100/how-ai-agents-are-changing-the-rules-of-software-governance.html",
+        keywords: ["AI 에이전트", "소프트웨어 거버넌스", "감사 추적", "최소 권한", "인간 승인"],
+        summary: "개발 현장의 AI가 코드 제안을 넘어 다중 파일 수정·테스트·배포까지 자율 수행하는 에이전트로 진화하면서, 사후적·문서 중심 통제에서 개발 워크플로 안에 내재화된 엔지니어링 통제로 전환해야 한다는 InfoWorld 분석. 의사결정과 실행 사이 간격이 극도로 짧아져 인간이 모든 단계를 실시간 감독하기 어려워졌고, 개발자의 역할은 직접 코딩에서 작업 위임과 결과 검증으로 바뀌고 있다. 에이전트가 바꾼 코드·받은 지시·수행한 테스트를 모두 기록하는 감사 추적, 앱 코드 수정 권한과 운영 인프라·배포 설정 권한을 엄격히 나누는 최소 권한 원칙, 핵심 시스템·인프라 변경 같은 고위험 작업에만 인간 최종 승인을 강제하는 장치를 개발 환경 자체에 설계해야 한다. 다단계 작업이 막대한 컴퓨팅·토큰 비용을 쓰는 만큼 실제 성과를 측정·제어하는 '소프트웨어 하네스' 계층이 필요하며, AI가 만든 소프트웨어의 장애 책임은 조직에 귀속되므로 일관된 권한·추적·승인 표준을 세워야 한다.",
+        date: "2026-11-16"
+      },
+      {
+        id: "80-23",
+        newsletter_id: 80,
+        topic_en: "Google Threat Intelligence - AI Hacking",
+        topic_kr: "구글 위협 인텔리전스 - AI 해킹 도구와 적성국 전술",
+        title: "AI hacking tool used in US aerospace sector intrusion, Google says",
+        title_kr: "구글 '미 항공우주 부문 침투에 AI 해킹 도구 사용' — 적성국 AI 사이버 위협 고도화",
+        source: "Nextgov/FCW",
+        url: "https://www.nextgov.com/cybersecurity/2026/11/ai-hacking-tool-used-us-aerospace-sector-intrusion-google-says/417218/",
+        keywords: ["Google Threat Intelligence", "Cairn", "AI 해킹 도구", "북한 해커", "완전 자동화 공격"],
+        summary: "구글 위협 인텔리전스 보고서에 따르면 외국 해커들이 AI 기반 자동화 해킹 도구로 미 항공우주 부문에 침투하는 등 국가 배후 사이버 작전의 속도와 정교함이 급격히 높아지고 있다. 해커들은 중국 오픈소스 보안 커뮤니티와 연계된 공개 침투 테스트 프레임워크 'Cairn'으로 미 항공우주 기관을 해킹했으며, Cairn과 ARTEX·CyberStrikeAI·PentAGI 등 오픈소스 AI 에이전트 도구는 해킹 기법을 스스로 결정·공유하며 다단계 침투를 자동 실행한다. 중국 해킹 조직은 탈취한 기밀 문서를 AI로 번역·분석해 표적 기관의 조직도와 정보 보고서를 만들고, 북한 해커들은 가짜 채용 담당자로 위장해 암호화폐 기업·개발자에 접근한 뒤 AI 코딩 비서(Claude Code) 설정을 변조해 악성코드를 퍼뜨렸다. 보안 패치를 자동 분석해 공격 코드를 생성·실행하는 '인간 개입 없는 완전 자동화 공격 시스템'도 처음 포착돼, 신속한 패치 관리와 AI 기반 위협 탐지 강화가 시급하다.",
+        date: "2026-11-16"
+      }
+    ]
+  });
+})();
