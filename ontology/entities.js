@@ -60,10 +60,12 @@ const ENTITIES = [
   { id: 'socom', t: 'org', n: '특수작전사령부', e: 'SOCOM', a: ['=SOCOM', '=USSOCOM', R('(?<!육군\\s?)특수작전사령부'), '특전사'], p: { cat: '통합전투사령부', country: 'us', parent: 'dod' } },
   { id: 'cybercom', t: 'org', n: '사이버사령부', e: 'U.S. Cyber Command', a: ['=CYBERCOM', '=USCYBERCOM', R('(?<!(?:Army|Navy|Force|Marine|Marines|Corps|Fleet|Its|its)\\s)Cyber Command'), R('(?<!육군\\s?|공군\\s?|해군\\s?)사이버사령부')], p: { cat: '통합전투사령부', country: 'us', parent: 'dod' } },
   { id: 'stratcom', t: 'org', n: '전략사령부', e: 'STRATCOM', a: ['=STRATCOM', '=USSTRATCOM', '전략사령부'], p: { cat: '통합전투사령부', country: 'us', parent: 'dod' } },
+  { id: 'eucom', t: 'org', n: '유럽사령부', e: 'EUCOM', a: ['=EUCOM', '=USEUCOM', '유럽사령부'], p: { cat: '통합전투사령부', country: 'us', parent: 'dod' } },
   { id: 'southcom', t: 'org', n: '남부사령부', e: 'SOUTHCOM', a: ['=SOUTHCOM', '=USSOUTHCOM', '남부사령부'], p: { cat: '통합전투사령부', country: 'us', parent: 'dod' } },
   { id: 'northcom', t: 'org', n: '북부사령부', e: 'NORTHCOM', a: ['=NORTHCOM', '=USNORTHCOM', '북부사령부', 'Northern Command'], p: { cat: '통합전투사령부', country: 'us', parent: 'dod' } },
   { id: 'autowarcom', t: 'org', n: '자율전투사령부(AUTOWARCOM)', e: 'Autonomous Warfare Command', a: ['=AUTOWARCOM', 'Autonomous Warfare Command', '자율전투사령부'], p: { cat: '통합전투사령부(창설 예정)', country: 'us', parent: 'dod' } },
   { id: 'arcyber', t: 'org', n: '육군 사이버사령부', e: 'ARCYBER', a: ['=ARCYBER', 'Army Cyber', '육군 사이버사령부'], p: { cat: '군종 예하', country: 'us', parent: 'army' } },
+  { id: 'usarpac', t: 'org', n: '육군 태평양사령부(USARPAC)', e: 'U.S. Army Pacific', a: ['=USARPAC', 'U.S. Army Pacific', '육군 태평양사령부'], p: { cat: '군종 예하', country: 'us', parent: 'army' } },
   { id: 'atec', t: 'org', n: '육군 시험평가사령부(ATEC)', e: 'Army Test and Evaluation Command', a: ['=ATEC', 'Army Test and Evaluation Command', '시험평가사령부'], p: { cat: '군종 예하', country: 'us', parent: 'army' } },
   { id: 'swcs', t: 'org', n: '특수작전센터·학교(SWCS)', e: 'John F. Kennedy Special Warfare Center and School', a: ['=SWCS', 'Special Warfare Center', '특수작전센터', '특수전센터'], p: { cat: '군종 예하', country: 'us', parent: 'usasoc' } },
   { id: 'mcu', t: 'org', n: '미 해병대 대학교(MCU)', e: 'Marine Corps University', a: ['Marine Corps University', '=MCU', '해병대 대학교'], p: { cat: '군종 예하', country: 'us', parent: 'usmc' } },
@@ -71,6 +73,7 @@ const ENTITIES = [
   { id: 'usasoc', t: 'org', n: '육군 특수작전사령부(USASOC)', e: 'U.S. Army Special Operations Command', a: ['=USASOC', 'Army Special Operations Command', '육군 특수작전사령부'], p: { cat: '군종 예하', country: 'us', parent: 'army' } },
   { id: 'diu', t: 'org', n: '국방혁신단(DIU)', e: 'Defense Innovation Unit', a: ['=DIU', 'Defense Innovation Unit', '국방혁신단', '국방혁신부'], p: { cat: '국방 기관', country: 'us', parent: 'dod' } },
   { id: 'darpa', t: 'org', n: 'DARPA', e: 'DARPA', a: ['=DARPA', '방위고등연구계획국', '고등연구계획국'], p: { cat: '국방 기관', country: 'us', parent: 'dod' } },
+  { id: 'dcma', t: 'org', n: '국방계약관리청(DCMA)', e: 'Defense Contract Management Agency', a: ['=DCMA', 'Defense Contract Management Agency', '국방계약관리청'], p: { cat: '국방 기관', country: 'us', parent: 'dod' } },
   { id: 'mda', t: 'org', n: '미사일방어청(MDA)', e: 'Missile Defense Agency', a: ['Missile Defense Agency', '미사일방어청'], p: { cat: '국방 기관', country: 'us', parent: 'dod' } },
   { id: 'ndu', t: 'org', n: '미 국방대학교(NDU)', e: 'National Defense University', a: ['=NDU', 'National Defense University'], p: { cat: '국방 기관', country: 'us', parent: 'jcs' } },
   { id: 'disa', t: 'org', n: '국방정보시스템국(DISA)', e: 'DISA', a: ['=DISA', '국방정보시스템국'], p: { cat: '국방 기관', country: 'us', parent: 'dod' } },
@@ -124,6 +127,7 @@ const ENTITIES = [
   { id: 'crs', t: 'org', n: '의회조사국(CRS)', e: 'Congressional Research Service', a: ['Congressional Research Service', '의회조사국'], p: { cat: '입법·감사', country: 'us', parent: 'congress' } },
   { id: 'congress', t: 'org', n: '미 의회', e: 'U.S. Congress', a: ['Congress', 'Senate', '=HASC', '=SASC', 'House Armed Services', 'Senate Armed Services', nf('의회'), nf('상원'), nf('하원')], p: { cat: '입법·감사', country: 'us' } },
   { id: 'nato', t: 'org', n: 'NATO', e: 'NATO', a: ['=NATO', '나토'], p: { cat: '국제기구·동맹' } },
+  { id: 'natoact', t: 'org', n: 'NATO 연합변혁사령부(ACT)', e: 'Allied Command Transformation', a: ['Allied Command Transformation', '연합변혁사령부'], p: { cat: '국제기구·동맹', parent: 'nato' } },
   { id: 'eu', t: 'org', n: '유럽연합(EU)', e: 'European Union', a: ['=EU', '유럽연합', 'European Union'], p: { cat: '국제기구·동맹' } },
   { id: 'un', t: 'org', n: '유엔', e: 'United Nations', a: ['유엔', R('안보리(?!스크)'), 'United Nations', 'Security Council', '=UNSC'], p: { cat: '국제기구' } },
   { id: 'fiveeyes', t: 'org', n: '파이브 아이즈', e: 'Five Eyes', a: ['Five Eyes', '파이브 아이즈', '파이브아이즈'], p: { cat: '국제기구·동맹' } },
@@ -139,6 +143,7 @@ const ENTITIES = [
   { id: 'csis', t: 'org', n: 'CSIS', e: 'CSIS', a: ['=CSIS', '전략국제문제연구소'], p: { cat: '연구기관·싱크탱크', country: 'us' } },
   { id: 'cnas', t: 'org', n: 'CNAS', e: 'Center for a New American Security', a: ['=CNAS', '신미국안보센터'], p: { cat: '연구기관·싱크탱크', country: 'us' } },
   { id: 'heritage', t: 'org', n: '헤리티지재단', e: 'Heritage Foundation', a: ['Heritage Foundation', '헤리티지재단', '헤리티지 재단'], p: { cat: '연구기관·싱크탱크', country: 'us' } },
+  { id: 'metr', t: 'org', n: 'METR', e: 'METR', a: ['=METR'], p: { cat: '연구기관·싱크탱크', country: 'us' } },
   { id: 'brookings', t: 'org', n: '브루킹스 연구소', e: 'Brookings Institution', a: ['Brookings', '브루킹스'], p: { cat: '연구기관·싱크탱크', country: 'us' } },
   { id: 'cfr', t: 'org', n: '미국외교협회(CFR)', e: 'Council on Foreign Relations', a: ['Council on Foreign Relations', '외교협회'], p: { cat: '연구기관·싱크탱크', country: 'us' } },
   { id: 'hudson', t: 'org', n: '허드슨 연구소', e: 'Hudson Institute', a: ['Hudson Institute', '허드슨 연구소'], p: { cat: '연구기관·싱크탱크', country: 'us' } },
@@ -240,6 +245,7 @@ const ENTITIES = [
   { id: 'mq9', t: 'program', n: 'MQ-9 Reaper', e: 'MQ-9 Reaper', a: [R('(?<![A-Za-z0-9])MQ-9'), '=Reaper', '리퍼'], p: { cat: '무인기 플랫폼', op: ['usaf'], ctr: ['ga'] } },
   { id: 'f35', t: 'program', n: 'F-35', e: 'F-35', a: [R('(?<![A-Za-z0-9])F-35')], p: { cat: '유인 전투기', op: ['usaf'], ctr: ['lockheed'] } },
   { id: 'f47', t: 'program', n: 'F-47', e: 'F-47', a: [R('(?<![A-Za-z0-9])F-47')], p: { cat: '6세대 전투기', op: ['usaf'], ctr: ['boeing'] } },
+  { id: 'faxx', t: 'program', n: 'F/A-XX', e: 'F/A-XX', a: [R('(?<![A-Za-z0-9])F/?A-XX')], p: { cat: '6세대 함재기', op: ['navy'], ctr: ['boeing'] } },
   { id: 'nmesis', t: 'program', n: 'NMESIS', e: 'Navy-Marine Expeditionary Ship Interdiction System', a: ['=NMESIS'], p: { cat: '무인 대함 미사일', op: ['usmc'] } },
   { id: 'goldenfleet', t: 'program', n: '골든 플릿(Golden Fleet)', e: 'Golden Fleet', a: ['Golden Fleet', '골든 플릿'], p: { cat: '함대 구상', op: ['navy'] } },
   { id: 'wiser', t: 'program', n: 'WISeR(메디케어 AI 심사)', e: 'WISeR Model', a: ['=WISeR'], p: { cat: '행정 AI 심사', op: ['cms'] } },
@@ -254,6 +260,9 @@ const ENTITIES = [
   { id: 'jwcc', t: 'program', n: 'JWCC(합동전투클라우드)', e: 'Joint Warfighting Cloud Capability', a: ['=JWCC', 'Joint Warfighting Cloud', 'Joint Warfighter Cloud'], p: { cat: '클라우드 계약', op: ['disa'], ctr: ['amazon', 'microsoft', 'google', 'oracle'] } },
   { id: 'goldendome', t: 'program', n: 'Golden Dome', e: 'Golden Dome', a: ['Golden Dome', '골든 돔', '골든돔'], p: { cat: '미사일 방어', op: ['dod', 'ussf'] } },
   { id: 'replicator', t: 'program', n: 'Replicator', e: 'Replicator', a: ['Replicator', '리플리케이터'], p: { cat: '자율무기 대량배치', op: ['diu'] } },
+  { id: 'mfgrodeo', t: 'program', n: '제조 로데오(Manufacturing Rodeo)', e: 'Manufacturing Rodeo', a: ['Manufacturing Rodeo', '제조 로데오'], p: { cat: '드론 대량생산 검증', op: ['army'] } },
+  { id: 'mpe', t: 'program', n: '임무파트너환경(MPE)', e: 'Mission Partner Environment', a: ['=MPE', 'Mission Partner Environment', '임무파트너환경', '임무 파트너 환경'], p: { cat: '연합 정보공유 체계', op: ['disa'] } },
+  { id: 'daybreak', t: 'program', n: 'OpenAI Daybreak', e: 'OpenAI Daybreak', a: ['Daybreak', '데이브레이크'], p: { cat: 'AI 보안 협력', ctr: ['openai'] } },
   { id: 'meridian', t: 'program', n: '프로젝트 메리디안', e: 'Project Meridian', a: ['Project Meridian', '메리디안 프로젝트', '프로젝트 메리디안'], p: { cat: '미래전 자문위원회', op: ['dod'] } },
   { id: 'gatekeeper', t: 'program', n: '프로젝트 게이트키퍼', e: 'Project Gatekeeper', a: ['Project Gatekeeper', '게이트키퍼'], p: { cat: 'SW 보안 심사 플랫폼', op: ['army'] } },
   { id: 'swapusv', t: 'program', n: 'SWAP-USV', e: 'SWAP-USV', a: ['SWAP-USV'], p: { cat: '무인수상정 경연', op: ['diu'] } },
@@ -354,6 +363,8 @@ const ENTITIES = [
   { id: 'p_arrington', t: 'person', n: '케이티 애링턴', e: 'Katie Arrington', a: ['Arrington', '애링턴'], p: { role: '전 국방부 CISO', aff: 'dod' } },
   { id: 'p_kosiba', t: 'person', n: '팀 코시바', e: 'Tim Kosiba', a: ['Kosiba', '코시바'], p: { role: 'NSA 부국장', aff: 'nsa' } },
   { id: 'p_kratsios', t: 'person', n: '마이클 크라치오스', e: 'Michael Kratsios', a: ['Kratsios', '크라치오스', '크라시오스'], p: { role: 'OSTP 실장', aff: 'ostp' } },
+  { id: 'p_toti', t: 'person', n: '윌리엄 토티', e: 'William Toti', a: ['Toti', '토티'], p: { role: '해군차관 지명자', aff: 'navy' } },
+  { id: 'p_gottheimer', t: 'person', n: '조시 고트하이머', e: 'Josh Gottheimer', a: ['Gottheimer', '고트하이머'], p: { role: '하원의원(민주·뉴저지)', aff: 'congress' } },
   { id: 'p_losapio', t: 'person', n: '마이클 로사피오', e: 'Michael LoSapio', a: ['LoSapio', '로사피오'], p: { role: 'CISA 국장 지명자(전 팔란티어 CISO)', aff: 'cisa' } },
   { id: 'p_wilsbach', t: 'person', n: '케네스 윌스바흐', e: 'Kenneth Wilsbach', a: ['Wilsbach', '윌스바흐'], p: { role: '공군참모총장', aff: 'usaf' } },
   { id: 'p_shive', t: 'person', n: '데이비드 샤이브', e: 'David Shive', a: ['David Shive', '샤이브'], p: { role: 'GSA 최고정보책임자(CIO)', aff: 'gsa' } },
@@ -406,14 +417,14 @@ const SRC_NORM = {
 };
 const SRC_CAT = {
   '국방 전문지': ['Next Gen Defense', 'Defense One', 'Breaking Defense', 'Defense News', 'Air & Space Forces Magazine', 'DefenseScoop', 'The Defense Post', 'Military Times', 'C4ISRNET', 'Military AI', 'Army Times', 'Air Force Times', 'Army Technology', 'Defence Blog', 'The Aviationist', 'Flight Global', 'RealClearDefense', 'Small Wars Journal', 'SpaceNews'],
-  '연방 IT·행정 전문지': ['MeriTalk', 'Nextgov/FCW', 'Federal News Network', 'Government Executive', 'Washington Technology', 'FedScoop', 'GovTech', 'CIO.com', 'ISACA'],
+  '연방 IT·행정 전문지': ['InfoWorld', 'MeriTalk', 'Nextgov/FCW', 'Federal News Network', 'Government Executive', 'Washington Technology', 'FedScoop', 'GovTech', 'CIO.com', 'ISACA'],
   '정부·공식 발표': ['Congress.gov', 'DVIDS', 'U.S. Department of War', 'U.S. Air Force', 'U.S. Army', 'GOV.UK', 'UK Parliament', 'NIST', 'DIU', 'GSA 뉴스레터'],
   '싱크탱크·연구기관': ['Brookings', 'CSIS', 'Council on Foreign Relations', 'NDU Press', 'IISS', 'Hudson Institute', 'SCSP', 'CMU SEI', 'CNAS', 'CEPA', 'HCSS', 'Finnish AI Region', 'Foreign Affairs'],
   '기업·보도자료': ['Anthropic', 'Palantir Blog', 'Lockheed Martin', 'GlobeNewswire', 'PR Newswire', 'Business Wire'],
   '블로그·뉴스레터': ['Steve Blank Blog', 'DIIE Substack', 'UnHerd'],
 };
 
-const DICT = { VERSION: '2026-11-14', ENTITIES, SRC_NORM, SRC_CAT };
+const DICT = { VERSION: '2026-11-21', ENTITIES, SRC_NORM, SRC_CAT };
 if (typeof module !== 'undefined' && module.exports) module.exports = DICT;
 else root.ONTOLOGY_DICT = DICT;
 })(typeof window !== 'undefined' ? window : globalThis);
