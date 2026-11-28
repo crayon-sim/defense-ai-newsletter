@@ -60,11 +60,13 @@ const ENTITIES = [
   { id: 'socom', t: 'org', n: '특수작전사령부', e: 'SOCOM', a: ['=SOCOM', '=USSOCOM', R('(?<!육군\\s?)특수작전사령부'), '특전사'], p: { cat: '통합전투사령부', country: 'us', parent: 'dod' } },
   { id: 'cybercom', t: 'org', n: '사이버사령부', e: 'U.S. Cyber Command', a: ['=CYBERCOM', '=USCYBERCOM', R('(?<!(?:Army|Navy|Force|Marine|Marines|Corps|Fleet|Its|its)\\s)Cyber Command'), R('(?<!육군\\s?|공군\\s?|해군\\s?)사이버사령부')], p: { cat: '통합전투사령부', country: 'us', parent: 'dod' } },
   { id: 'stratcom', t: 'org', n: '전략사령부', e: 'STRATCOM', a: ['=STRATCOM', '=USSTRATCOM', '전략사령부'], p: { cat: '통합전투사령부', country: 'us', parent: 'dod' } },
+  { id: 'transcom', t: 'org', n: '수송사령부', e: 'TRANSCOM', a: ['=TRANSCOM', '=USTRANSCOM', '수송사령부'], p: { cat: '통합전투사령부', country: 'us', parent: 'dod' } },
   { id: 'eucom', t: 'org', n: '유럽사령부', e: 'EUCOM', a: ['=EUCOM', '=USEUCOM', '유럽사령부'], p: { cat: '통합전투사령부', country: 'us', parent: 'dod' } },
   { id: 'southcom', t: 'org', n: '남부사령부', e: 'SOUTHCOM', a: ['=SOUTHCOM', '=USSOUTHCOM', '남부사령부'], p: { cat: '통합전투사령부', country: 'us', parent: 'dod' } },
   { id: 'northcom', t: 'org', n: '북부사령부', e: 'NORTHCOM', a: ['=NORTHCOM', '=USNORTHCOM', '북부사령부', 'Northern Command'], p: { cat: '통합전투사령부', country: 'us', parent: 'dod' } },
   { id: 'autowarcom', t: 'org', n: '자율전투사령부(AUTOWARCOM)', e: 'Autonomous Warfare Command', a: ['=AUTOWARCOM', 'Autonomous Warfare Command', '자율전투사령부'], p: { cat: '통합전투사령부(창설 예정)', country: 'us', parent: 'dod' } },
   { id: 'arcyber', t: 'org', n: '육군 사이버사령부', e: 'ARCYBER', a: ['=ARCYBER', 'Army Cyber', '육군 사이버사령부'], p: { cat: '군종 예하', country: 'us', parent: 'army' } },
+  { id: 'devcom', t: 'org', n: '육군 전투역량개발사령부(DEVCOM)', e: 'DEVCOM', a: ['=DEVCOM', '전투역량개발사령부', '전투능력개발사령부'], p: { cat: '군종 예하', country: 'us', parent: 'army' } },
   { id: 'usarpac', t: 'org', n: '육군 태평양사령부(USARPAC)', e: 'U.S. Army Pacific', a: ['=USARPAC', 'U.S. Army Pacific', '육군 태평양사령부'], p: { cat: '군종 예하', country: 'us', parent: 'army' } },
   { id: 'atec', t: 'org', n: '육군 시험평가사령부(ATEC)', e: 'Army Test and Evaluation Command', a: ['=ATEC', 'Army Test and Evaluation Command', '시험평가사령부'], p: { cat: '군종 예하', country: 'us', parent: 'army' } },
   { id: 'swcs', t: 'org', n: '특수작전센터·학교(SWCS)', e: 'John F. Kennedy Special Warfare Center and School', a: ['=SWCS', 'Special Warfare Center', '특수작전센터', '특수전센터'], p: { cat: '군종 예하', country: 'us', parent: 'usasoc' } },
@@ -129,6 +131,7 @@ const ENTITIES = [
   { id: 'nato', t: 'org', n: 'NATO', e: 'NATO', a: ['=NATO', '나토'], p: { cat: '국제기구·동맹' } },
   { id: 'natoact', t: 'org', n: 'NATO 연합변혁사령부(ACT)', e: 'Allied Command Transformation', a: ['Allied Command Transformation', '연합변혁사령부'], p: { cat: '국제기구·동맹', parent: 'nato' } },
   { id: 'eu', t: 'org', n: '유럽연합(EU)', e: 'European Union', a: ['=EU', '유럽연합', 'European Union'], p: { cat: '국제기구·동맹' } },
+  { id: 'eda', t: 'org', n: '유럽방위청(EDA)', e: 'European Defence Agency', a: ['European Defence Agency', '유럽방위청'], p: { cat: '국제기구·동맹', parent: 'eu' } },
   { id: 'un', t: 'org', n: '유엔', e: 'United Nations', a: ['유엔', R('안보리(?!스크)'), 'United Nations', 'Security Council', '=UNSC'], p: { cat: '국제기구' } },
   { id: 'fiveeyes', t: 'org', n: '파이브 아이즈', e: 'Five Eyes', a: ['Five Eyes', '파이브 아이즈', '파이브아이즈'], p: { cat: '국제기구·동맹' } },
   { id: 'pla', t: 'org', n: '중국 인민해방군(PLA)', e: 'PLA', a: ['=PLA', '=PLAAF', '인민해방군', '중국군'], p: { cat: '외국군', country: 'cn' } },
@@ -188,6 +191,7 @@ const ENTITIES = [
   { id: 'boeing', t: 'company', n: 'Boeing', e: 'Boeing', a: ['Boeing', '보잉'], p: { cat: '전통 방산', country: 'us' } },
   { id: 'rtx', t: 'company', n: 'RTX(Raytheon)', e: 'RTX', a: ['=RTX', 'Raytheon', '레이시온', 'Collins Aerospace', '콜린스 에어로스페이스'], p: { cat: '전통 방산', country: 'us' } },
   { id: 'gd', t: 'company', n: 'General Dynamics', e: 'General Dynamics', a: ['General Dynamics', '제너럴 다이내믹스', '=GDIT'], p: { cat: '전통 방산', country: 'us' } },
+  { id: 'saic', t: 'company', n: 'SAIC', e: 'SAIC', a: ['=SAIC'], p: { cat: 'IT 서비스', country: 'us' } },
   { id: 'arondite', t: 'company', n: 'Arondite', e: 'Arondite', a: ['Arondite', '아론다이트'], p: { cat: '방산 테크', country: 'uk' } },
   { id: 'sakana', t: 'company', n: 'Sakana AI', e: 'Sakana AI', a: ['Sakana AI', '사카나 AI', '사카나AI'], p: { cat: '프론티어 AI 랩', country: 'jp' } },
   { id: 'bae', t: 'company', n: 'BAE Systems', e: 'BAE Systems', a: ['BAE Systems', '=BAE', 'BAE 시스템즈'], p: { cat: '전통 방산', country: 'uk' } },
@@ -260,6 +264,9 @@ const ENTITIES = [
   { id: 'jwcc', t: 'program', n: 'JWCC(합동전투클라우드)', e: 'Joint Warfighting Cloud Capability', a: ['=JWCC', 'Joint Warfighting Cloud', 'Joint Warfighter Cloud'], p: { cat: '클라우드 계약', op: ['disa'], ctr: ['amazon', 'microsoft', 'google', 'oracle'] } },
   { id: 'goldendome', t: 'program', n: 'Golden Dome', e: 'Golden Dome', a: ['Golden Dome', '골든 돔', '골든돔'], p: { cat: '미사일 방어', op: ['dod', 'ussf'] } },
   { id: 'replicator', t: 'program', n: 'Replicator', e: 'Replicator', a: ['Replicator', '리플리케이터'], p: { cat: '자율무기 대량배치', op: ['diu'] } },
+  { id: 'odin', t: 'program', n: '오딘(Odin) 전장계획 앱', e: 'Odin', a: [R('(?<![A-Za-z])Odin(?![A-Za-z])'), '오딘'], p: { cat: '전술 작전계획 앱', op: ['devcom'] } },
+  { id: 'cloudone', t: 'program', n: '클라우드 원(Cloud One)', e: 'Cloud One', a: ['Cloud One', '클라우드 원'], p: { cat: '클라우드 플랫폼', op: ['usaf'], ctr: ['leidos', 'saic'] } },
+  { id: 'clarity', t: 'program', n: '헬싱 클래리티(Clarity)', e: 'Helsing Clarity', a: [R('(?<![A-Za-z])Clarity(?![A-Za-z])'), '클래리티'], p: { cat: '지휘통제 소프트웨어', ctr: ['helsing'] } },
   { id: 'mfgrodeo', t: 'program', n: '제조 로데오(Manufacturing Rodeo)', e: 'Manufacturing Rodeo', a: ['Manufacturing Rodeo', '제조 로데오'], p: { cat: '드론 대량생산 검증', op: ['army'] } },
   { id: 'mpe', t: 'program', n: '임무파트너환경(MPE)', e: 'Mission Partner Environment', a: ['=MPE', 'Mission Partner Environment', '임무파트너환경', '임무 파트너 환경'], p: { cat: '연합 정보공유 체계', op: ['disa'] } },
   { id: 'daybreak', t: 'program', n: 'OpenAI Daybreak', e: 'OpenAI Daybreak', a: ['Daybreak', '데이브레이크'], p: { cat: 'AI 보안 협력', ctr: ['openai'] } },
@@ -363,6 +370,7 @@ const ENTITIES = [
   { id: 'p_arrington', t: 'person', n: '케이티 애링턴', e: 'Katie Arrington', a: ['Arrington', '애링턴'], p: { role: '전 국방부 CISO', aff: 'dod' } },
   { id: 'p_kosiba', t: 'person', n: '팀 코시바', e: 'Tim Kosiba', a: ['Kosiba', '코시바'], p: { role: 'NSA 부국장', aff: 'nsa' } },
   { id: 'p_kratsios', t: 'person', n: '마이클 크라치오스', e: 'Michael Kratsios', a: ['Kratsios', '크라치오스', '크라시오스'], p: { role: 'OSTP 실장', aff: 'ostp' } },
+  { id: 'p_chaillan', t: 'person', n: '니콜라스 샤일란', e: 'Nicolas Chaillan', a: ['Chaillan', '샤일란'], p: { role: '전 공군 최고소프트웨어책임자', aff: 'usaf' } },
   { id: 'p_toti', t: 'person', n: '윌리엄 토티', e: 'William Toti', a: ['Toti', '토티'], p: { role: '해군차관 지명자', aff: 'navy' } },
   { id: 'p_gottheimer', t: 'person', n: '조시 고트하이머', e: 'Josh Gottheimer', a: ['Gottheimer', '고트하이머'], p: { role: '하원의원(민주·뉴저지)', aff: 'congress' } },
   { id: 'p_losapio', t: 'person', n: '마이클 로사피오', e: 'Michael LoSapio', a: ['LoSapio', '로사피오'], p: { role: 'CISA 국장 지명자(전 팔란티어 CISO)', aff: 'cisa' } },
@@ -389,6 +397,7 @@ const ENTITIES = [
   { id: 'ev_distill', t: 'event', n: '중국의 미 AI 모델 증류', e: 'Model distillation campaign', a: ['증류', 'distillation'], p: { kind: '기술 탈취 공작', period: '2026' }, rel: ['cn', 'deepseek', 'moonshot', 'alibaba'] },
   { id: 'ev_cnhack', t: 'event', n: '중국 연계 사이버 공작', e: 'China-linked cyber operations', a: ['Salt Typhoon', 'Volt Typhoon', '=TA419', 'China-linked', '중국 연계 해킹', '중국 연계 해커', '중국 정부 연계'], p: { kind: '사이버 공작' }, rel: ['cn'] },
   { id: 'ev_dmdc', t: 'event', n: '국방부 DMDC 개인정보 유출', e: 'DMDC data breach', a: ['=DMDC', '인력데이터센터'], p: { kind: '정보 유출', period: '2025.10~2026.7' }, rel: ['dod'] },
+  { id: 'ev_artex', t: 'event', n: 'AI 침투 도구 ARTEX 공격', e: 'ARTEX intrusions', a: ['=ARTEX'], p: { kind: '사이버 공작' }, rel: ['cn', 'cia', 'odni'] },
   { id: 'ev_nkit', t: 'event', n: '북한 IT 인력 위장 취업', e: 'North Korean IT worker scheme', a: ['laptop farm', '노트북 팜', 'Famous Chollima', '페이머스 촐리마', R('북한\\s?IT\\s?(?:인력|노동자|근로자)')], p: { kind: '사이버 공작' }, rel: ['kp', 'fbi'] },
   { id: 'ev_falconpeak', t: 'event', n: '팔콘 피크 대드론 훈련', e: 'Falcon Peak', a: ['Falcon Peak', '팔콘 피크'], p: { kind: '훈련·실험' }, rel: ['northcom', 'jiatf401'] },
   // 컨퍼런스·행사 (발언·발표가 나온 장소)
@@ -424,7 +433,7 @@ const SRC_CAT = {
   '블로그·뉴스레터': ['Steve Blank Blog', 'DIIE Substack', 'UnHerd'],
 };
 
-const DICT = { VERSION: '2026-11-21', ENTITIES, SRC_NORM, SRC_CAT };
+const DICT = { VERSION: '2026-11-28', ENTITIES, SRC_NORM, SRC_CAT };
 if (typeof module !== 'undefined' && module.exports) module.exports = DICT;
 else root.ONTOLOGY_DICT = DICT;
 })(typeof window !== 'undefined' ? window : globalThis);
